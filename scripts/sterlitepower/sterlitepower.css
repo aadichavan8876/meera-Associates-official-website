@@ -1,0 +1,836 @@
+/* ==========================================================================
+   STERLITE POWER TRANSMISSION LIMITED - DEDICATED STYLESHEET
+   Page-Specific Styling:
+   - Obsidian-Navy Technical Electric Hero with 4-KPI Metric Strip
+   - Asymmetric 2-Column Dashboard Layout (68% Main Content / 32% Sticky Sidebar)
+   - Corporate Master Specifications Table
+   - Executive Leadership Roster (Board of Directors)
+   - Strategic Energy Profile & Trilemma Callout Box
+   - 2x2 Awards & Accolades Showcase Grid
+   - High-Conversion Sticky Sidebar & Direct Investor Action Desk
+   ========================================================================== */
+
+/* Base page wrapper */
+.sterlite-page-wrap {
+    padding-bottom: 70px;
+}
+
+/* Distinct Hero Section with subtle technical electric gradient */
+.sterlite-hero {
+    background: linear-gradient(135deg, #091322 0%, #0f1f38 50%, #0c2b4d 100%);
+    color: #ffffff;
+    padding: 60px 0 45px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.25);
+}
+
+.sterlite-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(2, 132, 199, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.sterlite-hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.sterlite-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    color: #94a3b8;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.sterlite-breadcrumbs a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.sterlite-breadcrumbs a:hover {
+    color: #38bdf8;
+}
+
+.sterlite-breadcrumbs .crumb-sep {
+    color: #64748b;
+}
+
+.sterlite-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(2, 132, 199, 0.22);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #7dd3fc;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.sterlite-hero-badge .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 10px #38bdf8;
+    animation: pulseGrid 2s infinite;
+}
+
+@keyframes pulseGrid {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.25); }
+}
+
+.sterlite-hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.sterlite-hero-subtitle {
+    font-size: 1.08rem;
+    color: #cbd5e1;
+    max-width: 860px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+
+/* 4-KPI Metric Strip in Hero */
+.sterlite-metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.sterlite-metric-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.sterlite-metric-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.sterlite-metric-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sterlite-metric-value {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+}
+
+.sterlite-metric-sub {
+    font-size: 0.78rem;
+    color: #7dd3fc;
+    font-weight: 600;
+}
+
+/* Main Asymmetric Grid Layout */
+.sterlite-main-grid {
+    max-width: 1240px;
+    margin: 36px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Common Card Architecture */
+.sterlite-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sterlite-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 25px -4px rgba(15, 23, 42, 0.08);
+}
+
+.sterlite-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sterlite-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sterlite-card-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #e0f2fe;
+    color: #0284c7;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.sterlite-card-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #475569;
+}
+
+/* Master Data Table */
+.sterlite-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sterlite-table tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.15s ease;
+}
+
+.sterlite-table tr:last-child {
+    border-bottom: none;
+}
+
+.sterlite-table tr:hover {
+    background: #f8fafc;
+}
+
+.sterlite-table td {
+    padding: 13px 14px;
+    font-size: 0.93rem;
+    vertical-align: middle;
+}
+
+.sterlite-table .td-label {
+    width: 32%;
+    min-width: 220px;
+    font-weight: 600;
+    color: #475569;
+    white-space: nowrap;
+}
+
+.sterlite-table .td-val {
+    width: 68%;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.isin-copy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0f172a;
+    color: #38bdf8;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 1px solid #334155;
+    transition: all 0.2s ease;
+}
+
+.isin-copy-badge:hover {
+    background: #1e293b;
+    color: #7dd3fc;
+    border-color: #0284c7;
+}
+
+.isin-copy-badge:active {
+    transform: scale(0.97);
+}
+
+.copy-hint {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.sterlite-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.sterlite-link-btn:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+/* Board of Directors: Executive Grid */
+.directors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.director-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.director-card:hover {
+    transform: translateY(-2px);
+    border-color: #0284c7;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+}
+
+.director-check {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.director-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.director-name {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+.director-role {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0284c7;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Editorial Profile Typography & Trilemma Highlight */
+.sterlite-prose {
+    color: #334155;
+    font-size: 0.97rem;
+    line-height: 1.75;
+}
+
+.sterlite-prose p {
+    margin-bottom: 16px;
+}
+
+.sterlite-prose p:last-child {
+    margin-bottom: 0;
+}
+
+.trilemma-box {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 4px solid #0284c7;
+    border-radius: 0 12px 12px 0;
+    padding: 20px 22px;
+    margin: 22px 0;
+}
+
+.trilemma-box-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0369a1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trilemma-box p {
+    margin: 0;
+    color: #0c4a6e;
+    font-weight: 600;
+    font-size: 0.93rem;
+    line-height: 1.6;
+}
+
+/* Key Products / Capabilities Pills */
+.product-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px dashed #cbd5e1;
+}
+
+.product-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    font-size: 0.84rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+}
+
+.product-pill:hover {
+    background: #e0f2fe;
+    border-color: #0284c7;
+    color: #0369a1;
+}
+
+/* ⭐ Awards & Accolades Showcase (Distinct Feature) */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.award-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fefce8 100%);
+    border: 1px solid #fef08a;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-2px);
+    border-color: #eab308;
+    box-shadow: 0 6px 16px rgba(234, 179, 8, 0.15);
+}
+
+.award-trophy {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #fef08a;
+    color: #854d0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(202, 138, 4, 0.2);
+}
+
+.award-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.award-name {
+    font-size: 0.93rem;
+    font-weight: 800;
+    color: #713f12;
+    line-height: 1.35;
+}
+
+.award-body {
+    font-size: 0.8rem;
+    color: #854d0e;
+    font-weight: 600;
+}
+
+.award-year {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: #ca8a04;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-top: 4px;
+}
+
+/* Annual Report Card */
+.filing-badge-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.filing-badge-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filing-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #dbeafe;
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+/* Sticky Sidebar Components */
+.sterlite-sidebar {
+    position: sticky;
+    top: 104px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-brand-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+    text-align: center;
+}
+
+.sidebar-logo-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.02);
+    min-height: 90px;
+}
+
+.sidebar-logo-img {
+    max-width: 100%;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+.sidebar-brand-title {
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.sidebar-brand-sub {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+.sidebar-btn-web {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-web:hover {
+    background: #0284c7;
+    border-color: #0284c7;
+    color: #ffffff;
+}
+
+/* Action / Trade Card in Sidebar */
+.sidebar-trade-card {
+    background: linear-gradient(135deg, #091322 0%, #0f1f38 100%);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.25);
+    border: 1px solid rgba(2, 132, 199, 0.35);
+}
+
+.sidebar-trade-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.sidebar-trade-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.sidebar-trade-desc {
+    font-size: 0.84rem;
+    color: #cbd5e1;
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+.sidebar-btn-wa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: #25d366;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    margin-bottom: 10px;
+}
+
+.sidebar-btn-wa:hover {
+    background: #22c55e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+.sidebar-btn-call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 11px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-call:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.sidebar-trade-footer {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.75rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 992px) {
+    .sterlite-metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sterlite-main-grid {
+        grid-template-columns: 1fr;
+    }
+    .sterlite-sidebar {
+        position: static;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .sterlite-hero-title {
+        font-size: 1.85rem;
+    }
+    .sterlite-metrics-strip {
+        grid-template-columns: 1fr;
+    }
+    .directors-grid {
+        grid-template-columns: 1fr;
+    }
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+    .sterlite-table .td-label,
+    .sterlite-table .td-val {
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+    }
+    .sterlite-table tr {
+        display: block;
+        padding: 8px 0;
+    }
+}
+
+/* Financial Performance Graph - High-Tech Electric Energy Styling */
+.sterlite-card .fin-card-title {
+    color: #f8fafc;
+}
+.sterlite-card .fin-kpi-card {
+    background: #0f172a;
+    border-color: #334155;
+}
+.sterlite-card .fin-kpi-card:hover {
+    background: #1e293b;
+    border-color: #38bdf8;
+}
+.sterlite-card .fin-kpi-name {
+    color: #94a3b8;
+}
+.sterlite-card .fin-kpi-val {
+    color: #f8fafc;
+}
+.sterlite-card .fin-controls-bar {
+    background: #0f172a;
+    border-color: #334155;
+}
+.sterlite-card .fin-metric-tab {
+    background: #1e293b;
+    border-color: #334155;
+    color: #94a3b8;
+}
+.sterlite-card .fin-metric-tab:hover {
+    background: #334155;
+    color: #f8fafc;
+    border-color: #475569;
+}
+.sterlite-card .fin-metric-tab.active {
+    background: #0284c7;
+    border-color: #38bdf8;
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
+}
+.sterlite-card .fin-type-toggles {
+    background: #1e293b;
+    border-color: #334155;
+}
+.sterlite-card .fin-type-btn {
+    color: #94a3b8;
+}
+.sterlite-card .fin-type-btn.active {
+    background: #38bdf8;
+    color: #0f172a;
+}
+.sterlite-card .fin-data-table-wrapper {
+    background: #0f172a;
+    border-color: #334155;
+}
+.sterlite-card .fin-data-table th {
+    background: #1e293b;
+    color: #94a3b8;
+    border-color: #334155;
+}
+.sterlite-card .fin-data-table td {
+    color: #cbd5e1;
+    border-color: #1e293b;
+}
+.sterlite-card .fin-data-table tr:hover td {
+    background: rgba(56, 189, 248, 0.05);
+}
+.sterlite-card .fin-metric-name-cell {
+    color: #f8fafc;
+}
+.sterlite-card .fin-note-footer {
+    background: #0f172a;
+    border-color: #38bdf8;
+    color: #94a3b8;
+}
+

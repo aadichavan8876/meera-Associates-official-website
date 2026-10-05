@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <rect width="200" height="80" fill="#ffffff" rx="8"/>
+  <g transform="translate(10, 8)">
+    <!-- Insignia / Brand mark -->
+    <path d="M22 20 H32 V48 H22 Z M40 20 H50 V48 H40 Z" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M22 20 H32 V48 H22 Z M40 20 H50 V48 H40 Z" fill="#38bdf8" fill-opacity="0.12" />
+    <!-- Brand Name -->
+    <text x="68" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#1e293b" letter-spacing="-0.3">INDIA CARBON</text>
+    <!-- Subtitle / Sector -->
+    <text x="68" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="700" fill="#64748b" letter-spacing="0.8">LIMITED</text>
+  </g>
+</svg>

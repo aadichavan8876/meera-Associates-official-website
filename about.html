@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Meera Associates — 40-Year Financial Heritage</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="icon" type="image/png" href="assets/meera_associates_logo.png">
+</head>
+<body>
+    <!-- Shiny Sky Blue Light Follower -->
+    <div id="mouse-light-follower"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Meera Associates">
+                <img src="assets/meera_associates_logo.png" alt="Meera Associates" class="site-logo-img">
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About Us</a>
+                
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-link dropdown-toggle">
+                        Services <span class="dropdown-caret">▾</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="services.html#overview" class="dropdown-item">
+                            <span class="dropdown-icon">📈</span>
+                            <span class="dropdown-title">Buy & Sell Pre-IPO & Unlisted Shares</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="demat-shares">
+                            <span class="dropdown-icon">📜</span>
+                            <span class="dropdown-title">Dematerialization of Physical Shares</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="iepf-recovery">
+                            <span class="dropdown-icon">⚖️</span>
+                            <span class="dropdown-title">IEPF Recovery</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="ipo-capital">
+                            <span class="dropdown-icon">🔔</span>
+                            <span class="dropdown-title">IPO Facilitation & Capital Raising</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="mutual-funds">
+                            <span class="dropdown-icon">💼</span>
+                            <span class="dropdown-title">Mutual Funds & Wealth Allocation</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="bonds-fixed">
+                            <span class="dropdown-icon">🏦</span>
+                            <span class="dropdown-title">Bonds & Fixed-Income Securities</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="insurance-solutions">
+                            <span class="dropdown-icon">🛡️</span>
+                            <span class="dropdown-title">Insurance Solutions</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="brokerage-las">
+                            <span class="dropdown-icon">💳</span>
+                            <span class="dropdown-title">Equity Brokerage & Loan Against Securities</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="unlisted-shares.html" class="nav-link">Unlisted Shares</a>
+                <a href="upcoming-ipos.html" class="nav-link">Upcoming IPO's</a>
+                
+                <div class="nav-dropdown">
+                    <a href="resources.html" class="nav-link dropdown-toggle">
+                        Resources <span class="dropdown-caret">▾</span>
+                    </a>
+                    <div class="dropdown-menu resources-dropdown-menu">
+                        <a href="blogs.html" class="dropdown-item">
+                            <span class="dropdown-icon">📝</span>
+                            <span class="dropdown-title">Blogs</span>
+                        </a>
+                        <a href="news.html" class="dropdown-item">
+                            <span class="dropdown-icon">📰</span>
+                            <span class="dropdown-title">News</span>
+                        </a>
+                        <a href="videos.html" class="dropdown-item">
+                            <span class="dropdown-icon">🎥</span>
+                            <span class="dropdown-title">Videos</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="nav-link">Contact Us</a>
+
+                <!-- Social Media Channels -->
+                <div class="nav-social-links" aria-label="Social Media Links">
+                    <a href="https://www.instagram.com/meeraassociates_mpspl/" target="_blank" rel="noopener noreferrer" class="nav-social-link nav-social-instagram" aria-label="Instagram" title="Follow us on Instagram">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" class="nav-social-svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@MeeraAssociates-j2z" target="_blank" rel="noopener noreferrer" class="nav-social-link nav-social-youtube" aria-label="YouTube" title="Watch our YouTube Channel">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" class="nav-social-svg">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/meeraassociates/" target="_blank" rel="noopener noreferrer" class="nav-social-link nav-social-facebook" aria-label="Facebook" title="Follow us on Facebook">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" class="nav-social-svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section class="about-hero-section">
+            <div class="about-hero-bg"></div>
+            <div class="financial-grid-overlay"></div>
+            
+            <div class="container text-center" style="position: relative; z-index: 2;">
+                <div class="badge badge-center">
+                    <span class="badge-dot"></span> ESTABLISHED 1985
+                </div>
+                
+                <h1 class="about-hero-title">
+                    About <span class="gradient-text">Meera Associates</span>
+                </h1>
+                
+                <h2 class="about-hero-subheading">
+                    A Legacy of Trust, Transparency, and <span class="gradient-text">Financial Growth</span>
+                </h2>
+                
+                <p class="about-hero-desc">
+                    Building lasting relationships through integrity, market insight, and seamless financial solutions since 1985.
+                </p>
+
+                <div class="hero-cta-group" style="justify-content: center; margin-bottom: 0;">
+                    <a href="#foundation" class="btn btn-primary btn-lg">Explore Our Heritage</a>
+                    <a href="#solutions" class="btn btn-secondary btn-lg">Financial Solutions</a>
+                </div>
+            </div>
+
+            <!-- Curved Color Transition Divider (Where Dark changes to White in curve) -->
+            <div class="hero-curve-divider" aria-hidden="true">
+                <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,0 C420,80 1020,80 1440,0 L1440,80 L0,80 Z" fill="#ffffff"/>
+                    <path d="M0,0 C420,80 1020,80 1440,0" stroke="rgba(56, 189, 248, 0.45)" stroke-width="2.5"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- 2. OUR FOUNDATION — 35+ YEARS OF HERITAGE -->
+        <section id="foundation" class="heritage-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-center">Four Decades of Distinction</div>
+                    <h2 class="section-title">Our Foundation: A 35+ Year Heritage of <span class="gradient-text">Integrity</span></h2>
+                    <p class="section-subtitle">
+                        Built on an unyielding commitment to client trust, disciplined processes, and long-term financial stewardship.
+                    </p>
+                </div>
+
+                <div class="heritage-grid">
+                    <!-- Text Content Box -->
+                    <div class="heritage-text-box">
+                        <p class="heritage-paragraph">
+                            Founded in 1985 by our visionary founder, <strong>Mr. Gobind Singh Dhawda</strong>, Meera Associates began with a fundamental belief that financial services must be built on uncompromising integrity, genuine client relationships, and deep market insight.
+                        </p>
+                        <p class="heritage-paragraph">
+                            When <strong>Jasbir Singh Dhawda</strong> stepped into the business in 1999, he carried forward the principles, discipline, and strategic vision passed down by his father.
+                        </p>
+                        <p class="heritage-paragraph">
+                            Over the past four decades, the financial landscape has transformed significantly, but the core values of Meera Associates have remained constant.
+                        </p>
+                    </div>
+
+                    <!-- Timeline Showcase Card -->
+                    <div class="timeline-vertical">
+                        <!-- Milestone 1985 -->
+                        <div class="timeline-item">
+                            <div class="timeline-year-badge">1985</div>
+                            <div class="timeline-content">
+                                <h4>Founded by Mr. Gobind Singh Dhawda</h4>
+                                <p>Established on core principles of integrity, transparency, and personal client care.</p>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 1999 -->
+                        <div class="timeline-item">
+                            <div class="timeline-year-badge">1999</div>
+                            <div class="timeline-content">
+                                <h4>Next Generation Leadership</h4>
+                                <p>Jasbir Singh Dhawda joined the business and carried forward the family’s principles and vision.</p>
+                            </div>
+                        </div>
+
+                        <!-- Milestone TODAY -->
+                        <div class="timeline-item">
+                            <div class="timeline-year-badge" style="font-size: 0.75rem;">TODAY</div>
+                            <div class="timeline-content">
+                                <h4>Institutional & Private Market Leadership</h4>
+                                <p>Continuing a legacy built on trust, transparency, market insight, and long-term relationships.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. THE MEERA ASSOCIATES PROMISE (Replacing Journey) -->
+        <section id="promise" class="promise-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-center">Core Philosophy</div>
+                    <h2 class="section-title">The Meera Associates <span class="gradient-text">Promise</span></h2>
+                    <p class="section-subtitle">
+                        Three foundational commitments guiding every client interaction, advisory relationship, and private-market transaction.
+                    </p>
+                </div>
+
+                <div class="promise-grid">
+                    <!-- Promise 1 -->
+                    <div class="promise-card">
+                        <div class="promise-icon">🛡️</div>
+                        <h3 class="promise-title">Absolute Transparency</h3>
+                        <p class="promise-desc">
+                            Clear and upfront communication, transparent terms, verified Demat transfers, and strict adherence to regulatory standards across all off-market transactions.
+                        </p>
+                    </div>
+
+                    <!-- Promise 2 -->
+                    <div class="promise-card">
+                        <div class="promise-icon">⚡</div>
+                        <h3 class="promise-title">Seamless Execution</h3>
+                        <p class="promise-desc">
+                            Simplified documentation, prompt coordination, and efficient transaction settlement with end-to-end guidance from enquiry to delivery.
+                        </p>
+                    </div>
+
+                    <!-- Promise 3 -->
+                    <div class="promise-card">
+                        <div class="promise-icon">🤝</div>
+                        <h3 class="promise-title">Client-First Philosophy</h3>
+                        <p class="promise-desc">
+                            Research-driven processes and personalized advisory focused on long-term client trust, capital preservation, and lasting relationships.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PRE-IPO & UNLISTED EQUITIES -->
+        <section id="pre-ipo" class="pre-ipo-section">
+            <div class="container">
+                <div class="pre-ipo-box">
+                    <div class="badge badge-gold">Specialized Capability</div>
+                    <h2 class="section-title" style="margin-bottom: 20px;">
+                        Pioneering Access to Pre-IPO & Unlisted Equities
+                    </h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); max-width: 900px; margin-bottom: 30px;">
+                        Meera Associates has developed a strong presence in the Pre-IPO and Unlisted Share Market. Private-market transactions require careful evaluation, appropriate valuation benchmarks, reliable sourcing, and meticulous off-market execution.
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-main); font-weight: 600; max-width: 900px;">
+                        We assist private wealth clients, retail investors, and corporate institutions with the buying and selling process of unlisted shares, helping make the transaction journey simple, transparent, and hassle-free.
+                    </p>
+
+                    <!-- Visual Pillars -->
+                    <div class="pre-ipo-pillars">
+                        <div class="pillar-card">
+                            <span class="pillar-icon">🏛️</span>
+                            <div class="pillar-title">Private Market</div>
+                        </div>
+                        <div class="pillar-card">
+                            <span class="pillar-icon">🚀</span>
+                            <div class="pillar-title">Pre-IPO Access</div>
+                        </div>
+                        <div class="pillar-card">
+                            <span class="pillar-icon">📊</span>
+                            <div class="pillar-title">Unlisted Shares</div>
+                        </div>
+                        <div class="pillar-card">
+                            <span class="pillar-icon">📜</span>
+                            <div class="pillar-title">Demat Transfer</div>
+                        </div>
+                        <div class="pillar-card">
+                            <span class="pillar-icon">🔒</span>
+                            <div class="pillar-title">Secure Process</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. OUR FINANCIAL SOLUTIONS -->
+        <section id="solutions" class="solutions-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-center">Structured Offerings</div>
+                    <h2 class="section-title">Comprehensive Financial Solutions</h2>
+                    <p class="section-subtitle">
+                        Tailored financial market solutions structured to address wealth creation, capital protection, and liquidity requirements.
+                    </p>
+                </div>
+
+                <div class="solutions-grid">
+                    <!-- Card 1 -->
+                    <div class="solution-card">
+                        <div class="solution-card-top">
+                            <span class="solution-number">01</span>
+                            <span class="solution-icon">📈</span>
+                        </div>
+                        <h3 class="solution-title">PRE-IPO & UNLISTED SHARES</h3>
+                        <p class="solution-desc">
+                            Assistance with the buying and selling process of unlisted shares and access to private-market opportunities.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="solution-card">
+                        <div class="solution-card-top">
+                            <span class="solution-number">02</span>
+                            <span class="solution-icon">🔔</span>
+                        </div>
+                        <h3 class="solution-title">INITIAL PUBLIC OFFERINGS (IPO)</h3>
+                        <p class="solution-desc">
+                            Support for understanding and participating in upcoming mainboard and SME IPO opportunities.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="solution-card">
+                        <div class="solution-card-top">
+                            <span class="solution-number">03</span>
+                            <span class="solution-icon">💼</span>
+                        </div>
+                        <h3 class="solution-title">MUTUAL FUNDS</h3>
+                        <p class="solution-desc">
+                            Investment solutions across active and passive mutual fund strategies based on individual requirements.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="solution-card">
+                        <div class="solution-card-top">
+                            <span class="solution-number">04</span>
+                            <span class="solution-icon">🏦</span>
+                        </div>
+                        <h3 class="solution-title">BONDS & FIXED INCOME</h3>
+                        <p class="solution-desc">
+                            Access to corporate, PSU, and sovereign fixed-income opportunities designed for income and capital preservation.
+                        </p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="solution-card">
+                        <div class="solution-card-top">
+                            <span class="solution-number">05</span>
+                            <span class="solution-icon">💳</span>
+                        </div>
+                        <h3 class="solution-title">LOAN AGAINST SECURITIES</h3>
+                        <p class="solution-desc">
+                            Liquidity solutions against eligible equity, mutual fund, and bond holdings while retaining ownership.
+                        </p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="solution-card">
+                        <div class="solution-card-top">
+                            <span class="solution-number">06</span>
+                            <span class="solution-icon">🛡️</span>
+                        </div>
+                        <h3 class="solution-title">INSURANCE SOLUTIONS</h3>
+                        <p class="solution-desc">
+                            Life, health, and corporate insurance solutions designed to protect families, assets, and businesses.
+                        </p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="solution-card">
+                        <div class="solution-card-top">
+                            <span class="solution-number">07</span>
+                            <span class="solution-icon">⚖️</span>
+                        </div>
+                        <h3 class="solution-title">CAPITAL RAISING & SYNDICATION</h3>
+                        <p class="solution-desc">
+                            Advisory and private-placement support for growth-stage businesses seeking capital.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. BUILDING THE FUTURE TOGETHER -->
+        <section class="future-section">
+            <div class="container">
+                <div class="future-box">
+                    <div class="badge badge-center">Looking Forward</div>
+                    <h2 class="section-title" style="margin-bottom: 20px;">Building the Future Together</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 36px;">
+                        As we look ahead, Meera Associates remains committed to elevating our standards, expanding market opportunities, and helping clients navigate increasingly complex financial markets with clarity and confidence. Whether you are exploring Pre-IPO and unlisted shares, diversifying across fixed-income instruments, or reviewing your financial protection needs, our team is here to assist you.
+                    </p>
+                    
+                    <div class="hero-cta-group" style="justify-content: center; margin-bottom: 0;">
+                        <a href="#solutions" class="btn btn-primary btn-lg">EXPLORE OUR SERVICES</a>
+                        <a href="#contact-cta" class="btn btn-secondary btn-lg">CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. LEADERSHIP / CLOSING SECTION -->
+        <section class="leadership-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-center">Leadership</div>
+                    <h2 class="section-title">Continuing the Legacy</h2>
+                </div>
+
+                <div class="leadership-card">
+                    <div class="leader-avatar-icon">❖</div>
+                    <h3 class="leader-name">Jasbir Singh Dhawda</h3>
+                    <div class="leader-role">Director · Meera Associates</div>
+                    <p class="leader-quote">
+                        “Carrying forward a legacy built on trust, integrity, and long-term relationships.”
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CONTACT CTA BANNER -->
+        <section id="contact-cta" class="contact-banner-section">
+            <div class="container">
+                <div class="contact-banner-box">
+                    <div class="contact-banner-info">
+                        <h2>Let’s Build Your Financial Future Together</h2>
+                        <p>Connect with Meera Associates to learn more about our financial and private-market solutions.</p>
+                        <div class="contact-banner-details">
+                            <a href="tel:+918983388881" class="contact-detail-pill">
+                                <span class="pill-icon">📞</span>
+                                <span>+91 89833 88881</span>
+                            </a>
+                            <a href="tel:+918888415222" class="contact-detail-pill">
+                                <span class="pill-icon">📞</span>
+                                <span>+91 88884 15222</span>
+                            </a>
+                            <a href="https://wa.me/918983388881" target="_blank" rel="noopener" class="contact-detail-pill pill-whatsapp">
+                                <span class="pill-icon" style="color: #22c55e; display: inline-flex; align-items: center;"><svg class="wa-icon-svg" viewBox="0 0 448 512" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></span>
+                                <span>Chat on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-banner-btn-wrap">
+                        <button class="btn btn-primary btn-lg trigger-modal" data-company="General Connect">
+                            CONNECT WITH US
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Col 1: Corporate Brand Identity -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo" aria-label="Meera Associates">
+                    <img src="assets/meera_associates_logo.png" alt="Meera Associates" class="site-logo-img">
+                </a>
+                <p class="footer-tagline">“Trust. Transparency. Long-Term Relationships.”</p>
+                <p class="footer-desc">
+                    Four decades of financial advisory and private equity leadership spearheaded by JasbirSingh Dhawda since 1985. Delivering seamless off-market Demat settlement, research accuracy, and client-first execution.
+                </p>
+                <div class="footer-social-wrap" aria-label="Social Channels">
+                    <a href="https://wa.me/918983388881" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-wa" aria-label="WhatsApp" title="Chat on WhatsApp">
+                        <svg class="wa-icon-svg" viewBox="0 0 448 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/meeraassociates_mpspl/" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-instagram" aria-label="Instagram" title="Follow us on Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@MeeraAssociates-j2z" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-youtube" aria-label="YouTube" title="Watch our YouTube Channel">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/meeraassociates/" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-facebook" aria-label="Facebook" title="Follow us on Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="facts.html">Key Facts & Track Record</a></li>
+                    <li><a href="services.html">Financial Services</a></li>
+                    <li><a href="unlisted-shares.html">Unlisted Shares Directory</a></li>
+                    <li><a href="upcoming-ipos.html">Upcoming IPO's</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="index.html#gallery">Our Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Core Financial Solutions -->
+            <div class="footer-links">
+                <h4>Core Services</h4>
+                <ul>
+                    <li><a href="unlisted-shares.html">Buy & Sell Unlisted Shares</a></li>
+                    <li><a href="services.html#all-services">Dematerialization of Shares</a></li>
+                    <li><a href="services.html#all-services">IEPF Recovery Assistance</a></li>
+                    <li><a href="services.html#all-services">IPO & Capital Raising</a></li>
+                    <li><a href="services.html#all-services">Mutual Funds & Allocation</a></li>
+                    <li><a href="services.html#all-services">Bonds & Fixed Income</a></li>
+                    <li><a href="services.html#all-services">Equity Brokerage & LAS</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Direct Investor Desk & Contact -->
+            <div class="footer-links footer-contact-col">
+                <h4>Direct Investor Desk</h4>
+                <ul class="footer-contact-list">
+                    <li class="footer-contact-item">
+                        <span class="f-icon">📞</span>
+                        <div class="f-content">
+                            <span class="f-label">Advisory Desk</span>
+                            <div>
+                                <a href="tel:+918983388881">+91 89833 88881</a> &nbsp;|&nbsp; 
+                                <a href="tel:+918888415222">+91 88884 15222</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="f-icon f-icon-wa" style="color: #22c55e;"><svg class="wa-icon-svg" viewBox="0 0 448 512" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></span>
+                        <div class="f-content">
+                            <span class="f-label">WhatsApp Priority</span>
+                            <div>
+                                <a href="https://wa.me/918983388881" target="_blank" rel="noopener" class="footer-link-wa">Message on WhatsApp</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="f-icon">☎️</span>
+                        <div class="f-content">
+                            <span class="f-label">Office Landline</span>
+                            <div>
+                                <a href="tel:+919028345588">+91 90283 45588</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="f-icon">✉️</span>
+                        <div class="f-content">
+                            <span class="f-label">Email Inquiries</span>
+                            <div>
+                                <a href="mailto:contact.meeraassociates@gmail.com">contact.meeraassociates@gmail.com</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="f-icon">📍</span>
+                        <div class="f-content">
+                            <span class="f-label">Head Office</span>
+                            <span>Dashmesh Square, A Wing, 2nd Floor, Kalewadi, Pune - 411017</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Statutory Regulatory Notice & SEBI Compliance Disclaimer -->
+        <div class="container footer-disclaimer-wrap">
+            <div class="footer-disclaimer-card">
+                <div class="footer-disclaimer-header">
+                    <span class="f-disc-badge">Regulatory Notice</span>
+                    <strong>Important Investor Information</strong>
+                </div>
+                <p>
+                    Meera Associates operates as an independent private equity facilitation and financial consulting firm. Transactions in unlisted and pre-IPO securities are facilitated strictly through compliant off-market depository transfer mechanisms (NSDL / CDSL) between consenting parties. Unlisted investments are subject to market risks, illiquidity, and transfer procedures. This website is educational and informational in nature and does not constitute a public offer, recommendation, stock exchange trading portal, or solicitation to buy or sell securities. Investors are advised to consult SEBI-registered professionals before making financial decisions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p class="copyright-text">&copy; 2026 Meera Associates. All Rights Reserved. Spearheaded by JasbirSingh Dhawda.</p>
+                <div class="footer-bottom-links">
+                    <a href="contact.html" class="f-bottom-link">Privacy &amp; Compliance</a>
+                    <span class="f-sep">&bull;</span>
+                    <a href="contact.html" class="f-bottom-link">Investor Helpdesk</a>
+                    <span class="f-sep">&bull;</span>
+                    <a href="#main-header" class="f-back-to-top" title="Back to top">Back to Top ↑</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Allocation Modal Popup -->
+    <div class="modal-overlay" id="allocation-modal">
+        <div class="modal-box">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <span class="badge badge-gold">Advisory Desk</span>
+                <h3 id="modal-company-title">Connect with Meera Associates</h3>
+            </div>
+            <p>Our advisory team will reach out to assist you with your financial requirements.</p>
+            <form id="modal-form">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="+91 Mobile Number" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chatbot-kb.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>

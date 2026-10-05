@@ -1,0 +1,1115 @@
+/* ==========================================================================
+   MEERA ASSOCIATES - MEERA AI ASSISTANT CHATBOT STYLES
+   ========================================================================== */
+
+:root {
+    --chat-bg-dark: #ffffff;
+    --chat-bg-card: #f8fafc;
+    --chat-bg-input: #ffffff;
+    --chat-border: #e2e8f0;
+    --chat-border-glow: rgba(2, 132, 199, 0.25);
+    --chat-cyan: #0284c7;
+    --chat-sky: #0369a1;
+    --chat-blue-primary: #0284c7;
+    --chat-blue-dark: #075985;
+    --chat-gold: #b45309;
+    --chat-gold-soft: rgba(180, 83, 9, 0.1);
+    --chat-text-main: #090e17;
+    --chat-text-muted: #475569;
+    --chat-shadow: 0 20px 50px rgba(0, 0, 0, 0.12), 0 0 25px rgba(2, 132, 199, 0.08);
+}
+
+/* ==========================================
+   1. FLOATING LAUNCHER BUTTON
+   ========================================== */
+.meera-chat-launcher {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0b152d 100%);
+    border: 2px solid var(--chat-sky);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 240, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9990;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.meera-chat-launcher:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 35px rgba(0, 240, 255, 0.6);
+    border-color: var(--chat-cyan);
+}
+
+.meera-chat-launcher:active {
+    transform: scale(0.96);
+}
+
+body.disclaimer-open .meera-chat-launcher,
+body.disclaimer-open .meera-chat-window {
+    pointer-events: none;
+    opacity: 0.15;
+    filter: blur(1px);
+}
+
+/* Launcher Icon & State Transitions */
+.meera-launcher-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 26px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.meera-launcher-close-icon {
+    display: none;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.meera-chat-launcher.active .meera-launcher-open-icon {
+    display: none;
+}
+
+.meera-chat-launcher.active .meera-launcher-close-icon {
+    display: block;
+}
+
+/* Pulse Wave Animation */
+.meera-launcher-pulse {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    border: 2px solid var(--chat-cyan);
+    animation: launcherPulseRing 2.4s infinite;
+    pointer-events: none;
+    opacity: 0;
+}
+
+@keyframes launcherPulseRing {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+}
+
+/* Launcher Notification Badge */
+.meera-launcher-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #ef4444;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #070b14;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.6);
+}
+
+/* Tooltip on Hover */
+.meera-launcher-tooltip {
+    position: absolute;
+    right: 74px;
+    background: #ffffff;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #cbd5e1;
+    color: var(--chat-text-main);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 8px 14px;
+    border-radius: 20px;
+    pointer-events: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.meera-chat-launcher:hover .meera-launcher-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ==========================================
+   2. CHAT WINDOW CONTAINER
+   ========================================== */
+.meera-chat-window {
+    position: fixed;
+    bottom: 102px;
+    right: 28px;
+    width: 410px;
+    height: 640px;
+    max-width: calc(100vw - 36px);
+    max-height: calc(100vh - 120px);
+    background: var(--chat-bg-dark);
+    border: 1.5px solid var(--chat-border);
+    border-radius: 22px;
+    box-shadow: var(--chat-shadow);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9995;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(24px) scale(0.95);
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--chat-text-main);
+}
+
+.meera-chat-window:not(.active) {
+    display: none !important;
+}
+
+.meera-chat-window.active {
+    display: flex !important;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+/* Minimized State */
+.meera-chat-window.minimized {
+    height: 70px !important;
+    overflow: hidden;
+}
+
+.meera-chat-window.minimized .meera-chat-body,
+.meera-chat-window.minimized .meera-chat-chips-area,
+.meera-chat-window.minimized .meera-chat-input-bar,
+.meera-chat-window.minimized .meera-chat-footer {
+    display: none !important;
+}
+
+/* ==========================================
+   3. CHAT HEADER
+   ========================================== */
+.meera-chat-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--chat-border);
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    user-select: none;
+}
+
+.meera-chat-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--chat-cyan), transparent);
+    opacity: 0.3;
+}
+
+.meera-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.meera-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0284c7, #0b152d);
+    border: 1.5px solid var(--chat-sky);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--chat-cyan);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+    flex-shrink: 0;
+    position: relative;
+}
+
+.meera-avatar-online {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #10b981;
+    border: 2px solid var(--chat-bg-dark);
+    box-shadow: 0 0 8px #10b981;
+}
+
+.meera-header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.meera-bot-name {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--chat-text-main);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: -0.01em;
+}
+
+.meera-bot-brand {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--chat-gold);
+    background: var(--chat-gold-soft);
+    border: 1px solid rgba(180, 83, 9, 0.2);
+    padding: 1px 6px;
+    border-radius: 4px;
+}
+
+.meera-bot-status {
+    font-size: 11px;
+    color: var(--chat-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    display: inline-block;
+    animation: statusPulse 2s infinite ease-in-out;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.meera-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.meera-header-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: var(--chat-text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.meera-header-btn:hover {
+    background: #e2e8f0;
+    border-color: var(--chat-sky);
+    color: var(--chat-cyan);
+}
+
+/* ==========================================
+   4. CHAT BODY & MESSAGE FEED
+   ========================================== */
+.meera-chat-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    scroll-behavior: smooth;
+    background: #ffffff;
+}
+
+/* Custom Scrollbar */
+.meera-chat-body::-webkit-scrollbar {
+    width: 5px;
+}
+.meera-chat-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+.meera-chat-body::-webkit-scrollbar-thumb {
+    background: rgba(2, 132, 199, 0.2);
+    border-radius: 10px;
+}
+.meera-chat-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(2, 132, 199, 0.4);
+}
+
+/* Message Rows */
+.meera-msg-row {
+    display: flex;
+    gap: 10px;
+    max-width: 100%;
+    animation: msgFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes msgFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.meera-msg-row.bot {
+    align-self: flex-start;
+}
+
+.meera-msg-row.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.meera-msg-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0284c7, #0b152d);
+    border: 1px solid var(--chat-sky);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: var(--chat-cyan);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.meera-msg-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 86%;
+}
+
+.meera-msg-row.user .meera-msg-content-wrapper {
+    align-items: flex-end;
+}
+
+/* Message Bubbles */
+.meera-msg-bubble {
+    padding: 12px 16px;
+    border-radius: 16px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    overflow-wrap: break-word;
+    word-break: normal;
+    position: relative;
+}
+
+.meera-msg-row.bot .meera-msg-bubble {
+    background: var(--chat-bg-card);
+    border: 1px solid var(--chat-border);
+    color: var(--chat-text-main);
+    border-top-left-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.meera-msg-row.user .meera-msg-bubble {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    border: 1px solid rgba(56, 189, 248, 0.5);
+    color: #ffffff;
+    border-top-right-radius: 4px;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.25);
+}
+
+.meera-msg-time {
+    font-size: 10px;
+    color: var(--chat-text-muted);
+    margin-top: 4px;
+    padding: 0 4px;
+}
+
+/* ==========================================
+   5. RICH CARDS & INTERACTIVES
+   ========================================== */
+/* Process Steps Card */
+.chat-process-card {
+    margin-top: 10px;
+    background: #f8fafc;
+    border: 1px solid var(--chat-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chat-process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 10px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.chat-step-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: #e0f2fe;
+    color: #0284c7;
+    font-weight: 800;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(2, 132, 199, 0.3);
+}
+
+.chat-step-info h5 {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--chat-text-main);
+    margin: 0 0 2px 0;
+}
+
+.chat-step-info p {
+    font-size: 11.5px;
+    color: var(--chat-text-muted);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Company Profile Card */
+.chat-company-card {
+    margin-top: 10px;
+    background: #ffffff;
+    border: 1.5px solid var(--chat-border);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.chat-company-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.chat-company-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--chat-text-main);
+    line-height: 1.35;
+    word-break: normal;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+.chat-company-badge {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #0284c7;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    white-space: normal;
+    word-break: normal;
+    line-height: 1.4;
+}
+
+.chat-company-desc {
+    font-size: 12px;
+    color: var(--chat-text-muted);
+    line-height: 1.45;
+    margin-bottom: 10px;
+}
+
+.chat-company-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chat-company-highlights li {
+    font-size: 11.5px;
+    color: var(--chat-text-muted);
+    position: relative;
+    padding-left: 14px;
+    line-height: 1.35;
+}
+
+.chat-company-highlights li::before {
+    content: '•';
+    color: #0284c7;
+    position: absolute;
+    left: 2px;
+    font-weight: bold;
+}
+
+.chat-company-footer {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+/* Contact Details Card */
+.chat-contact-card {
+    margin-top: 10px;
+    background: #f8fafc;
+    border: 1px solid var(--chat-border);
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.chat-contact-title {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: var(--chat-text-main);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.chat-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.chat-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.chat-btn-primary {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #ffffff;
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.chat-btn-primary:hover {
+    background: linear-gradient(135deg, #0369a1, #0284c7);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    color: #ffffff;
+}
+
+.chat-btn-whatsapp {
+    background: #f0fdf4;
+    color: #15803d;
+    border-color: #86efac;
+}
+
+.chat-btn-whatsapp:hover {
+    background: #dcfce7;
+    box-shadow: 0 0 12px rgba(22, 163, 74, 0.2);
+}
+
+.chat-btn-secondary {
+    background: #f1f5f9;
+    color: var(--chat-blue-primary);
+    border-color: #cbd5e1;
+}
+
+.chat-btn-secondary:hover {
+    background: #e2e8f0;
+    color: var(--chat-blue-dark);
+}
+
+/* ==========================================
+   PROMINENT ENQUIRE SHARES BUTTON
+   ========================================== */
+.meera-enquire-shares-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 14px;
+    padding: 13px 20px;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #075985 100%);
+    border: 2px solid var(--chat-sky);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 13.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.25);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+}
+
+.meera-enquire-shares-btn:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #0284c7 50%, #0c4a6e 100%);
+    border-color: var(--chat-cyan);
+    box-shadow: 0 8px 25px rgba(2, 132, 199, 0.4);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.meera-enquire-shares-btn:active {
+    transform: translateY(0);
+}
+
+.meera-enquire-shares-btn .btn-icon {
+    font-size: 18px;
+}
+
+/* ==========================================
+   6. LEAD CAPTURE FORM
+   ========================================== */
+.chat-lead-form {
+    margin-top: 10px;
+    background: #ffffff;
+    border: 1.5px solid var(--chat-border);
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.chat-lead-title {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: var(--chat-text-main);
+    margin-bottom: 4px;
+}
+
+.chat-lead-subtitle {
+    font-size: 11.5px;
+    color: var(--chat-text-muted);
+    margin-bottom: 12px;
+}
+
+.chat-lead-group {
+    margin-bottom: 10px;
+}
+
+.chat-lead-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--chat-text-muted);
+    margin-bottom: 4px;
+}
+
+.chat-lead-input,
+.chat-lead-select {
+    width: 100%;
+    padding: 8px 12px;
+    background: var(--chat-bg-input);
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--chat-text-main);
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat-lead-input:focus,
+.chat-lead-select:focus {
+    border-color: var(--chat-cyan);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.25);
+}
+
+.chat-lead-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.chat-lead-submit {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    border: 1px solid var(--chat-sky);
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 800;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: all 0.2s ease;
+}
+
+.chat-lead-submit:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+}
+
+.chat-lead-disclaimer {
+    font-size: 9.5px;
+    color: var(--chat-text-muted);
+    text-align: center;
+    margin-top: 8px;
+    line-height: 1.35;
+}
+
+/* ==========================================
+   7. TYPING INDICATOR
+   ========================================== */
+.meera-typing-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 14px;
+    background: var(--chat-bg-card);
+    border: 1px solid var(--chat-border);
+    border-radius: 16px;
+    border-top-left-radius: 4px;
+}
+
+.meera-typing-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--chat-sky);
+    animation: typingBounce 1.4s infinite ease-in-out both;
+}
+
+.meera-typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.meera-typing-dot:nth-child(2) { animation-delay: -0.16s; }
+.meera-typing-dot:nth-child(3) { animation-delay: 0s; }
+
+@keyframes typingBounce {
+    0%, 80%, 100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+    }
+    40% {
+        transform: scale(1.1);
+        opacity: 1;
+        background: var(--chat-cyan);
+    }
+}
+
+/* ==========================================
+   8. QUICK ACTION CHIPS
+   ========================================== */
+.meera-chat-chips-area {
+    padding: 8px 10px 6px 10px;
+    background: #f8fafc;
+    border-top: 1px solid var(--chat-border);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    user-select: none;
+}
+
+.meera-chips-nav-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: var(--chat-blue-primary);
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+    padding: 0;
+    line-height: 1;
+}
+
+.meera-chips-nav-btn:hover {
+    background: #f1f5f9;
+    border-color: var(--chat-blue-primary);
+    color: var(--chat-blue-primary);
+    box-shadow: 0 0 10px rgba(2, 132, 199, 0.25);
+    transform: scale(1.1);
+}
+
+.meera-chips-nav-btn:active {
+    transform: scale(0.95);
+}
+
+.meera-chips-scroll {
+    flex: 1;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    scroll-behavior: smooth;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+}
+
+.meera-chips-scroll.is-dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
+/* Sleek cyan scrollbar indicator */
+.meera-chips-scroll::-webkit-scrollbar {
+    height: 4px;
+    display: block;
+}
+
+.meera-chips-scroll::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+}
+
+.meera-chips-scroll::-webkit-scrollbar-thumb {
+    background: rgba(2, 132, 199, 0.3);
+    border-radius: 4px;
+}
+
+.meera-chips-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--chat-blue-primary);
+}
+
+.meera-chip-btn {
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: var(--chat-text-main);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.meera-chip-btn:hover {
+    background: #f1f5f9;
+    border-color: var(--chat-blue-primary);
+    color: var(--chat-blue-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(2, 132, 199, 0.15);
+}
+
+.meera-chip-btn.highlight {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    border: 1.5px solid #0284c7;
+    color: #ffffff;
+    font-weight: 800;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+.meera-chip-btn.highlight:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+    border-color: #0369a1;
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
+    color: #ffffff;
+}
+
+/* ==========================================
+   9. INPUT BAR
+   ========================================== */
+.meera-chat-input-bar {
+    padding: 10px 14px;
+    background: #ffffff;
+    border-top: 1px solid var(--chat-border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.meera-input-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.meera-chat-input {
+    width: 100%;
+    padding: 10px 38px 10px 14px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 24px;
+    color: var(--chat-text-main);
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meera-chat-input:focus {
+    border-color: var(--chat-cyan);
+    box-shadow: 0 0 10px rgba(2, 132, 199, 0.2);
+}
+
+.meera-chat-input::placeholder {
+    color: #94a3b8;
+    font-size: 12.5px;
+}
+
+.meera-emoji-btn {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: var(--chat-text-muted);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.meera-emoji-btn:hover {
+    color: var(--chat-gold);
+    transform: scale(1.15);
+}
+
+.meera-chat-send-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    border: 1px solid var(--chat-sky);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.meera-chat-send-btn:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+    box-shadow: 0 0 15px rgba(2, 132, 199, 0.35);
+    transform: scale(1.05);
+}
+
+.meera-chat-send-btn:active {
+    transform: scale(0.95);
+}
+
+/* ==========================================
+   10. CHAT FOOTER
+   ========================================== */
+.meera-chat-footer {
+    padding: 6px 14px 10px 14px;
+    background: #f8fafc;
+    border-top: 1px solid var(--chat-border);
+    text-align: center;
+}
+
+.meera-chat-footer-brand {
+    font-size: 10px;
+    color: var(--chat-text-muted);
+    line-height: 1.4;
+}
+
+.meera-chat-footer-brand a {
+    color: var(--chat-sky);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.meera-chat-footer-brand a:hover {
+    color: var(--chat-cyan);
+    text-decoration: underline;
+}
+
+/* ==========================================
+   11. MOBILE & RESPONSIVE BREAKPOINTS
+   ========================================== */
+@media (max-width: 640px) {
+    .meera-chat-launcher {
+        bottom: 20px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .meera-launcher-tooltip {
+        display: none;
+    }
+
+    .meera-chat-window {
+        bottom: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 92vh !important;
+        max-width: 100% !important;
+        max-height: 92vh !important;
+        border-radius: 20px 20px 0 0 !important;
+        border-bottom: none !important;
+    }
+
+    .meera-chat-window.minimized {
+        height: 60px !important;
+        bottom: 0 !important;
+        border-radius: 16px 16px 0 0 !important;
+    }
+}

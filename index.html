@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meera Associates | Institutional-Grade Pre-IPO & Unlisted Equities</title>
+    <!-- Google Fonts: Plus Jakarta Sans for high-weight modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="icon" type="image/png" href="assets/meera_associates_logo.png">
+</head>
+<body class="home-page">
+    <!-- Shiny Sky Blue Light Follower -->
+    <div id="mouse-light-follower"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Meera Associates">
+                <img src="assets/meera_associates_logo.png" alt="Meera Associates" class="site-logo-img">
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-link dropdown-toggle">
+                        Services <span class="dropdown-caret">▾</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="services.html#overview" class="dropdown-item">
+                            <span class="dropdown-icon">📈</span>
+                            <span class="dropdown-title">Buy & Sell Pre-IPO & Unlisted Shares</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="demat-shares">
+                            <span class="dropdown-icon">📜</span>
+                            <span class="dropdown-title">Dematerialization of Physical Shares</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="iepf-recovery">
+                            <span class="dropdown-icon">⚖️</span>
+                            <span class="dropdown-title">IEPF Recovery</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="ipo-capital">
+                            <span class="dropdown-icon">🔔</span>
+                            <span class="dropdown-title">IPO Facilitation & Capital Raising</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="mutual-funds">
+                            <span class="dropdown-icon">💼</span>
+                            <span class="dropdown-title">Mutual Funds & Wealth Allocation</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="bonds-fixed">
+                            <span class="dropdown-icon">🏦</span>
+                            <span class="dropdown-title">Bonds & Fixed-Income Securities</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="insurance-solutions">
+                            <span class="dropdown-icon">🛡️</span>
+                            <span class="dropdown-title">Insurance Solutions</span>
+                        </a>
+                        <a href="services.html#all-services" class="dropdown-item" data-service-key="brokerage-las">
+                            <span class="dropdown-icon">💳</span>
+                            <span class="dropdown-title">Equity Brokerage & Loan Against Securities</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="unlisted-shares.html" class="nav-link">Unlisted Shares</a>
+                <a href="upcoming-ipos.html" class="nav-link">Upcoming IPO's</a>
+                
+                <div class="nav-dropdown">
+                    <a href="resources.html" class="nav-link dropdown-toggle">
+                        Resources <span class="dropdown-caret">▾</span>
+                    </a>
+                    <div class="dropdown-menu resources-dropdown-menu">
+                        <a href="blogs.html" class="dropdown-item">
+                            <span class="dropdown-icon">📝</span>
+                            <span class="dropdown-title">Blogs</span>
+                        </a>
+                        <a href="news.html" class="dropdown-item">
+                            <span class="dropdown-icon">📰</span>
+                            <span class="dropdown-title">News</span>
+                        </a>
+                        <a href="videos.html" class="dropdown-item">
+                            <span class="dropdown-icon">🎥</span>
+                            <span class="dropdown-title">Videos</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="nav-link">Contact Us</a>
+
+                <!-- Social Media Channels -->
+                <div class="nav-social-links" aria-label="Social Media Links">
+                    <a href="https://www.instagram.com/meeraassociates_mpspl/" target="_blank" rel="noopener noreferrer" class="nav-social-link nav-social-instagram" aria-label="Instagram" title="Follow us on Instagram">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" class="nav-social-svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@MeeraAssociates-j2z" target="_blank" rel="noopener noreferrer" class="nav-social-link nav-social-youtube" aria-label="YouTube" title="Watch our YouTube Channel">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" class="nav-social-svg">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/meeraassociates/" target="_blank" rel="noopener noreferrer" class="nav-social-link nav-social-facebook" aria-label="Facebook" title="Follow us on Facebook">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" class="nav-social-svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- 1ST PAGE / HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">
+                        <span class="badge-dot"></span> Private Equity & Pre-IPO Institutional Access
+                    </div>
+                    <h1 class="hero-title">
+                        Own India’s Next Giants <br>
+                        <span class="gradient-text">Before the Opening Bell</span>
+                    </h1>
+                    <p class="hero-subtitle" style="margin-bottom: 0;">
+                        Secure early allocations in high-growth enterprises and category leaders. Meera Associates provides private investors and HNWIs with direct, transparent access to institutional-grade pre-IPO and unlisted equities.
+                    </p>
+                </div>
+
+                <!-- Realistic 3D Laptop Display Running Meera Unlisted Market Terminal with Moving Blocks -->
+                <div class="hero-media">
+                    <div class="laptop-3d-scaler">
+                        <!-- 3D Perspective Screen Overlay (Directly on Laptop Screen) -->
+                        <div class="screen-quad-overlay">
+                            <!-- 7-Second Bull Intro Screen Overlay -->
+                            <div class="screen-bull-overlay" id="screen-bull-overlay" role="region" aria-label="Terminal Market Bull Splash">
+                                <div class="bull-screen-top">
+                                    <div class="bull-live-badge">
+                                        <span class="bull-pulse-dot"></span> MEERA MARKET TERMINAL • LIVE DESK
+                                    </div>
+                                    <button type="button" class="bull-skip-btn" id="bull-skip-btn" title="Skip to live scrips">Skip &rarr;</button>
+                                </div>
+                                <div class="bull-img-wrap">
+                                    <img src="assets/bull_transparent.png" alt="Market Bull" class="screen-bull-img">
+                                </div>
+                                <div class="bull-screen-bottom">
+                                    <div class="bull-status-row">
+                                        <span class="bull-status-text">INITIALIZING MARKET DATA & SCRIPS...</span>
+                                        <span class="bull-countdown-badge" id="bull-countdown">7s</span>
+                                    </div>
+                                    <div class="bull-progress-track">
+                                        <div class="bull-progress-bar" id="bull-progress-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="screen-header">
+                                <div class="screen-title">
+                                    <span class="live-dot"></span> MEERA UNLISTED MARKET TERMINAL v2.4
+                                </div>
+                                <a href="unlisted-shares.html" class="screen-more-details-btn" title="View all unlisted shares and market directory">
+                                    More Details &rarr;
+                                </a>
+                            </div>
+
+                            <div class="screen-ticker-bar">
+                                <span><span class="ticker-badge">LIVE FACILITATION</span> • 100% DEMAT EXECUTION</span>
+                                <span class="ticker-subtext">ACTIVE PRIVATE SCRIPS</span>
+                            </div>
+
+                            <div class="screen-cards-stream">
+                                <!-- Row 1: Smooth Moving Cards (Left) -->
+                                <div class="marquee-row">
+                                    <div class="marquee-track marquee-track-left">
+                                        <!-- 1. PXIL -->
+                                        <a href="scripts/pxil/pxil.html" class="moving-company-card" title="Power Exchange India Limited - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#F97316" stroke="#EA580C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #EA580C;">PXIL</div>
+                                            <div class="card-fullname-text">POWER EXCHANGE INDIA LIMITED</div>
+                                            <div class="card-badge-pill">PRE-IPO</div>
+                                        </a>
+
+                                        <!-- 2. NCDEX -->
+                                        <a href="scripts/ncdex/ncdex.html" class="moving-company-card" title="National Commodity & Derivatives Exchange - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L15 8H9L12 2Z" fill="#EAB308"/><path d="M12 22V8" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"/><path d="M12 12C9 10 6 11 5 14C8 14 11 13 12 12Z" fill="#22C55E"/><path d="M12 16C15 14 18 15 19 18C16 18 13 17 12 16Z" fill="#EAB308"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #16A34A;">NCDEX</div>
+                                            <div class="card-fullname-text">NATIONAL COMM. & DERIVATIVES</div>
+                                            <div class="card-badge-pill">COMMODITY</div>
+                                        </a>
+
+                                        <!-- 3. STERLITE POWER -->
+                                        <a href="scripts/sterlitepower/sterlitepower.html" class="moving-company-card" title="Sterlite Power Transmission - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 2V7M15 2V7" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/><path d="M6 7H18V12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12V7Z" fill="#475569" stroke="#1E293B" stroke-width="1.2"/><path d="M12 18V21" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #334155;">STERLITE</div>
+                                            <div class="card-fullname-text">STERLITE POWER TRANSMISSION</div>
+                                            <div class="card-badge-pill">INFRA</div>
+                                        </a>
+
+                                        <!-- 4. NERL -->
+                                        <a href="unlisted-shares.html" class="moving-company-card" title="National E-Repository Limited - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7C3 5.89543 3.89543 5 5 5H9.58579C10.1162 5 10.6249 5.21071 11 5.58579L12.4142 7H19C20.1046 7 21 7.89543 21 9V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V7Z" fill="#F59E0B"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #D97706;">NERL</div>
+                                            <div class="card-fullname-text">NATIONAL E-REPOSITORY LTD</div>
+                                            <div class="card-badge-pill">FINTECH</div>
+                                        </a>
+
+                                        <!-- Duplicate Row 1 for Infinite Continuous Movement -->
+                                        <a href="scripts/pxil/pxil.html" class="moving-company-card" title="Power Exchange India Limited - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#F97316" stroke="#EA580C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #EA580C;">PXIL</div>
+                                            <div class="card-fullname-text">POWER EXCHANGE INDIA LIMITED</div>
+                                            <div class="card-badge-pill">PRE-IPO</div>
+                                        </a>
+                                        <a href="scripts/ncdex/ncdex.html" class="moving-company-card" title="National Commodity & Derivatives Exchange - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L15 8H9L12 2Z" fill="#EAB308"/><path d="M12 22V8" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"/><path d="M12 12C9 10 6 11 5 14C8 14 11 13 12 12Z" fill="#22C55E"/><path d="M12 16C15 14 18 15 19 18C16 18 13 17 12 16Z" fill="#EAB308"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #16A34A;">NCDEX</div>
+                                            <div class="card-fullname-text">NATIONAL COMM. & DERIVATIVES</div>
+                                            <div class="card-badge-pill">COMMODITY</div>
+                                        </a>
+                                        <a href="scripts/sterlitepower/sterlitepower.html" class="moving-company-card" title="Sterlite Power Transmission - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 2V7M15 2V7" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/><path d="M6 7H18V12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12V7Z" fill="#475569" stroke="#1E293B" stroke-width="1.2"/><path d="M12 18V21" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #334155;">STERLITE</div>
+                                            <div class="card-fullname-text">STERLITE POWER TRANSMISSION</div>
+                                            <div class="card-badge-pill">INFRA</div>
+                                        </a>
+                                        <a href="unlisted-shares.html" class="moving-company-card" title="National E-Repository Limited - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7C3 5.89543 3.89543 5 5 5H9.58579C10.1162 5 10.6249 5.21071 11 5.58579L12.4142 7H19C20.1046 7 21 7.89543 21 9V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V7Z" fill="#F59E0B"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #D97706;">NERL</div>
+                                            <div class="card-fullname-text">NATIONAL E-REPOSITORY LTD</div>
+                                            <div class="card-badge-pill">FINTECH</div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Row 2: Smooth Moving Cards (Right) -->
+                                <div class="marquee-row">
+                                    <div class="marquee-track marquee-track-right">
+                                        <!-- 5. RRP S4E -->
+                                        <a href="unlisted-shares.html" class="moving-company-card" title="RRP-S4E Innovation - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#06B6D4" opacity="0.25" stroke="#0284C7" stroke-width="1.8"/><path d="M3.6 12H20.4M12 3.6C14.5 6.5 16 9.2 16 12C16 14.8 14.5 17.5 12 20.4M12 3.6C9.5 6.5 8 9.2 8 12C8 14.8 9.5 17.5 12 20.4" stroke="#0284C7" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #0284C7;">RRP S4E</div>
+                                            <div class="card-fullname-text">RRP-S4E INNOVATION P.LTD.</div>
+                                            <div class="card-badge-pill">AEROSPACE</div>
+                                        </a>
+
+                                        <!-- 6. GOODLUCK -->
+                                        <a href="unlisted-shares.html" class="moving-company-card" title="Goodluck Defence and Aerospace - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4.5 16.5C3.5 15.5 3 14 3 14C3 14 4.5 13.5 5.5 14.5L9.5 10.5C9 8.5 10 6 12.5 3.5C15.5 0.5 20.5 0.5 20.5 0.5C20.5 0.5 20.5 5.5 17.5 8.5C15 11 12.5 12 10.5 11.5L6.5 15.5C7.5 16.5 7 18 7 18C7 18 5.5 17.5 4.5 16.5Z" fill="#EC4899" stroke="#BE185D" stroke-width="1.2"/><path d="M12 12L15 9" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #BE185D;">GOODLUCK</div>
+                                            <div class="card-fullname-text">DEFENCE & AEROSPACE LTD</div>
+                                            <div class="card-badge-pill">DEFENCE</div>
+                                        </a>
+
+                                        <!-- 7. RITE WATER -->
+                                        <a href="scripts/ritewater/ritewater.html" class="moving-company-card" title="Rite Water Solutions - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2.5C12 2.5 5 10 5 15.5C5 19.0899 8.13401 22 12 22C15.866 22 19 19.0899 19 15.5C19 10 12 2.5 12 2.5Z" fill="#38BDF8" stroke="#0284C7" stroke-width="1.2"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #0369A1;">RITE WATER</div>
+                                            <div class="card-fullname-text">RITE WATER SOLUTIONS LTD</div>
+                                            <div class="card-badge-pill">CLEANTECH</div>
+                                        </a>
+
+                                        <!-- 8. PHARMED -->
+                                        <a href="scripts/pharmed/pharmed.html" class="moving-company-card" title="Pharmed Limited - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="5" y="11" width="14" height="8" rx="4" transform="rotate(-45 5 11)" fill="#FB923C"/><path d="M8.53553 7.53553C6.58291 9.48815 6.58291 12.6539 8.53553 14.6066L14.6066 8.53553C12.6539 6.58291 9.48815 6.58291 8.53553 7.53553Z" fill="#F43F5E"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #EA580C;">PHARMED</div>
+                                            <div class="card-fullname-text">PHARMED LIMITED</div>
+                                            <div class="card-badge-pill">PHARMA</div>
+                                        </a>
+
+                                        <!-- Duplicate Row 2 for Infinite Continuous Movement -->
+                                        <a href="unlisted-shares.html" class="moving-company-card" title="RRP-S4E Innovation - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#06B6D4" opacity="0.25" stroke="#0284C7" stroke-width="1.8"/><path d="M3.6 12H20.4M12 3.6C14.5 6.5 16 9.2 16 12C16 14.8 14.5 17.5 12 20.4M12 3.6C9.5 6.5 8 9.2 8 12C8 14.8 9.5 17.5 12 20.4" stroke="#0284C7" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #0284C7;">RRP S4E</div>
+                                            <div class="card-fullname-text">RRP-S4E INNOVATION P.LTD.</div>
+                                            <div class="card-badge-pill">AEROSPACE</div>
+                                        </a>
+                                        <a href="unlisted-shares.html" class="moving-company-card" title="Goodluck Defence and Aerospace - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4.5 16.5C3.5 15.5 3 14 3 14C3 14 4.5 13.5 5.5 14.5L9.5 10.5C9 8.5 10 6 12.5 3.5C15.5 0.5 20.5 0.5 20.5 0.5C20.5 0.5 20.5 5.5 17.5 8.5C15 11 12.5 12 10.5 11.5L6.5 15.5C7.5 16.5 7 18 7 18C7 18 5.5 17.5 4.5 16.5Z" fill="#EC4899" stroke="#BE185D" stroke-width="1.2"/><path d="M12 12L15 9" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #BE185D;">GOODLUCK</div>
+                                            <div class="card-fullname-text">DEFENCE & AEROSPACE LTD</div>
+                                            <div class="card-badge-pill">DEFENCE</div>
+                                        </a>
+                                        <a href="scripts/ritewater/ritewater.html" class="moving-company-card" title="Rite Water Solutions - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2.5C12 2.5 5 10 5 15.5C5 19.0899 8.13401 22 12 22C15.866 22 19 19.0899 19 15.5C19 10 12 2.5 12 2.5Z" fill="#38BDF8" stroke="#0284C7" stroke-width="1.2"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #0369A1;">RITE WATER</div>
+                                            <div class="card-fullname-text">RITE WATER SOLUTIONS LTD</div>
+                                            <div class="card-badge-pill">CLEANTECH</div>
+                                        </a>
+                                        <a href="scripts/pharmed/pharmed.html" class="moving-company-card" title="Pharmed Limited - View Details">
+                                            <div class="card-icon-box">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="5" y="11" width="14" height="8" rx="4" transform="rotate(-45 5 11)" fill="#FB923C"/><path d="M8.53553 7.53553C6.58291 9.48815 6.58291 12.6539 8.53553 14.6066L14.6066 8.53553C12.6539 6.58291 9.48815 6.58291 8.53553 7.53553Z" fill="#F43F5E"/></svg>
+                                            </div>
+                                            <div class="card-code-text" style="color: #EA580C;">PHARMED</div>
+                                            <div class="card-fullname-text">PHARMED LIMITED</div>
+                                            <div class="card-badge-pill">PHARMA</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Physical 3D Laptop Image Frame -->
+                        <img src="assets/laptop_mockup.png" class="laptop-3d-base-img" alt="Meera Associates Unlisted Shares Market Terminal Laptop" width="570" height="387">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curved Color Transition Divider (Where Dark changes to White in curve) -->
+            <div class="hero-curve-divider" aria-hidden="true">
+                <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,0 C420,80 1020,80 1440,0 L1440,80 L0,80 Z" fill="#ffffff"/>
+                    <path d="M0,0 C420,80 1020,80 1440,0" stroke="rgba(56, 189, 248, 0.45)" stroke-width="2.5"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- 2ND PAGE / WHY MEERA ASSOCIATES SECTION -->
+        <section id="why-us" class="why-us-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-center">Institutional Distinction</div>
+                    <h2 class="section-title">Why Meera Associates</h2>
+                    <p class="section-subtitle">
+                        Empowering private investors with direct market access, rigorous research, and seamless Demat execution in India's top unlisted category leaders.
+                    </p>
+                </div>
+
+                <!-- 6 STRUCTURED BLOCKS -->
+                <div class="why-us-grid">
+                    <!-- Block 1 -->
+                    <div class="feature-block">
+                        <div class="block-icon-wrapper">
+                            <span class="block-icon">🏛️</span>
+                        </div>
+                        <h3 class="block-title">Direct Market Leadership</h3>
+                        <p class="block-description">
+                            Founded and spearheaded by Jasbir Singh Dhawda, offering seasoned market direction and direct strategic leadership for private equity investors.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Block 2 -->
+                    <div class="feature-block">
+                        <div class="block-icon-wrapper">
+                            <span class="block-icon">📈</span>
+                        </div>
+                        <h3 class="block-title">150+ Covered Companies</h3>
+                        <p class="block-description">
+                            Curated access to India’s most promising enterprises across established industrial giants, tech leaders, and pre-IPO scrips.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Block 3 -->
+                    <div class="feature-block">
+                        <div class="block-icon-wrapper">
+                            <span class="block-icon">🏷️</span>
+                        </div>
+                        <h3 class="block-title">Competitive Price Discovery</h3>
+                        <p class="block-description">
+                            Real-time liquidity and narrow spreads ensuring optimal entry and exit values for both buyers and sellers.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Block 4 -->
+                    <div class="feature-block">
+                        <div class="block-icon-wrapper">
+                            <span class="block-icon">🔒</span>
+                        </div>
+                        <h3 class="block-title">Frictionless Execution</h3>
+                        <p class="block-description">
+                            Secure, compliant off-market Demat settlement frameworks that guarantee safe and timely share transfers.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Block 5 -->
+                    <div class="feature-block">
+                        <div class="block-icon-wrapper">
+                            <span class="block-icon">📊</span>
+                        </div>
+                        <h3 class="block-title">Research-Led Advisory</h3>
+                        <p class="block-description">
+                            Unbiased insights, valuation tracking, and company updates to help clients build structured, high-conviction portfolios.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Block 6 -->
+                    <div class="feature-block">
+                        <div class="block-icon-wrapper">
+                            <span class="block-icon">🤝</span>
+                        </div>
+                        <h3 class="block-title">Dedicated Investor Support</h3>
+                        <p class="block-description">
+                            Personalized advisory backed by consistent communication, transparent terms, and complete client satisfaction.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3RD PAGE / WHAT WE DO SECTION -->
+        <section id="what-we-do" class="what-we-do-section" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-center">Comprehensive Financial Solutions</div>
+                    <h2 class="section-title">What We Do</h2>
+                    <p class="section-subtitle">
+                        Delivering tailored capital market solutions, private equity discovery, and asset recovery services to help individuals and institutions maximize wealth with minimal friction.
+                    </p>
+                </div>
+
+                <!-- 8 SERVICE BLOCKS GRID -->
+                <div class="services-grid">
+                    <!-- Service Block 1 -->
+                    <div class="service-card">
+                        <div class="service-card-top">
+                            <span class="service-tag">Unlisted & Pre-IPO Equity</span>
+                            <span class="service-icon">📈</span>
+                        </div>
+                        <h3 class="service-title">Buying & Selling of Unlisted Shares</h3>
+                        <p class="service-summary">
+                            Direct access to private, pre-IPO, and high-growth late-stage equities with transparent price discovery and seamless off-market transfer execution.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Service Block 2 -->
+                    <div class="service-card">
+                        <div class="service-card-top">
+                            <span class="service-tag">Capital Markets & Advisory</span>
+                            <span class="service-icon">🏛️</span>
+                        </div>
+                        <h3 class="service-title">IPO & Capital Raising Support</h3>
+                        <p class="service-summary">
+                            End-to-end guidance for companies and high-net-worth investors across capital placement, listing roadmaps, and strategic investment decisions.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Service Block 3 -->
+                    <div class="service-card">
+                        <div class="service-card-top">
+                            <span class="service-tag">Share Dematerialization</span>
+                            <span class="service-icon">📜</span>
+                        </div>
+                        <h3 class="service-title">Dematerialization of Physical Shares</h3>
+                        <p class="service-summary">
+                            Complete assistance in converting legacy paper certificates into electronic Demat format, resolving name mismatches, duplicate certificate requests, and transmission issues.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Service Block 4 -->
+                    <div class="service-card">
+                        <div class="service-card-top">
+                            <span class="service-tag">Asset Recovery & Compliance</span>
+                            <span class="service-icon">⚖️</span>
+                        </div>
+                        <h3 class="service-title">IEPF Claim & Recovery Assistance</h3>
+                        <p class="service-summary">
+                            Specialized legal and procedural support for retrieving unclaimed dividends and shares transferred to the Investor Education and Protection Fund (IEPF).
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Service Block 5 -->
+                    <div class="service-card">
+                        <div class="service-card-top">
+                            <span class="service-tag">Wealth & Portfolio Management</span>
+                            <span class="service-icon">💼</span>
+                        </div>
+                        <h3 class="service-title">Mutual Funds & Structured Products</h3>
+                        <p class="service-summary">
+                            Goal-based asset allocation and curated mutual fund portfolios designed to balance risk and drive steady, long-term capital growth.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Service Block 6 -->
+                    <div class="service-card">
+                        <div class="service-card-top">
+                            <span class="service-tag">Fixed Income Solutions</span>
+                            <span class="service-icon">🏦</span>
+                        </div>
+                        <h3 class="service-title">Bonds & Fixed-Income Securities</h3>
+                        <p class="service-summary">
+                            High-yield corporate bonds, sovereign gold bonds, and government securities tailored for stable cash flows and capital preservation.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Service Block 7 -->
+                    <div class="service-card">
+                        <div class="service-card-top">
+                            <span class="service-tag">Risk Management</span>
+                            <span class="service-icon">🛡️</span>
+                        </div>
+                        <h3 class="service-title">Comprehensive Insurance Planning</h3>
+                        <p class="service-summary">
+                            Robust life and general insurance solutions structured to safeguard personal wealth, business assets, and family legacies.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+
+                    <!-- Service Block 8 -->
+                    <div class="service-card">
+                        <div class="service-card-top">
+                            <span class="service-tag">Equity Brokerage</span>
+                            <span class="service-icon">📊</span>
+                        </div>
+                        <h3 class="service-title">Full-Service Equity Brokerage</h3>
+                        <p class="service-summary">
+                            Competitive execution and active trading support across public equity markets, derivatives, and exchange-traded products.
+                        </p>
+                        <div class="block-sky-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4 / PAGE 4: MILESTONES & RECOMMENDATIONS TRACK RECORD -->
+        <section id="milestones" class="milestones-section" style="background-color: var(--bg-dark); border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-center">MILESTONE</div>
+                    <h2 class="section-title">Our Recommendation to Clients</h2>
+                    <p class="section-subtitle">
+                        Proven track record of high-conviction price discovery, wealth creation, and successful exit returns across unlisted and capital market equities.
+                    </p>
+                </div>
+
+                <div class="milestones-table-wrapper">
+                    <!-- Left Table -->
+                    <div class="milestone-table-card">
+                        <table class="milestone-table">
+                            <thead>
+                                <tr>
+                                    <th>SCRIPTS</th>
+                                    <th>BUY PRICE</th>
+                                    <th>ALL TIME HIGH</th>
+                                    <th>CURRENT MARKET PRICE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🔴</span>
+                                            <span class="table-logo-name rbl-logo">RBL BANK</span>
+                                        </div>
+                                    </td>
+                                    <td>₹80</td>
+                                    <td>675</td>
+                                    <td>₹145</td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🔷</span>
+                                            <span class="table-logo-name bse-logo">BSE</span>
+                                        </div>
+                                    </td>
+                                    <td>₹400</td>
+                                    <td>900</td>
+                                    <td>₹450</td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🎗️</span>
+                                            <span class="table-logo-name nazara-logo">Nazara</span>
+                                        </div>
+                                    </td>
+                                    <td>₹600</td>
+                                    <td>1550</td>
+                                    <td>₹600</td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🔶</span>
+                                            <span class="table-logo-name icici-logo">ICICI Lombard</span>
+                                        </div>
+                                    </td>
+                                    <td>₹300</td>
+                                    <td><span class="highlight-tag">IPO-710</span></td>
+                                    <td>₹1,200</td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🌌</span>
+                                            <span class="table-logo-name galaxy-logo">Galaxy</span>
+                                        </div>
+                                    </td>
+                                    <td>₹250</td>
+                                    <td><span class="highlight-tag">IPO-1480</span></td>
+                                    <td class="multibagger-val">₹2,600</td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">♦️</span>
+                                            <span class="table-logo-name lux-logo">LUX</span>
+                                        </div>
+                                    </td>
+                                    <td>₹600</td>
+                                    <td><span class="bonus-tag">BONUS + SPLIT 1:10</span></td>
+                                    <td>₹1,200</td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🟨</span>
+                                            <span class="table-logo-name epiroc-logo">Epiroc</span>
+                                        </div>
+                                    </td>
+                                    <td>₹800</td>
+                                    <td class="dash-text">—</td>
+                                    <td><span class="buyback-tag">BUY BACK - 1635</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Right Table -->
+                    <div class="milestone-table-card">
+                        <table class="milestone-table">
+                            <thead>
+                                <tr>
+                                    <th>SCRIPTS</th>
+                                    <th>BUY PRICE</th>
+                                    <th>ALL TIME HIGH</th>
+                                    <th>CURRENT MARKET PRICE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🔹</span>
+                                            <span class="table-logo-name tata-logo">TATA TECH</span>
+                                        </div>
+                                    </td>
+                                    <td>₹800</td>
+                                    <td><span class="bonus-tag">BONUS + SPLIT 1:10</span></td>
+                                    <td>₹800</td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🟥</span>
+                                            <span class="table-logo-name studds-logo">STUDDS</span>
+                                        </div>
+                                    </td>
+                                    <td>₹1,000</td>
+                                    <td><span class="bonus-tag">BONUS + SPLIT 1:16</span></td>
+                                    <td>₹900</td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">⭕</span>
+                                            <span class="table-logo-name merino-logo">merino</span>
+                                        </div>
+                                    </td>
+                                    <td>₹900</td>
+                                    <td><span class="unlisted-tag">UNLISTED</span></td>
+                                    <td class="multibagger-val">₹3,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">👑</span>
+                                            <span class="table-logo-name emblem-logo">EMBLEM</span>
+                                        </div>
+                                    </td>
+                                    <td>₹250</td>
+                                    <td><span class="unlisted-tag">UNLISTED</span></td>
+                                    <td class="multibagger-val">₹1,400</td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🌿</span>
+                                            <span class="table-logo-name syngenta-logo">syngenta</span>
+                                        </div>
+                                    </td>
+                                    <td>₹800</td>
+                                    <td class="dash-text">—</td>
+                                    <td><span class="buyback-tag">BUY BACK - 2445</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🟦</span>
+                                            <span class="table-logo-name atlas-logo">Atlas Copco</span>
+                                        </div>
+                                    </td>
+                                    <td>₹1,100</td>
+                                    <td class="dash-text">—</td>
+                                    <td><span class="buyback-tag">BUY BACK - 2100</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script-cell">
+                                        <div class="table-logo-box">
+                                            <span class="table-logo-icon">🔥</span>
+                                            <span class="table-logo-name bbq-logo">BARBEQUE NATION</span>
+                                        </div>
+                                    </td>
+                                    <td>₹500</td>
+                                    <td>1950</td>
+                                    <td>₹500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 / PAGE 5: KEY FACTS & INSTITUTIONAL TRACK RECORD (ABOVE GALLERY) -->
+        <section id="facts" class="facts-section" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-center">Institutional Track Record</div>
+                    <h2 class="section-title">Key Facts & <span class="gradient-text">Proven Performance</span></h2>
+                </div>
+
+                <div class="facts-grid">
+                    <!-- Fact Card 1: 35+ Years of Experience -->
+                    <div class="fact-card">
+                        <div class="fact-card-top">
+                            <div class="fact-icon-badge">🏛️</div>   
+                        </div>
+                        <div class="fact-counter-val">
+                            <span class="fact-counter" data-target="35" data-prefix="" data-suffix="+">0</span>
+                        </div>
+                        <div class="fact-metric-label">Years of Market Experience</div>
+                        <div class="fact-divider"></div>
+                    </div>
+
+                    <!-- Fact Card 2: ₹13000+ Happy Clients -->
+                    <div class="fact-card">
+                        <div class="fact-card-top">
+                            <div class="fact-icon-badge">🤝</div>
+                        </div>
+                        <div class="fact-counter-val">
+                            <span class="fact-counter" data-target="13000" data-prefix="₹" data-suffix="+" data-format="comma">₹0</span>
+                        </div>
+                        <div class="fact-metric-label">Happy & Satisfied Clients</div>
+                        <div class="fact-divider"></div>
+                    </div>
+
+                    <!-- Fact Card 3: 150+ Dealing in Companies -->
+                    <div class="fact-card">
+                        <div class="fact-card-top">
+                            <div class="fact-icon-badge">📈</div>
+                        </div>
+                        <div class="fact-counter-val">
+                            <span class="fact-counter" data-target="150" data-prefix="" data-suffix="+">0</span>
+                        </div>
+                        <div class="fact-metric-label">Dealing in Companies</div>
+                        <div class="fact-divider"></div>
+                        
+                    </div>
+
+                    <!-- Fact Card 4: 850+ CR AUM -->
+                    <div class="fact-card">
+                        <div class="fact-card-top">
+                            <div class="fact-icon-badge">💼</div>
+                        </div>
+                        <div class="fact-counter-val">
+                            <span class="fact-counter" data-target="850" data-prefix="" data-suffix="+ CR">0</span>
+                        </div>
+                        <div class="fact-metric-label">Assets Under Management</div>
+                        <div class="fact-divider"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6 / PAGE 6: OUR GALLERY (ADDED ABOVE CONTACT) -->
+        <section id="gallery" class="gallery-section" style="background-color: var(--bg-dark); border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-center">MEERA ASSOCIATES IN ACTION</div>
+                    <h2 class="section-title">OUR GALLERY</h2>
+                    <p class="section-subtitle">
+                        A glimpse into our corporate headquarters, strategic leadership led by JasbirSingh Dhawda, client advisory desks, and team excellence.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/gallery_1.jpg" alt="Strategic Leadership & Executive">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Mr. Gobind Singh Dhawda</h4>
+                            <p>Senior Leadership</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/gallery_2.jpg" alt="JasbirSingh Dhawda - Founder & Strategic Leader">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Mr. Jasbir Singh Dhawda</h4>
+                            <p>Founder & Strategic Leader</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/gallery_3.jpg" alt="Meera Associates Executive Lounge & Team">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Corporate Team</h4>
+                            <p>Executive Lounge & Advisory</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 -->
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/gallery_4.jpg" alt="Operations & Research Desk">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Operations & Research</h4>
+                            <p>Off-Market Demat Settlement</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5 -->
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/gallery_5.jpg" alt="HNWI Advisory Conference Room">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Client Conference</h4>
+                            <p>High-Conviction Portfolio Desk</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 6 -->
+                    <div class="gallery-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/gallery_6.jpg" alt="Meera Associates Corporate Reception">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Corporate Reception</h4>
+                            <p>Financial District Headquarter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: CLIENT REVIEWS & TESTIMONIALS (ADDED ABOVE CONTACT) -->
+        <section id="reviews" class="reviews-section" style="background-color: var(--bg-surface);">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-center">CLIENT SATISFACTION & VERIFIED REVIEWS</div>
+                    <h2 class="section-title">What Our Client Has To Say</h2>
+                    <p class="section-subtitle">
+                        Trusted by over 13,000+ private equity investors across India for transparent pre-IPO access, research-led price discovery, and secure off-market Demat execution.
+                    </p>
+                </div>
+
+                <div class="reviews-grid">
+                    <!-- Review Card 1 -->
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★ <span class="rating-val">5.0</span></div>
+                        <p class="review-text">
+                            “it was trustworthy and nice experience dealing with the team at Meera Associates. They guided me the process and whole process was made easy. I would deal with them again for buying and selling of pre IPO securities.  Thanks Team.”
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar">VK</div>
+                            <div>
+                                <h4>Vidhata Kulkarni</h4>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 2 -->
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★ <span class="rating-val">5.0</span></div>
+                        <p class="review-text">
+                            “I had an amazing experience dealing with Meera Associates. They are very professional, meticulous in their dealings and transaction. They support client and also educated them in right way. The owner himself involves in dealings and is a soft spoken personality. I would highly recommend to deal with them for their investment needs. I wish them all the best in their success.”
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar">PS</div>
+                            <div>
+                                <h4>Pratik Shaha</h4>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 3 -->
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★ <span class="rating-val">5.0</span></div>
+                        <p class="review-text">
+                            “Excellent service by the team. The process was seamless and the payment as promised was done in 5 mins. I will do business again with them.”
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar">DG</div>
+                            <div>
+                                <h4>Dharit Gajjar</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 4 -->
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★ <span class="rating-val">5.0</span></div>
+                        <p class="review-text">
+                            “Recently dealt with Meera Associates for selling of my unlisted shares. Their approach was very professional and entire process was smooth and quick.”
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar">YB</div>
+                            <div>
+                                <h4>Yogesh Bhide</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 5 -->
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★ <span class="rating-val">5.0</span></div>
+                        <p class="review-text">
+                            “High quality client service, punctual follow ups- a very professional & satisfied experience with Meera Associated during sale of Unlisted shares”
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar">A</div>
+                            <div>
+                                <h4>Aidan</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 6 -->
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★ <span class="rating-val">5.0</span></div>
+                        <p class="review-text">
+                            “Excellent experience,highly professional,transparent,prompt response,smooth execution,client satisfaction.highly recommended for anyone looking for trustworthy partner in off market dealings”
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar">GM</div>
+                            <div>
+                                <h4>Girish Modi</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT / INQUIRY SECTION -->
+        <section id="contact" class="contact-section" style="background-color: var(--bg-dark);">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-text">
+                        <div class="badge">Direct Strategic Advisory</div>
+                        <h2>Ready to Invest in India’s Next Market Leaders?</h2>
+                        <p>Speak directly with JasbirSingh Dhawda and the senior advisory desk at Meera Associates. Receive verified valuation reports, off-market transaction procedures, and custom lot availability.</p>
+                        
+                        <div class="contact-info-list">
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <div>
+                                    <strong>Office Location</strong>
+                                    <p>Dashmesh Square, A Wing, 2nd Floor, Kalewadi, Pune - 411017</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">📞</span>
+                                <div>
+                                    <strong>Direct Advisory Lines</strong>
+                                    <p>
+                                        <a href="tel:+918983388881" style="color: inherit; text-decoration: none;">+91 89833 88881</a> &nbsp;|&nbsp; 
+                                        <a href="tel:+918888415222" style="color: inherit; text-decoration: none;">+91 88884 15222</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon info-icon-wa" style="color: #15803d;"><svg class="wa-icon-svg" viewBox="0 0 448 512" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></span>
+                                <div>
+                                    <strong>WhatsApp Support</strong>
+                                    <p>
+                                        <a href="https://wa.me/918983388881" target="_blank" rel="noopener" style="color: #15803d; text-decoration: none; font-weight: 700;">Chat on WhatsApp &rarr;</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">✉️</span>
+                                <div>
+                                    <strong>Email Correspondence</strong>
+                                    <p><a href="mailto:contact.meeraassociates@gmail.com" style="color: inherit; text-decoration: none;">contact.meeraassociates@gmail.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form id="inquiry-form" class="inquiry-form">
+                            <h3>Private Allocation Request</h3>
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" placeholder="e.g. Rajesh Kumar" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="e.g. rajesh@investor.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone / WhatsApp</label>
+                                <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="interested-scrip">Interested Enterprise / Scrip</label>
+                                <select id="interested-scrip">
+                                    <option value="NSE India">National Stock Exchange (NSE)</option>
+                                    <option value="Reliance Retail">Reliance Retail Ventures</option>
+                                    <option value="Tata Capital">Tata Capital Limited</option>
+                                    <option value="HDB Financial">HDB Financial Services</option>
+                                    <option value="Swiggy">Swiggy Pre-IPO</option>
+                                    <option value="Hexaware">Hexaware Technologies</option>
+                                    <option value="General Portfolio Access">Custom High-Growth Portfolio</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="investment-ticket">Proposed Investment Bracket</label>
+                                <select id="investment-ticket">
+                                    <option value="₹5L - ₹25L">₹5 Lakhs - ₹25 Lakhs</option>
+                                    <option value="₹25L - ₹1Cr">₹25 Lakhs - ₹1 Crore</option>
+                                    <option value="₹1Cr+">₹1 Crore+ (Institutional HNWI)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Submit Priority Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Col 1: Corporate Brand Identity -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo" aria-label="Meera Associates">
+                    <img src="assets/meera_associates_logo.png" alt="Meera Associates" class="site-logo-img">
+                </a>
+                <p class="footer-tagline">“Trust. Transparency. Long-Term Relationships.”</p>
+                <p class="footer-desc">
+                    Four decades of financial advisory and private equity leadership spearheaded by JasbirSingh Dhawda since 1985. Delivering seamless off-market Demat settlement, research accuracy, and client-first execution.
+                </p>
+                <div class="footer-social-wrap" aria-label="Social Channels">
+                    <a href="https://wa.me/918983388881" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-wa" aria-label="WhatsApp" title="Chat on WhatsApp">
+                        <svg class="wa-icon-svg" viewBox="0 0 448 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/meeraassociates_mpspl/" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-instagram" aria-label="Instagram" title="Follow us on Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@MeeraAssociates-j2z" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-youtube" aria-label="YouTube" title="Watch our YouTube Channel">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/meeraassociates/" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-social-facebook" aria-label="Facebook" title="Follow us on Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="facts.html">Key Facts & Track Record</a></li>
+                    <li><a href="services.html">Financial Services</a></li>
+                    <li><a href="unlisted-shares.html">Unlisted Shares Directory</a></li>
+                    <li><a href="upcoming-ipos.html">Upcoming IPO's</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="index.html#gallery">Our Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Core Financial Solutions -->
+            <div class="footer-links">
+                <h4>Core Services</h4>
+                <ul>
+                    <li><a href="unlisted-shares.html">Buy & Sell Unlisted Shares</a></li>
+                    <li><a href="services.html#all-services">Dematerialization of Shares</a></li>
+                    <li><a href="services.html#all-services">IEPF Recovery Assistance</a></li>
+                    <li><a href="services.html#all-services">IPO & Capital Raising</a></li>
+                    <li><a href="services.html#all-services">Mutual Funds & Allocation</a></li>
+                    <li><a href="services.html#all-services">Bonds & Fixed Income</a></li>
+                    <li><a href="services.html#all-services">Equity Brokerage & LAS</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Direct Investor Desk & Contact -->
+            <div class="footer-links footer-contact-col">
+                <h4>Direct Investor Desk</h4>
+                <ul class="footer-contact-list">
+                    <li class="footer-contact-item">
+                        <span class="f-icon">📞</span>
+                        <div class="f-content">
+                            <span class="f-label">Advisory Desk</span>
+                            <div>
+                                <a href="tel:+918983388881">+91 89833 88881</a> &nbsp;|&nbsp; 
+                                <a href="tel:+918888415222">+91 88884 15222</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="f-icon f-icon-wa"><svg class="wa-icon-svg" viewBox="0 0 448 512" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></span>
+                        <div class="f-content">
+                            <span class="f-label">WhatsApp Priority</span>
+                            <div>
+                                <a href="https://wa.me/918983388881" target="_blank" rel="noopener" class="footer-link-wa">Message on WhatsApp</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="f-icon">☎️</span>
+                        <div class="f-content">
+                            <span class="f-label">Office Landline</span>
+                            <div>
+                                <a href="tel:+919028345588">+91 90283 45588</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="f-icon">✉️</span>
+                        <div class="f-content">
+                            <span class="f-label">Email Inquiries</span>
+                            <div>
+                                <a href="mailto:contact.meeraassociates@gmail.com">contact.meeraassociates@gmail.com</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="f-icon">📍</span>
+                        <div class="f-content">
+                            <span class="f-label">Head Office</span>
+                            <span>Dashmesh Square, A Wing, 2nd Floor, Kalewadi, Pune - 411017</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Statutory Regulatory Notice & SEBI Compliance Disclaimer -->
+        <div class="container footer-disclaimer-wrap">
+            <div class="footer-disclaimer-card">
+                <div class="footer-disclaimer-header">
+                    <span class="f-disc-badge">Regulatory Notice</span>
+                    <strong>Important Investor Information</strong>
+                </div>
+                <p>
+                    Meera Associates operates as an independent private equity facilitation and financial consulting firm. Transactions in unlisted and pre-IPO securities are facilitated strictly through compliant off-market depository transfer mechanisms (NSDL / CDSL) between consenting parties. Unlisted investments are subject to market risks, illiquidity, and transfer procedures. This website is educational and informational in nature and does not constitute a public offer, recommendation, stock exchange trading portal, or solicitation to buy or sell securities. Investors are advised to consult SEBI-registered professionals before making financial decisions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p class="copyright-text">&copy; 2026 Meera Associates. All Rights Reserved. Spearheaded by JasbirSingh Dhawda.</p>
+                <div class="footer-bottom-links">
+                    <a href="contact.html" class="f-bottom-link">Privacy &amp; Compliance</a>
+                    <span class="f-sep">&bull;</span>
+                    <a href="contact.html" class="f-bottom-link">Investor Helpdesk</a>
+                    <span class="f-sep">&bull;</span>
+                    <a href="#main-header" class="f-back-to-top" title="Back to top">Back to Top ↑</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mandatory Disclaimer Modal Popup -->
+    <div class="disclaimer-modal-overlay" id="disclaimer-modal" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title" aria-describedby="disclaimer-content">
+        <div class="disclaimer-modal-box">
+            <div class="disclaimer-header">
+                <div class="disclaimer-logo">
+                    <img src="assets/meera_associates_logo.png" alt="Meera Associates" class="site-logo-img" style="height: 60px; width: auto;">
+                </div>
+                <span class="disclaimer-badge">Important Disclaimer</span>
+                <h2 class="disclaimer-title" id="disclaimer-title">Please Read Before Continuing</h2>
+            </div>
+
+            <div class="disclaimer-body" id="disclaimer-content">
+                <p>This website is only for information and education. As per SEBI rules, unlisted shares cannot be traded online, and this website is not a trading or broking platform.</p>
+                <p>Please do your own research and speak with a SEBI-registered advisor before investing. Nothing on this website is investment advice.</p>
+                <p>Meera Associates owns shares in various unlisted companies and buys or sells them only through an offline, off-market process. Every deal is purely a private agreement between two consenting parties.</p>
+            </div>
+
+            <div class="disclaimer-footer-action">
+                <label class="disclaimer-checkbox-label">
+                    <input type="checkbox" id="disclaimer-checkbox" aria-label="I have read and agree to this disclaimer">
+                    <span>I have read and agree to this disclaimer.</span>
+                </label>
+
+                <button type="button" class="btn btn-primary disclaimer-submit-btn" id="disclaimer-submit-btn" disabled>
+                    I Agree & Continue
+                </button>
+
+                <p class="disclaimer-note">
+                    By continuing, you acknowledge that you have read and understood this disclaimer.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Allocation Modal Popup -->
+    <div class="modal-overlay" id="allocation-modal">
+        <div class="modal-box">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <span class="badge">Instant Allocation Desk</span>
+                <h3 id="modal-company-title">Inquire Allocation</h3>
+            </div>
+            <p>Our senior private equity managers will confirm current price spreads and Demat settlement timelines within 30 minutes.</p>
+            <form id="modal-form">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="+91 Mobile Number" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chatbot-kb.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>

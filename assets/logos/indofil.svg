@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <rect width="200" height="80" fill="#ffffff" rx="8"/>
+  <g transform="translate(10, 8)">
+    <!-- Insignia / Brand mark -->
+    <path d="M20 45 C20 25 35 15 50 15 C45 35 35 45 20 45 Z" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M20 45 C20 25 35 15 50 15 C45 35 35 45 20 45 Z" fill="#f59e0b" fill-opacity="0.12" />
+    <!-- Brand Name -->
+    <text x="68" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#047857" letter-spacing="-0.3">INDOFIL</text>
+    <!-- Subtitle / Sector -->
+    <text x="68" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="700" fill="#64748b" letter-spacing="0.8">INDUSTRIES LIMITED</text>
+  </g>
+</svg>
