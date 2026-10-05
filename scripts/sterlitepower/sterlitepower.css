@@ -977,77 +977,78 @@
     }
 }
 
-/* Financial Performance Graph - High-Tech Electric Energy Styling */
+/* Financial Performance Graph - Cohesive Light Theme as per Anugraha */
 .sterlite-card .fin-card-title {
-    color: #f8fafc;
+    color: #0f2439;
 }
 .sterlite-card .fin-kpi-card {
-    background: #0f172a;
-    border-color: #334155;
+    background: #f8fafc;
+    border-color: #e2e8f0;
 }
 .sterlite-card .fin-kpi-card:hover {
-    background: #1e293b;
-    border-color: #38bdf8;
+    border-color: #0284c7;
+    background: #ffffff;
 }
 .sterlite-card .fin-kpi-name {
-    color: #94a3b8;
+    color: #64748b;
 }
 .sterlite-card .fin-kpi-val {
-    color: #f8fafc;
-}
-.sterlite-card .fin-controls-bar {
-    background: #0f172a;
-    border-color: #334155;
-}
-.sterlite-card .fin-metric-tab {
-    background: #1e293b;
-    border-color: #334155;
-    color: #94a3b8;
-}
-.sterlite-card .fin-metric-tab:hover {
-    background: #334155;
-    color: #f8fafc;
-    border-color: #475569;
-}
-.sterlite-card .fin-metric-tab.active {
-    background: #0284c7;
-    border-color: #38bdf8;
-    color: #ffffff;
-    box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
-}
-.sterlite-card .fin-type-toggles {
-    background: #1e293b;
-    border-color: #334155;
-}
-.sterlite-card .fin-type-btn {
-    color: #94a3b8;
-}
-.sterlite-card .fin-type-btn.active {
-    background: #38bdf8;
     color: #0f172a;
 }
+.sterlite-card .fin-controls-bar {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+}
+.sterlite-card .fin-metric-tab {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    color: #475569;
+}
+.sterlite-card .fin-metric-tab:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #94a3b8;
+}
+.sterlite-card .fin-metric-tab.active {
+    background: #0f2942;
+    border-color: #0f2942;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 41, 66, 0.25);
+}
+.sterlite-card .fin-type-toggles {
+    background: #ffffff;
+    border-color: #cbd5e1;
+}
+.sterlite-card .fin-type-btn {
+    color: #64748b;
+}
+.sterlite-card .fin-type-btn.active {
+    background: #0284c7;
+    color: #ffffff;
+    box-shadow: 0 1px 4px rgba(2, 132, 199, 0.3);
+}
 .sterlite-card .fin-data-table-wrapper {
-    background: #0f172a;
-    border-color: #334155;
+    background: #ffffff;
+    border-color: #e2e8f0;
 }
 .sterlite-card .fin-data-table th {
-    background: #1e293b;
-    color: #94a3b8;
-    border-color: #334155;
+    background: #f8fafc;
+    color: #475569;
+    border-color: #f1f5f9;
 }
 .sterlite-card .fin-data-table td {
-    color: #cbd5e1;
-    border-color: #1e293b;
+    color: #334155;
+    border-color: #f1f5f9;
 }
 .sterlite-card .fin-data-table tr:hover td {
-    background: rgba(56, 189, 248, 0.05);
+    background: #f8fafc;
 }
 .sterlite-card .fin-metric-name-cell {
-    color: #f8fafc;
+    color: #0f172a;
 }
 .sterlite-card .fin-note-footer {
-    background: #0f172a;
-    border-color: #38bdf8;
-    color: #94a3b8;
+    background: #f8fafc;
+    border-color: #0284c7;
+    color: #64748b;
 }
 

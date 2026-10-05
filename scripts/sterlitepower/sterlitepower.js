@@ -16,11 +16,11 @@ function initSterliteFinancialChart() {
         window.initFinancialChart({
             containerId: 'sterlite-fin-graph-container',
             canvasId: 'sterlite-fin-canvas',
-            years: ['FY 2021-22', 'FY 2022-23', 'FY 2023-24'],
-            revenue: [3797.00, 3924.00, 4918.00],
-            ebitda: [542.00, 618.00, 725.00],
-            pat: [32.70, 142.50, 216.80],
-            eps: [2.67, 11.65, 18.62],
+            years: ['FY 2023-24', 'FY 2024-25', 'FY 2025-26'],
+            revenue: [4917.89, 4955.76, 6253.55],
+            ebitda: [506.63, 472.42, 569.44],
+            pat: [230.13, 183.03, 237.19],
+            eps: [17.90, 14.56, 18.83],
             theme: 'sterlite',
             title: 'Sterlite Power Financial Trajectory'
         });

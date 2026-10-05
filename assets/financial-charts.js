@@ -28,13 +28,13 @@
             heading: '#0f2942'
         },
         sterlite: {
-            revenue: { bar: '#38bdf8', line: '#38bdf8', bg: 'rgba(56, 189, 248, 0.2)' },
-            ebitda:  { bar: '#34d399', line: '#34d399', bg: 'rgba(52, 211, 153, 0.2)' },
-            pat:     { bar: '#fbbf24', line: '#fbbf24', bg: 'rgba(251, 191, 36, 0.2)' },
-            eps:     { bar: '#a78bfa', line: '#a78bfa', bg: 'rgba(167, 139, 250, 0.2)' },
-            grid:    'rgba(255, 255, 255, 0.08)',
-            text:    '#94a3b8',
-            heading: '#f8fafc'
+            revenue: { bar: '#0284c7', line: '#0284c7', bg: 'rgba(2, 132, 199, 0.15)' },
+            ebitda:  { bar: '#0d9488', line: '#0d9488', bg: 'rgba(13, 148, 136, 0.15)' },
+            pat:     { bar: '#d97706', line: '#d97706', bg: 'rgba(217, 119, 6, 0.15)' },
+            eps:     { bar: '#7c3aed', line: '#7c3aed', bg: 'rgba(124, 58, 237, 0.15)' },
+            grid:    '#e2e8f0',
+            text:    '#475569',
+            heading: '#0f2942'
         },
         anugraha: {
             revenue: { bar: '#1e40af', line: '#1e40af', bg: 'rgba(30, 64, 175, 0.15)' },
