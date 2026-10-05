@@ -217,6 +217,22 @@ window.MEERA_KB = {
             website: "https://www.sterlitepower.com"
         },
         {
+            name: "Goa Shipyard Limited",
+            aliases: ["goa shipyard", "gsl", "goa shipyard limited"],
+            industry: "Defence Shipbuilding & Marine Engineering",
+            isin: "INE178Z01013",
+            faceValue: "₹10.00",
+            overview: "Premier Miniratna Category-I Defence PSU under the Ministry of Defence, Government of India. Designs and builds advanced stealth frigates, offshore patrol vessels, and fast interceptor craft.",
+            highlights: [
+                "68+ years of maritime excellence, established in 1957; 200+ warships and 100+ interceptor boats constructed.",
+                "FY 2025–26 Gross Revenue: ₹4,004.41 Cr (+25.53% YoY), Revenue from Operations: ₹3,764.30 Cr (+32.05% YoY).",
+                "FY 2025–26 PAT: ₹331.45 Cr (+14.91% YoY), Gross Margin (EBITDA): ₹522.40 Cr, EPS: ₹28.47.",
+                "Leadership: Shri Brajesh Kumar Upadhyay (CMD), Rear Admiral Nelson A. J. D'Souza (Director Operations), Shri Amit Satija (Govt Nominee Director)."
+            ],
+            availableInfo: "Direct depository transfer (NSDL / CDSL) and off-market liquidity facilitation available.",
+            website: "https://www.goashipyard.in"
+        },
+        {
             name: "OYO (Oravel Stays Limited)",
             aliases: ["oyo", "oyo rooms", "oravel stays"],
             industry: "Hospitality & Travel Technology",

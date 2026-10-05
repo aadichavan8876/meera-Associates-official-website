@@ -192,8 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Infrastructure',
             logo: 'assets/logos/goa-shipyard.png',
             industry: 'Defense Shipbuilding & Marine Engineering',
-            about: 'Goa Shipyard Limited (GSL) is a premier Miniratna defence public sector undertaking under the Ministry of Defence, building modern warships and patrol vessels.',
-            highlights: ['Miniratna Category-I Defence PSU', 'Specialist in stealth frigates and Offshore Patrol Vessels (OPVs)', 'Advanced indigenous hull design and naval engineering'],
+            about: 'Goa Shipyard Limited (GSL) is a premier Miniratna Category-I defence public sector undertaking under the Ministry of Defence, building modern warships, stealth frigates, and patrol vessels.',
+            highlights: ['Miniratna Category-I Defence PSU (ISIN: INE178Z01013)', 'FY26 Revenue from Ops: ₹3,764.30 Cr (+32.05% YoY) | PAT: ₹331.45 Cr', '200+ Ships delivered & state-of-the-art in-house CAD/CAM design bureau'],
             overview: 'GSL designs, constructs, and repairs advanced naval combatants, coast guard interceptor craft, and specialized support vessels.'
         },
         {

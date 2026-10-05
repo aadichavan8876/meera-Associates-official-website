@@ -7692,6 +7692,54 @@ body.disclaimer-open {
     display: inline-block;
 }
 
+/* Structured Financial Cell Values - Proper alignment in all cases */
+.fin-cell-val {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3px;
+    white-space: nowrap;
+    text-align: right;
+    width: 100%;
+}
+
+.fin-val-main {
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: #0f172a;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.25;
+}
+
+.fin-val-sub {
+    font-size: 0.74rem;
+    color: #64748b;
+    font-weight: 500;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+}
+
+.fin-null-dash {
+    color: #94a3b8;
+    font-weight: 700;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    display: inline-block;
+}
+
+.fin-col-yoy {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.fin-col-yoy .fin-pill-growth {
+    display: inline-flex;
+    justify-content: center;
+}
+
 /* Regulatory Footnote */
 .fin-note-footer {
     display: flex;
