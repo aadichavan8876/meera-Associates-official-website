@@ -725,38 +725,255 @@
 @media (max-width: 992px) {
     .sterlite-metrics-strip {
         grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
     .sterlite-main-grid {
         grid-template-columns: 1fr;
     }
     .sterlite-sidebar {
         position: static;
-        margin-top: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .fin-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sterlite-hero {
+        padding: 45px 0 30px;
+    }
+    .sterlite-hero-container {
+        padding: 0 16px;
+    }
+    .sterlite-hero-title {
+        font-size: clamp(1.45rem, 5.5vw, 2.1rem);
+        line-height: 1.25;
+    }
+    .sterlite-hero-subtitle {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+    .sterlite-hero-tags {
+        gap: 6px;
+    }
+    .sterlite-hero-tag {
+        font-size: 0.74rem;
+        padding: 4px 10px;
+    }
+    .sterlite-page-wrap {
+        padding-bottom: 50px;
+    }
+    .sterlite-card {
+        padding: 22px 18px;
+        border-radius: 14px;
+        margin-bottom: 22px;
     }
 }
 
 @media (max-width: 640px) {
-    .sterlite-hero-title {
-        font-size: 1.85rem;
+    .sterlite-card {
+        padding: 18px 14px;
+        border-radius: 12px;
+        margin-bottom: 18px;
+    }
+    .sterlite-card-header {
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+    }
+    .sterlite-card-title {
+        font-size: 1.15rem;
+        gap: 8px;
+    }
+    .sterlite-card-title-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
     }
     .sterlite-metrics-strip {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .metric-item {
+        padding: 12px 10px;
+        border-radius: 10px;
+        gap: 8px;
+    }
+    .metric-item-num {
+        font-size: 1.2rem;
+    }
+    .metric-item-label {
+        font-size: 0.72rem;
     }
     .directors-grid {
         grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .director-card {
+        padding: 14px;
+        border-radius: 10px;
     }
     .awards-grid {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
-    .sterlite-table .td-label,
-    .sterlite-table .td-val {
+    .award-card {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    /* Transform table into mobile property cards */
+    .sterlite-table,
+    .sterlite-table tbody {
         display: block;
         width: 100%;
-        padding: 6px 12px;
     }
     .sterlite-table tr {
         display: block;
-        padding: 8px 0;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        background: #0b1524;
+        border: 1px solid #1e293b;
+        border-radius: 8px;
+    }
+    .sterlite-table td {
+        display: block;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .sterlite-table .td-label {
+        min-width: 0 !important;
+        width: 100% !important;
+        white-space: normal !important;
+        font-size: 0.74rem;
+        text-transform: uppercase;
+        color: #94a3b8;
+        font-weight: 700;
+        margin-bottom: 4px;
+        letter-spacing: 0.04em;
+    }
+    .sterlite-table .td-val {
+        width: 100% !important;
+        font-size: 0.92rem;
+        color: #f8fafc;
+        font-weight: 700;
+        word-break: break-word;
+    }
+    .isin-copy-badge {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        box-sizing: border-box;
+    }
+
+    /* Financial Graph Mobile Optimizations */
+    .sterlite-card .fin-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+    .sterlite-card .fin-kpi-card {
+        padding: 10px 12px;
+        border-radius: 8px;
+        gap: 4px;
+    }
+    .sterlite-card .fin-kpi-name {
+        font-size: 0.72rem;
+    }
+    .sterlite-card .fin-kpi-val {
+        font-size: 1.22rem;
+    }
+    .sterlite-card .fin-kpi-sub {
+        font-size: 0.7rem;
+    }
+    .sterlite-card .fin-controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .sterlite-card .fin-metric-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        width: 100%;
+    }
+    .sterlite-card .fin-metric-tab {
+        flex: 1 1 calc(33.333% - 5px);
+        min-width: 75px;
+        justify-content: center;
+        padding: 6px 8px;
+        font-size: 0.74rem;
+        border-radius: 6px;
+    }
+    .sterlite-card .fin-type-toggles {
+        width: 100%;
+        display: flex;
+        border-radius: 6px;
+    }
+    .sterlite-card .fin-type-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 6px 10px;
+        font-size: 0.76rem;
+    }
+    .sterlite-card .fin-chart-canvas-wrapper {
+        height: 270px;
+        margin-bottom: 16px;
+    }
+    .sterlite-card .fin-data-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+        margin-bottom: 12px;
+    }
+    .sterlite-card .fin-data-table {
+        min-width: 440px;
+        font-size: 0.8rem;
+    }
+    .sterlite-card .fin-data-table th,
+    .sterlite-card .fin-data-table td {
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+    .sterlite-card .fin-note-footer {
+        font-size: 0.74rem;
+        padding: 10px 12px;
+        line-height: 1.45;
+    }
+
+    /* Sidebar Cards */
+    .sidebar-brand-card,
+    .sidebar-trade-card {
+        padding: 18px 14px;
+        border-radius: 12px;
+    }
+    .sidebar-trade-title {
+        font-size: 1.05rem;
+    }
+    .sidebar-btn-wa {
+        padding: 12px 14px;
+        font-size: 0.92rem;
+    }
+    .sidebar-btn-call {
+        padding: 11px 14px;
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .sterlite-metrics-strip {
+        grid-template-columns: 1fr;
+    }
+    .sterlite-card .fin-kpi-grid {
+        grid-template-columns: 1fr;
+    }
+    .sterlite-card .fin-metric-tab {
+        flex: 1 1 calc(50% - 5px);
     }
 }
 

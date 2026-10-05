@@ -807,41 +807,269 @@
 @media (max-width: 992px) {
     .anugraha-metrics-strip {
         grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
     .anugraha-main-grid {
         grid-template-columns: 1fr;
     }
     .anugraha-sidebar {
         position: static;
-        margin-top: 10px;
+        margin-top: 20px;
+        width: 100%;
     }
     .fin-insights-grid {
         grid-template-columns: 1fr;
     }
+    .fin-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .anugraha-hero {
+        padding: 45px 0 30px;
+    }
+    .anugraha-hero-container {
+        padding: 0 16px;
+    }
+    .anugraha-hero-title {
+        font-size: clamp(1.45rem, 5.5vw, 2.1rem);
+        line-height: 1.25;
+    }
+    .anugraha-hero-subtitle {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+    .anugraha-hero-tags {
+        gap: 6px;
+    }
+    .anugraha-hero-tag {
+        font-size: 0.74rem;
+        padding: 4px 10px;
+    }
+    .anugraha-page-wrap {
+        padding-bottom: 50px;
+    }
+    .anugraha-card {
+        padding: 22px 18px;
+        border-radius: 14px;
+        margin-bottom: 22px;
+    }
 }
 
 @media (max-width: 640px) {
-    .anugraha-hero-title {
-        font-size: 1.85rem;
+    .anugraha-card {
+        padding: 18px 14px;
+        border-radius: 12px;
+        margin-bottom: 18px;
+    }
+    .anugraha-card-header {
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+    }
+    .anugraha-card-title {
+        font-size: 1.15rem;
+        gap: 8px;
+    }
+    .anugraha-card-title-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
     }
     .anugraha-metrics-strip {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .metric-item {
+        padding: 12px 10px;
+        border-radius: 10px;
+        gap: 8px;
+    }
+    .metric-item-num {
+        font-size: 1.2rem;
+    }
+    .metric-item-label {
+        font-size: 0.72rem;
     }
     .directors-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .director-card {
+        padding: 14px;
+        border-radius: 10px;
+    }
+    
+    /* 2 columns for valve products on mobile */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .product-item {
+        padding: 12px 10px;
+        border-radius: 8px;
+    }
+    .product-item h4 {
+        font-size: 0.84rem;
+    }
+    .product-item p {
+        font-size: 0.75rem;
+    }
+
+    /* Transform table into mobile property cards */
+    .anugraha-table,
+    .anugraha-table tbody {
+        display: block;
+        width: 100%;
+    }
+    .anugraha-table tr {
+        display: block;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+    }
+    .anugraha-table td {
+        display: block;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .anugraha-table .td-label {
+        min-width: 0 !important;
+        width: 100% !important;
+        white-space: normal !important;
+        font-size: 0.74rem;
+        text-transform: uppercase;
+        color: #64748b;
+        font-weight: 700;
+        margin-bottom: 4px;
+        letter-spacing: 0.04em;
+    }
+    .anugraha-table .td-val {
+        width: 100% !important;
+        font-size: 0.92rem;
+        color: #0f172a;
+        font-weight: 700;
+        word-break: break-word;
+    }
+    .isin-copy-badge {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        box-sizing: border-box;
+    }
+
+    /* Financial Graph Mobile Optimizations */
+    .anugraha-card .fin-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+    .anugraha-card .fin-kpi-card {
+        padding: 10px 12px;
+        border-radius: 8px;
+        gap: 4px;
+    }
+    .anugraha-card .fin-kpi-name {
+        font-size: 0.72rem;
+    }
+    .anugraha-card .fin-kpi-val {
+        font-size: 1.22rem;
+    }
+    .anugraha-card .fin-kpi-sub {
+        font-size: 0.7rem;
+    }
+    .anugraha-card .fin-controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .anugraha-card .fin-metric-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        width: 100%;
+    }
+    .anugraha-card .fin-metric-tab {
+        flex: 1 1 calc(33.333% - 5px);
+        min-width: 75px;
+        justify-content: center;
+        padding: 6px 8px;
+        font-size: 0.74rem;
+        border-radius: 6px;
+    }
+    .anugraha-card .fin-type-toggles {
+        width: 100%;
+        display: flex;
+        border-radius: 6px;
+    }
+    .anugraha-card .fin-type-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 6px 10px;
+        font-size: 0.76rem;
+    }
+    .anugraha-card .fin-chart-canvas-wrapper {
+        height: 270px;
+        margin-bottom: 16px;
+    }
+    .anugraha-card .fin-data-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+        margin-bottom: 12px;
+    }
+    .anugraha-card .fin-data-table {
+        min-width: 440px;
+        font-size: 0.8rem;
+    }
+    .anugraha-card .fin-data-table th,
+    .anugraha-card .fin-data-table td {
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+    .anugraha-card .fin-note-footer {
+        font-size: 0.74rem;
+        padding: 10px 12px;
+        line-height: 1.45;
+    }
+
+    /* Sidebar Cards */
+    .sidebar-brand-card,
+    .sidebar-trade-card {
+        padding: 18px 14px;
+        border-radius: 12px;
+    }
+    .sidebar-trade-title {
+        font-size: 1.05rem;
+    }
+    .sidebar-btn-wa {
+        padding: 12px 14px;
+        font-size: 0.92rem;
+    }
+    .sidebar-btn-call {
+        padding: 11px 14px;
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .anugraha-metrics-strip {
         grid-template-columns: 1fr;
     }
     .products-grid {
         grid-template-columns: 1fr;
     }
-    .anugraha-table .td-label,
-    .anugraha-table .td-val {
-        display: block;
-        width: 100%;
-        padding: 6px 12px;
+    .anugraha-card .fin-kpi-grid {
+        grid-template-columns: 1fr;
     }
-    .anugraha-table tr {
-        display: block;
-        padding: 8px 0;
+    .anugraha-card .fin-metric-tab {
+        flex: 1 1 calc(50% - 5px);
     }
 }
 

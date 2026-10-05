@@ -206,6 +206,7 @@
         function getScales(metric) {
             const isAll = metric === 'all';
             const isEPSOnly = metric === 'eps';
+            const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
 
             const scales = {
                 x: {
@@ -218,7 +219,7 @@
                         font: {
                             family: "'Plus Jakarta Sans', sans-serif",
                             weight: '600',
-                            size: 12
+                            size: isMobile ? 10 : 12
                         }
                     }
                 },
@@ -234,14 +235,14 @@
                         color: themeColors.text,
                         font: {
                             family: "'Plus Jakarta Sans', sans-serif",
-                            size: 11
+                            size: isMobile ? 9.5 : 11
                         },
                         callback: function (val) {
                             return isEPSOnly ? '₹' + val : '₹' + val + ' Cr';
                         }
                     },
                     title: {
-                        display: true,
+                        display: !isMobile,
                         text: isEPSOnly ? 'Earnings Per Share (₹)' : 'Financial Value (₹ in Crores)',
                         color: themeColors.text,
                         font: {
@@ -265,7 +266,7 @@
                         color: themeColors.eps.line,
                         font: {
                             family: "'Plus Jakarta Sans', sans-serif",
-                            size: 11,
+                            size: isMobile ? 9.5 : 11,
                             weight: '600'
                         },
                         callback: function (val) {
@@ -273,7 +274,7 @@
                         }
                     },
                     title: {
-                        display: true,
+                        display: !isMobile,
                         text: 'EPS (₹ / Share)',
                         color: themeColors.eps.line,
                         font: {
@@ -294,6 +295,7 @@
                 chartInstance.destroy();
             }
 
+            const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
             const ctx = canvas.getContext('2d');
             chartInstance = new Chart(ctx, {
                 type: currentType,
@@ -316,10 +318,11 @@
                                 font: {
                                     family: "'Plus Jakarta Sans', sans-serif",
                                     weight: '600',
-                                    size: 12
+                                    size: isMobile ? 10 : 12
                                 },
                                 usePointStyle: true,
-                                padding: 16
+                                padding: isMobile ? 8 : 16,
+                                boxWidth: isMobile ? 8 : 12
                             }
                         },
                         tooltip: {
