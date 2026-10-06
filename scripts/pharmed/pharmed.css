@@ -1,0 +1,944 @@
+/* ==========================================================================
+   PHARMED LIMITED - DEDICATED STYLESHEET
+   100% Structural & Design Parity with NCDEX / Anugraha Valve Castings Limited
+   
+   Palette: Deep Medical Navy (#071320, #0c2033), Cyan/Blue (#0284c7, #0ea5e9),
+   Crisp White, Neutral Slates & Gold/Amber Accents
+   ========================================================================== */
+
+/* Base page wrapper with clean background */
+.pharmed-page-wrap {
+    padding-bottom: 70px;
+}
+
+/* High-Impact Hero Command Bar (Exact Same Parity as NCDEX / Anugraha) */
+.pharmed-hero {
+    background: linear-gradient(135deg, #071320 0%, #0c2033 50%, #082d49 100%);
+    color: #ffffff;
+    padding: 60px 0 45px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.25);
+}
+
+.pharmed-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 18% 28%, rgba(2, 132, 199, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 82% 72%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.pharmed-hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.pharmed-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    color: #94a3b8;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.pharmed-breadcrumbs a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.pharmed-breadcrumbs a:hover {
+    color: #38bdf8;
+}
+
+.pharmed-breadcrumbs .crumb-sep {
+    color: #64748b;
+}
+
+.pharmed-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(2, 132, 199, 0.22);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #7dd3fc;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.pharmed-hero-badge .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 10px #38bdf8;
+    animation: pulsePharmed 2s infinite;
+}
+
+@keyframes pulsePharmed {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.25); }
+}
+
+.pharmed-hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.pharmed-hero-subtitle {
+    font-size: 1.08rem;
+    color: #cbd5e1;
+    max-width: 880px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+
+/* 4-KPI Metric Strip in Hero */
+.pharmed-metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.pharmed-metric-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pharmed-metric-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.pharmed-metric-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pharmed-metric-value {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+}
+
+.pharmed-metric-sub {
+    font-size: 0.78rem;
+    color: #7dd3fc;
+    font-weight: 600;
+}
+
+/* Main Asymmetric Grid Layout (68% Main / 32% Sidebar) */
+.pharmed-main-grid {
+    max-width: 1240px;
+    margin: 36px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Common Card Architecture */
+.pharmed-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.pharmed-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 25px -4px rgba(15, 23, 42, 0.08);
+}
+
+.pharmed-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pharmed-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pharmed-card-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #e0f2fe;
+    color: #0284c7;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.pharmed-card-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #475569;
+}
+
+/* Master Data Table */
+.pharmed-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pharmed-table tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.15s ease;
+}
+
+.pharmed-table tr:last-child {
+    border-bottom: none;
+}
+
+.pharmed-table tr:hover {
+    background: #f8fafc;
+}
+
+.pharmed-table td {
+    padding: 13px 14px;
+    font-size: 0.93rem;
+    vertical-align: middle;
+}
+
+.pharmed-table .td-label {
+    width: 32%;
+    min-width: 220px;
+    font-weight: 600;
+    color: #475569;
+    white-space: nowrap;
+}
+
+.pharmed-table .td-val {
+    width: 68%;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* ISIN Interactive Copy Badge */
+.isin-copy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0f172a;
+    color: #38bdf8;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 1px solid #334155;
+    transition: all 0.2s ease;
+}
+
+.isin-copy-badge:hover {
+    background: #1e293b;
+    color: #7dd3fc;
+    border-color: #0284c7;
+}
+
+.isin-copy-badge:active {
+    transform: scale(0.97);
+}
+
+.copy-hint {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.pharmed-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.pharmed-link-btn:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+/* Board of Directors: Executive Grid */
+.directors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.director-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.director-card:hover {
+    transform: translateY(-2px);
+    border-color: #0284c7;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+}
+
+.director-check {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.director-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.director-name {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+.director-role {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0284c7;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Strategic Profile Prose & Highlights */
+.pharmed-prose {
+    color: #334155;
+    font-size: 0.97rem;
+    line-height: 1.75;
+}
+
+.pharmed-prose p {
+    margin-bottom: 16px;
+}
+
+.pharmed-prose p:last-child {
+    margin-bottom: 0;
+}
+
+/* Clinical Legacy Feature Box */
+.infrastructure-feature-box {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 4px solid #0284c7;
+    border-radius: 0 12px 12px 0;
+    padding: 20px 22px;
+    margin: 22px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.infra-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.infra-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #0284c7;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.infra-text {
+    font-size: 0.93rem;
+    color: #0c4a6e;
+    line-height: 1.6;
+}
+
+.infra-text strong {
+    color: #0369a1;
+}
+
+/* Products Portfolio Therapy Cards Grid */
+.therapy-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.therapy-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.therapy-card:hover {
+    background: #ffffff;
+    border-color: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.08);
+}
+
+.therapy-card-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.therapy-card-icon {
+    font-size: 1.2rem;
+}
+
+.therapy-card-title {
+    font-size: 0.96rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.therapy-brands-text {
+    font-size: 0.9rem;
+    color: #334155;
+    line-height: 1.55;
+}
+
+.therapy-brands-text strong {
+    color: #0284c7;
+}
+
+/* Services Tri-Grid */
+.services-tri-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.service-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.service-card:hover {
+    background: #ffffff;
+    border-color: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.07);
+}
+
+.service-card-icon {
+    font-size: 1.3rem;
+}
+
+.service-card-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.service-card-desc {
+    font-size: 0.86rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Annual Report Box */
+.filing-badge-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.filing-badge-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filing-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #dbeafe;
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+/* Sticky Sidebar Components */
+.pharmed-sidebar {
+    position: sticky;
+    top: 104px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-brand-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+    text-align: center;
+}
+
+.sidebar-logo-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.02);
+    min-height: 90px;
+}
+
+.sidebar-logo-img {
+    max-width: 100%;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+.sidebar-brand-title {
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.sidebar-brand-sub {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+.sidebar-btn-web {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-web:hover {
+    background: #0284c7;
+    border-color: #0284c7;
+    color: #ffffff;
+}
+
+/* Direct Investor Execution Desk (Sidebar) */
+.sidebar-trade-card {
+    background: linear-gradient(135deg, #071320 0%, #0c2033 100%);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.25);
+    border: 1px solid rgba(2, 132, 199, 0.35);
+}
+
+.sidebar-trade-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.sidebar-trade-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.sidebar-trade-desc {
+    font-size: 0.84rem;
+    color: #cbd5e1;
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+.sidebar-btn-wa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: #25d366;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    margin-bottom: 10px;
+}
+
+.sidebar-btn-wa:hover {
+    background: #22c55e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+.sidebar-btn-call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 11px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-call:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.sidebar-trade-footer {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.75rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Sidebar Credentials Card */
+.sidebar-credentials-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px;
+}
+
+.sidebar-cred-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-cred-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: #334155;
+}
+
+.sidebar-cred-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-cred-bullet {
+    color: #0284c7;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+/* Financial Performance Graph - Pharmed Styling */
+.pharmed-card .fin-card-title {
+    color: #0f2942;
+}
+
+.pharmed-card .fin-kpi-card {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+}
+
+.pharmed-card .fin-kpi-card:hover {
+    border-color: #0284c7;
+    background: #ffffff;
+}
+
+.pharmed-card .fin-metric-tab.active {
+    background: #0f2942;
+    border-color: #0f2942;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 41, 66, 0.25);
+}
+
+.pharmed-card .fin-type-btn.active {
+    background: #0284c7;
+    color: #ffffff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+    .pharmed-metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    .pharmed-main-grid {
+        grid-template-columns: 1fr;
+    }
+    .pharmed-sidebar {
+        position: static;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .therapy-areas-grid {
+        grid-template-columns: 1fr;
+    }
+    .services-tri-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .pharmed-hero {
+        padding: 45px 0 30px;
+    }
+    .pharmed-hero-container {
+        padding: 0 16px;
+    }
+    .pharmed-hero-title {
+        font-size: clamp(1.45rem, 5.5vw, 2.1rem);
+        line-height: 1.25;
+    }
+    .pharmed-hero-subtitle {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+    .pharmed-page-wrap {
+        padding-bottom: 50px;
+    }
+    .pharmed-card {
+        padding: 22px 18px;
+        border-radius: 14px;
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 640px) {
+    .pharmed-card {
+        padding: 18px 14px;
+        border-radius: 12px;
+        margin-bottom: 18px;
+    }
+    .pharmed-card-header {
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+    }
+    .pharmed-card-title {
+        font-size: 1.15rem;
+        gap: 8px;
+    }
+    .pharmed-card-title-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+    .pharmed-metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .directors-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .director-card {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    /* Transform table into mobile cards */
+    .pharmed-table,
+    .pharmed-table tbody {
+        display: block;
+        width: 100%;
+    }
+    .pharmed-table tr {
+        display: block;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+    }
+    .pharmed-table td {
+        display: block;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .pharmed-table .td-label {
+        min-width: 0 !important;
+        width: 100% !important;
+        white-space: normal !important;
+        font-size: 0.74rem;
+        text-transform: uppercase;
+        color: #64748b;
+        font-weight: 700;
+        margin-bottom: 4px;
+        letter-spacing: 0.04em;
+    }
+    .pharmed-table .td-val {
+        width: 100% !important;
+        font-size: 0.92rem;
+        color: #0f172a;
+        font-weight: 700;
+        word-break: break-word;
+    }
+    .isin-copy-badge {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        box-sizing: border-box;
+    }
+
+    /* Sidebar Cards */
+    .sidebar-brand-card,
+    .sidebar-trade-card {
+        padding: 18px 14px;
+        border-radius: 12px;
+    }
+    .sidebar-trade-title {
+        font-size: 1.05rem;
+    }
+    .sidebar-btn-wa {
+        padding: 12px 14px;
+        font-size: 0.92rem;
+    }
+    .sidebar-btn-call {
+        padding: 11px 14px;
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .pharmed-metrics-strip {
+        grid-template-columns: 1fr;
+    }
+}
