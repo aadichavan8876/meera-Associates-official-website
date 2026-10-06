@@ -1,44 +1,43 @@
 /**
- * Sterlite Power Transmission Limited - Dedicated Page Script
+ * Greenzo Energy India Limited - Dedicated Page Script
  * Meera Associates Official Website
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     initIsinCopyFeature();
-    initSterliteFinancialChart();
+    initGreenzoFinancialChart();
 });
 
 /**
  * Initializes the Interactive Financial Performance Graph
  */
-function initSterliteFinancialChart() {
+function initGreenzoFinancialChart() {
     if (window.initFinancialChart) {
         window.initFinancialChart({
-            containerId: 'sterlite-fin-graph-container',
-            canvasId: 'sterlite-fin-canvas',
+            containerId: 'greenzo-fin-graph-container',
+            canvasId: 'greenzo-fin-canvas',
             years: ['FY 2023-24', 'FY 2024-25', 'FY 2025-26'],
-            revenue: [4917.89, 4955.76, 6253.55],
-            revenueRawLakhs: ['49,178.94', '49,557.60', '62,535.53'],
-            ebitda: [506.63, 472.42, 490.60],
-            ebitdaRaw: ['5,066.32', '4,724.24', '4,906.00'],
+            revenue: [14.89, 15.97, 36.81],
+            revenueRawLakhs: ['1,488,755.96', '1596969.2', '3,680,636.45'],
+            ebitda: [1.36, null, null],
+            ebitdaRaw: ['1,35,64,316', 'NA', 'NA'],
             secondMetricLabel: 'EBITDA',
             secondMetricUnit: '₹ Cr',
-            pat: [230.13, 183.03, 237.19],
-            patRawLakhs: ['2,301.27', '1,830.30', '2,371.92'],
-            eps: [null, 13.78, 14.49],
-            revenueLabel: 'Revenue from Operations',
-            theme: 'sterlite',
-            title: 'Sterlite Power Financial Trajectory'
+            pat: [2.00, 1.38, 3.43],
+            patRawLakhs: ['20000000', '1.38,422.04', '343,075.38'],
+            eps: [1.81, 1.18, 2.79],
+            revenueLabel: 'Revenue',
+            theme: 'anugraha',
+            title: 'Greenzo Energy India Financial Trajectory'
         });
     }
 }
 
-
 /**
  * Copies the ISIN code to user clipboard and provides visual feedback
- * @param {string} isin - The ISIN code to copy (default: INE110V01015)
+ * @param {string} isin - The ISIN code to copy (default: INE00A401013)
  */
-function copyIsinCode(isin = 'INE110V01015') {
+function copyIsinCode(isin = 'INE00A401013') {
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(isin)
             .then(showCopiedState)
@@ -88,11 +87,11 @@ function showCopiedState() {
     if (statusEl) {
         const originalText = statusEl.innerHTML;
         statusEl.innerHTML = '✅ Copied!';
-        statusEl.style.color = '#4ade80';
+        statusEl.style.color = '#34d399';
         
         if (badgeBtn) {
-            badgeBtn.style.borderColor = '#22c55e';
-            badgeBtn.style.backgroundColor = '#1e293b';
+            badgeBtn.style.borderColor = '#10b981';
+            badgeBtn.style.backgroundColor = '#064e3b';
         }
 
         setTimeout(() => {
@@ -115,7 +114,7 @@ function initIsinCopyFeature() {
         copyBtn.dataset.bound = 'true';
         copyBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            copyIsinCode('INE110V01015');
+            copyIsinCode('INE00A401013');
         });
     }
 }

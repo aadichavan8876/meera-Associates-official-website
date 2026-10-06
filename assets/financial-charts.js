@@ -44,6 +44,15 @@
             grid:    '#e2e8f0',
             text:    '#475569',
             heading: '#0f2439'
+        },
+        greenzo: {
+            revenue: { bar: '#0284c7', line: '#0284c7', bg: 'rgba(2, 132, 199, 0.15)' },
+            ebitda:  { bar: '#10b981', line: '#10b981', bg: 'rgba(16, 185, 129, 0.15)' },
+            pat:     { bar: '#f59e0b', line: '#f59e0b', bg: 'rgba(245, 158, 11, 0.15)' },
+            eps:     { bar: '#8b5cf6', line: '#8b5cf6', bg: 'rgba(139, 92, 246, 0.15)' },
+            grid:    '#e2e8f0',
+            text:    '#475569',
+            heading: '#042f2e'
         }
     };
 
@@ -63,7 +72,11 @@
             theme = 'standard',
             title = 'Financial Trajectory',
             secondMetricLabel = 'EBITDA',
-            revenueLabel = 'Total Revenue'
+            secondMetricUnit = '₹ Cr',
+            revenueLabel = 'Total Revenue',
+            revenueRawLakhs,
+            patRawLakhs,
+            ebitdaRaw
         } = options;
 
         const container = document.getElementById(containerId);
@@ -86,6 +99,7 @@
         // Build Chart.js Datasets
         function getDatasets(metric, type) {
             const isLine = type === 'line';
+            const isSecondPercent = secondMetricUnit === '%';
 
             if (metric === 'all') {
                 return [
@@ -103,14 +117,19 @@
                         order: 2
                     },
                     {
-                        label: `${secondMetricLabel} (₹ Cr)`,
+                        label: isSecondPercent ? `${secondMetricLabel} (%)` : `${secondMetricLabel} (₹ Cr)`,
                         data: ebitda,
-                        type: isLine ? 'line' : 'bar',
+                        type: isSecondPercent ? 'line' : (isLine ? 'line' : 'bar'),
                         backgroundColor: themeColors.ebitda.bar,
                         borderColor: themeColors.ebitda.line,
-                        borderWidth: isLine ? 3 : 1,
-                        borderRadius: isLine ? 0 : 6,
-                        yAxisID: 'y',
+                        borderWidth: isSecondPercent ? 2.5 : (isLine ? 3 : 1),
+                        borderRadius: (isSecondPercent || isLine) ? 0 : 6,
+                        pointBackgroundColor: '#ffffff',
+                        pointBorderColor: themeColors.ebitda.line,
+                        pointBorderWidth: 2,
+                        pointRadius: isSecondPercent ? 5 : 0,
+                        pointHoverRadius: isSecondPercent ? 7 : 4,
+                        yAxisID: isSecondPercent ? 'y1' : 'y',
                         tension: 0.35,
                         fill: false,
                         order: 3
@@ -158,10 +177,10 @@
                     yAxisID: 'y'
                 },
                 ebitda: {
-                    label: `${secondMetricLabel} (₹ Cr)`,
+                    label: isSecondPercent ? `${secondMetricLabel} (%)` : `${secondMetricLabel} (₹ Cr)`,
                     data: ebitda,
                     color: themeColors.ebitda,
-                    unit: '₹ Cr',
+                    unit: secondMetricUnit,
                     yAxisID: 'y'
                 },
                 pat: {
@@ -206,6 +225,8 @@
         function getScales(metric) {
             const isAll = metric === 'all';
             const isEPSOnly = metric === 'eps';
+            const isSecondPercent = secondMetricUnit === '%';
+            const isPercentOnly = metric === 'ebitda' && isSecondPercent;
             const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
 
             const scales = {
@@ -238,12 +259,13 @@
                             size: isMobile ? 9.5 : 11
                         },
                         callback: function (val) {
+                            if (isPercentOnly) return val + '%';
                             return isEPSOnly ? '₹' + val : '₹' + val + ' Cr';
                         }
                     },
                     title: {
                         display: !isMobile,
-                        text: isEPSOnly ? 'Earnings Per Share (₹)' : 'Financial Value (₹ in Crores)',
+                        text: isPercentOnly ? `${secondMetricLabel} (%)` : (isEPSOnly ? 'Earnings Per Share (₹)' : 'Financial Value (₹ in Crores)'),
                         color: themeColors.text,
                         font: {
                             family: "'Plus Jakarta Sans', sans-serif",
@@ -253,6 +275,11 @@
                     }
                 }
             };
+
+            if (isPercentOnly) {
+                scales.y.suggestedMax = Math.max(...ebitda, 15) + 3;
+                scales.y.min = 0;
+            }
 
             if (isAll) {
                 scales.y1 = {
@@ -270,12 +297,12 @@
                             weight: '600'
                         },
                         callback: function (val) {
-                            return '₹' + val;
+                            return isSecondPercent ? val : '₹' + val;
                         }
                     },
                     title: {
                         display: !isMobile,
-                        text: 'EPS (₹ / Share)',
+                        text: isSecondPercent ? `EPS (₹) / Margin (%)` : 'EPS (₹ / Share)',
                         color: themeColors.eps.line,
                         font: {
                             family: "'Plus Jakarta Sans', sans-serif",
@@ -338,13 +365,28 @@
                                 label: function (context) {
                                     let label = context.dataset.label || '';
                                     let val = context.parsed.y;
+                                    if (val === null || val === undefined || isNaN(val)) {
+                                        return label ? `${label}: Not Disclosed / NA` : 'Not Disclosed / NA';
+                                    }
                                     if (label) {
                                         label += ': ';
                                     }
-                                    if (context.dataset.label.includes('EPS')) {
+                                    if (context.dataset.label.includes('%') || context.dataset.label.includes('Margin')) {
+                                        label += Number(val).toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 2 }) + '%';
+                                    } else if (context.dataset.label.includes('EPS')) {
                                         label += '₹' + Number(val).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                                     } else {
                                         label += '₹' + Number(val).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' Cr';
+                                        if (revenueRawLakhs && context.dataset.label.includes(revenueLabel) && revenueRawLakhs[context.dataIndex] !== undefined) {
+                                            const rawRev = revenueRawLakhs[context.dataIndex];
+                                            label += typeof rawRev === 'string' ? ` (${rawRev})` : ` (${Number(rawRev).toLocaleString('en-IN')} L)`;
+                                        } else if (patRawLakhs && (context.dataset.label.includes('PAT') || context.dataset.label.includes('Profit After Tax')) && patRawLakhs[context.dataIndex] !== undefined) {
+                                            const rawPat = patRawLakhs[context.dataIndex];
+                                            label += typeof rawPat === 'string' ? ` (${rawPat})` : ` (${Number(rawPat).toLocaleString('en-IN')} L)`;
+                                        } else if (ebitdaRaw && (context.dataset.label.includes(secondMetricLabel) || context.dataset.label.includes('EBITDA')) && ebitdaRaw[context.dataIndex] !== undefined) {
+                                            const rawEb = ebitdaRaw[context.dataIndex];
+                                            label += typeof rawEb === 'string' ? ` (${rawEb})` : ` (${Number(rawEb).toLocaleString('en-IN')})`;
+                                        }
                                     }
                                     return label;
                                 }
@@ -391,24 +433,29 @@
         const chartWrapper = container.querySelector('.fin-chart-canvas-wrapper');
         if (!chartWrapper) return;
 
-        const { years, revenue, ebitda, pat, eps } = options;
-        const maxVal = Math.max(...revenue, ...ebitda, ...pat, 100);
+        const { years, revenue, ebitda, pat, eps, secondMetricLabel = 'EBITDA', secondMetricUnit = '₹ Cr' } = options;
+        const isSecondPercent = secondMetricUnit === '%';
+        const numRev = (revenue || []).filter(v => typeof v === 'number' && !isNaN(v));
+        const numPat = (pat || []).filter(v => typeof v === 'number' && !isNaN(v));
+        const maxVal = Math.max(...numRev, ...numPat, 10);
 
         let barsHtml = '';
         years.forEach((yr, idx) => {
             const revHeight = ((revenue[idx] || 0) / maxVal) * 160;
-            const ebHeight = ((ebitda[idx] || 0) / maxVal) * 160;
+            const hasEb = typeof ebitda[idx] === 'number' && !isNaN(ebitda[idx]);
+            const ebHeight = hasEb ? (isSecondPercent ? ((ebitda[idx] || 0) / 25) * 160 : ((ebitda[idx] || 0) / maxVal) * 160) : 0;
             const patHeight = ((pat[idx] || 0) / maxVal) * 160;
+            const ebTitle = hasEb ? (isSecondPercent ? `${secondMetricLabel}: ${ebitda[idx]}%` : `${secondMetricLabel}: ₹${ebitda[idx]} Cr`) : `${secondMetricLabel}: NA`;
 
             barsHtml += `
                 <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;">
                     <div style="height: 180px; width: 100%; display: flex; align-items: flex-end; justify-content: center; gap: 8px; border-bottom: 2px solid #cbd5e1;">
                         <div style="width: 22px; height: ${Math.max(revHeight, 4)}px; background: #0284c7; border-radius: 4px 4px 0 0;" title="Revenue: ₹${revenue[idx]} Cr"></div>
-                        <div style="width: 22px; height: ${Math.max(ebHeight, 4)}px; background: #0d9488; border-radius: 4px 4px 0 0;" title="EBITDA: ₹${ebitda[idx]} Cr"></div>
+                        <div style="width: 22px; height: ${Math.max(ebHeight, 4)}px; background: #0d9488; border-radius: 4px 4px 0 0;" title="${ebTitle}"></div>
                         <div style="width: 22px; height: ${Math.max(patHeight, 4)}px; background: #d97706; border-radius: 4px 4px 0 0;" title="PAT: ₹${pat[idx]} Cr"></div>
                     </div>
                     <strong style="font-size: 0.85rem; color: #1e293b;">${yr}</strong>
-                    <span style="font-size: 0.78rem; color: #7c3aed; font-weight: 700;">EPS: ₹${eps[idx]}</span>
+                    <span style="font-size: 0.78rem; color: #7c3aed; font-weight: 700;">EPS: ${eps[idx] != null && !isNaN(eps[idx]) ? '₹' + eps[idx] : 'NA'}</span>
                 </div>
             `;
         });
@@ -417,7 +464,7 @@
             <div style="padding: 20px; display: flex; flex-direction: column; gap: 16px;">
                 <div style="display: flex; justify-content: center; gap: 16px; font-size: 0.82rem; font-weight: 700;">
                     <span style="color: #0284c7;">■ Revenue</span>
-                    <span style="color: #0d9488;">■ EBITDA</span>
+                    <span style="color: #0d9488;">■ ${secondMetricLabel}</span>
                     <span style="color: #d97706;">■ PAT</span>
                     <span style="color: #7c3aed;">● EPS</span>
                 </div>
