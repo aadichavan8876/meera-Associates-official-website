@@ -28,37 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         document.body.classList.remove('disclaimer-open');
     } else if (disclaimerModal) {
-        const DISCLAIMER_CONFIG = {
-            // Mode options:
-            // 'reload'  -> Show on every website reload / new load (Default requested)
-            // 'session' -> Show once per browser session
-            // 'timed'   -> Show again after X hours
-            mode: 'reload',
-            storageKey: 'meera_disclaimer_accepted',
-            expireHours: 24
-        };
+        const DISCLAIMER_STORAGE_KEY = 'meera_disclaimer_accepted';
 
         function checkDisclaimerStatus() {
-            let shouldShow = true;
+            // Check if visitor has already accepted the disclaimer previously
+            const hasAccepted = localStorage.getItem(DISCLAIMER_STORAGE_KEY) === 'true';
 
-            if (DISCLAIMER_CONFIG.mode === 'session') {
-                if (sessionStorage.getItem(DISCLAIMER_CONFIG.storageKey) === 'true') {
-                    shouldShow = false;
-                }
-            } else if (DISCLAIMER_CONFIG.mode === 'timed') {
-                const acceptedTime = localStorage.getItem(DISCLAIMER_CONFIG.storageKey);
-                if (acceptedTime) {
-                    const now = new Date().getTime();
-                    const hoursPassed = (now - parseInt(acceptedTime, 10)) / (1000 * 60 * 60);
-                    if (hoursPassed < DISCLAIMER_CONFIG.expireHours) {
-                        shouldShow = false;
-                    }
-                }
-            }
-
-            if (shouldShow) {
+            if (!hasAccepted) {
+                // First-time visit: show disclaimer popup
                 disclaimerModal.classList.add('active');
                 document.body.classList.add('disclaimer-open');
+            } else {
+                // Already accepted: never show again on page reloads or returns
+                disclaimerModal.classList.remove('active');
+                document.body.classList.remove('disclaimer-open');
             }
         }
 
@@ -76,11 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             disclaimerSubmitBtn.addEventListener('click', () => {
                 if (disclaimerCheckbox.checked) {
-                    if (DISCLAIMER_CONFIG.mode === 'session') {
-                        sessionStorage.setItem(DISCLAIMER_CONFIG.storageKey, 'true');
-                    } else if (DISCLAIMER_CONFIG.mode === 'timed') {
-                        localStorage.setItem(DISCLAIMER_CONFIG.storageKey, new Date().getTime().toString());
-                    }
+                    // Permanently record acceptance so it does NOT appear again on reload
+                    localStorage.setItem(DISCLAIMER_STORAGE_KEY, 'true');
 
                     disclaimerModal.classList.remove('active');
                     document.body.classList.remove('disclaimer-open');

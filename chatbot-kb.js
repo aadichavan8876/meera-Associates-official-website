@@ -17,7 +17,7 @@ window.MEERA_KB = {
         phones: [
             { label: "Executive Desk", number: "+91 8983388881", tel: "+918983388881" },
             { label: "Advisory Desk", number: "+91 8888415222", tel: "+918888415222" },
-            { label: "Registered Office", number: "+91 9028345588", tel: "+919028345588" }
+            { label: "Registered Office", number: "+91 8446006200", tel: "+918446006200" }
         ],
         whatsapp: {
             number: "+91 89833 88881",
@@ -383,7 +383,7 @@ window.MEERA_KB = {
             id: "how-to-contact",
             q: "How can I contact Meera Associates?",
             keywords: ["contact meera", "phone number", "office address", "call us", "contact details", "helpline"],
-            a: "You can reach Meera Associates directly via:\n• Direct Desk: +91 8983388881\n• Advisory Line: +91 8888415222\n• Office Landline: +91 9028345588\n• WhatsApp Support: Chat on WhatsApp or visit our Contact Us page\n• Email: contact.meeraassociates@gmail.com"
+            a: "You can reach Meera Associates directly via:\n• Direct Desk: +91 8983388881\n• Advisory Line: +91 8888415222\n• Office Landline: +91 8446006200\n• WhatsApp Support: Chat on WhatsApp or visit our Contact Us page\n• Email: contact.meeraassociates@gmail.com"
         }
     ]
 };

@@ -881,7 +881,7 @@ Transactions require an active NRE (repatriable) or NRO (non-repatriable) Demat 
                         <div>📞 Desk 1: <a href="tel:+918983388881" style="color: var(--chat-sky); text-decoration: none;"><strong>+91 8983388881</strong></a></div>
                         <div>📞 Desk 2: <a href="tel:+918888415222" style="color: var(--chat-sky); text-decoration: none;"><strong>+91 8888415222</strong></a></div>
                         <div>${this.waIconSvg} WhatsApp: <a href="https://wa.me/918983388881" target="_blank" rel="noopener" style="color: #15803d; text-decoration: none;"><strong>Chat on WhatsApp &rarr;</strong></a></div>
-                        <div>🏢 Office: <a href="tel:+919028345588" style="color: var(--chat-sky); text-decoration: none;"><strong>+91 9028345588</strong></a></div>
+                        <div>🏢 Office: <a href="tel:+918446006200" style="color: var(--chat-sky); text-decoration: none;"><strong>+91 8446006200</strong></a></div>
                         <div>📧 <a href="mailto:contact.meeraassociates@gmail.com" style="color: var(--chat-sky); text-decoration: none;">contact.meeraassociates@gmail.com</a></div>
                     </div>
 
