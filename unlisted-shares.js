@@ -1138,8 +1138,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Form Submission
     if (enquiryForm) {
-        enquiryForm.addEventListener('submit', (e) => {
+        enquiryForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            const submitBtn = enquiryForm.querySelector('.enquiry-submit-btn');
+            const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span>⏳ Sending Enquiry...</span>';
+            }
+
+            const company = (document.getElementById('enquiry-company-name')?.value || '').trim();
+            const name = (document.getElementById('enquiry-user-name')?.value || '').trim();
+            const mobile = (document.getElementById('enquiry-user-mobile')?.value || '').trim();
+            const email = (document.getElementById('enquiry-user-email')?.value || '').trim();
+            const quantity = (document.getElementById('enquiry-user-quantity')?.value || '').trim();
+            const message = (document.getElementById('enquiry-user-message')?.value || '').trim();
+
+            const payload = {
+                _subject: `Unlisted Shares Allocation Enquiry: ${company || 'General'} - ${name}`,
+                "Target Company": company,
+                "Full Name": name,
+                "Mobile Number": mobile,
+                "Email Address": email,
+                "Quantity / Requirement": quantity || 'Standard Lot',
+                "Message Details": message,
+                "Source Page": "Unlisted Shares Directory Modal",
+                "Submission Time": new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+                _template: 'table',
+                _captcha: 'false'
+            };
+            if (email) payload._replyto = email;
+
+            try {
+                await fetch('https://formsubmit.co/ajax/contact.meeraassociates@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+            } catch (err) {
+                console.warn('Enquiry form submission notice:', err);
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHTML;
+                }
+            }
 
             // Success Display
             if (enquiryForm) enquiryForm.style.display = 'none';

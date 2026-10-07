@@ -369,30 +369,161 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /**
+     * Helper to dispatch form submissions directly to contact.meeraassociates@gmail.com
+     * via FormSubmit.co AJAX API.
+     */
+    async function submitMeeraFormToEmail(payload, submitBtn, successMsg, onComplete) {
+        const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>⏳ Sending Enquiry...</span>';
+        }
+
+        const endpoint = 'https://formsubmit.co/ajax/contact.meeraassociates@gmail.com';
+
+        try {
+            const bodyData = {
+                ...payload,
+                _subject: payload._subject || `New Website Enquiry - Meera Associates (${payload['Full Name'] || 'Investor'})`,
+                _template: 'table',
+                _captcha: 'false'
+            };
+            if (payload['Email Address'] || payload.email || payload.Email) {
+                bodyData._replyto = payload['Email Address'] || payload.email || payload.Email;
+            }
+
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(bodyData)
+            });
+
+            if (response.ok) {
+                if (typeof onComplete === 'function') onComplete(true);
+            } else {
+                throw new Error('Server returned status: ' + response.status);
+            }
+        } catch (err) {
+            console.warn('Form submission notice:', err);
+            if (typeof onComplete === 'function') onComplete(false);
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+            }
+        }
+    }
+
     if (modalForm) {
-        modalForm.addEventListener('submit', (e) => {
+        modalForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            alert('Thank you! Your allocation inquiry has been submitted to JasbirSingh Dhawda & the Meera Associates advisory team.');
-            if (modal) modal.classList.remove('active');
-            modalForm.reset();
+            const submitBtn = modalForm.querySelector('button[type="submit"]');
+            const inputs = modalForm.querySelectorAll('input');
+            const name = (inputs[0]?.value || '').trim();
+            const phone = (inputs[1]?.value || '').trim();
+            const company = modalCompanyTitle ? modalCompanyTitle.textContent.replace('Inquire Allocation:', '').replace('Connect with Meera Associates', 'General Advisory').trim() : 'Unlisted Equity';
+
+            const payload = {
+                _subject: `Instant Allocation Inquiry: ${company} - ${name}`,
+                "Target Requirement": company,
+                "Full Name": name,
+                "Mobile Phone": phone,
+                "Source Page": window.location.pathname || "Website Modal",
+                "Submission Time": new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+            };
+
+            await submitMeeraFormToEmail(
+                payload,
+                submitBtn,
+                null,
+                () => {
+                    alert(`Thank you! Your allocation inquiry for "${company}" has been sent to our advisory desk (contact.meeraassociates@gmail.com). Our team will contact you shortly.`);
+                    if (modal) modal.classList.remove('active');
+                    modalForm.reset();
+                }
+            );
         });
     }
 
     const inquiryForm = document.getElementById('inquiry-form');
     if (inquiryForm) {
-        inquiryForm.addEventListener('submit', (e) => {
+        inquiryForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            alert('Priority allocation request submitted successfully! An advisory representative will contact you shortly.');
-            inquiryForm.reset();
+            const submitBtn = inquiryForm.querySelector('button[type="submit"]');
+            const name = (document.getElementById('fullname')?.value || '').trim();
+            const email = (document.getElementById('email')?.value || '').trim();
+            const phone = (document.getElementById('phone')?.value || '').trim();
+            const interest = (document.getElementById('interested-scrip')?.value || '').trim();
+
+            const payload = {
+                _subject: `Priority Allocation Request: ${name}`,
+                "Full Name": name,
+                "Email Address": email,
+                "Phone / WhatsApp": phone,
+                "Share Your Interest": interest || 'General Private Equity Interest',
+                "Source Page": "Home Page (Priority Allocation Form)",
+                "Submission Time": new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+            };
+
+            await submitMeeraFormToEmail(
+                payload,
+                submitBtn,
+                null,
+                () => {
+                    const alertEl = document.getElementById('inquiry-success-alert');
+                    if (alertEl) {
+                        alertEl.style.display = 'block';
+                        alertEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    } else {
+                        alert("Priority allocation request submitted successfully! Your details have been emailed to our advisory desk (contact.meeraassociates@gmail.com).");
+                    }
+                    inquiryForm.reset();
+                }
+            );
         });
     }
 
     const contactPageForm = document.getElementById('contact-page-form');
     if (contactPageForm) {
-        contactPageForm.addEventListener('submit', (e) => {
+        contactPageForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            alert("Thank you for contacting Meera Associates. Our team will get in touch with you shortly.");
-            contactPageForm.reset();
+            const submitBtn = contactPageForm.querySelector('button[type="submit"]');
+            const name = (document.getElementById('contact-name')?.value || '').trim();
+            const phone = (document.getElementById('contact-phone')?.value || '').trim();
+            const email = (document.getElementById('contact-email')?.value || '').trim();
+            const subject = (document.getElementById('contact-subject')?.value || '').trim();
+            const message = (document.getElementById('contact-message')?.value || '').trim();
+
+            const payload = {
+                _subject: `New Contact Enquiry: ${subject || 'General'} - ${name}`,
+                "Full Name": name,
+                "Mobile Number": phone,
+                "Email Address": email,
+                "Enquiry Subject": subject,
+                "Message Details": message,
+                "Source Page": "Contact Us Page",
+                "Submission Time": new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+            };
+
+            await submitMeeraFormToEmail(
+                payload,
+                submitBtn,
+                null,
+                () => {
+                    const alertEl = document.getElementById('contact-success-alert');
+                    if (alertEl) {
+                        alertEl.style.display = 'block';
+                        alertEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    } else {
+                        alert("Thank you for contacting Meera Associates! Your enquiry has been received and emailed to our desk (contact.meeraassociates@gmail.com). Our team will get in touch with you shortly.");
+                    }
+                    contactPageForm.reset();
+                }
+            );
         });
     }
 

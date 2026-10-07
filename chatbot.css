@@ -221,6 +221,16 @@ body.disclaimer-open .meera-chat-window {
     box-shadow: 0 6px 22px rgba(37, 211, 102, 0.7), 0 3px 8px rgba(0, 0, 0, 0.35);
 }
 
+/* Email Us Button (Direct Email Inquiries) */
+.meera-wa-email-btn {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    box-shadow: 0 4px 16px rgba(2, 132, 199, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.meera-wa-email-btn:hover {
+    box-shadow: 0 6px 22px rgba(2, 132, 199, 0.7), 0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
 /* Join Us Button (WhatsApp Community Group) */
 .meera-wa-join-btn {
     background: linear-gradient(135deg, #128c7e 0%, #075e54 100%);
