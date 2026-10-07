@@ -150,8 +150,8 @@
                 </p>
 
                 <div class="hero-cta-group" style="justify-content: center; margin-bottom: 0; gap: 18px;">
-                    <a href="unlisted-shares.html?action=buy#enquire" class="btn btn-primary btn-lg">BUY UNLISTED SHARES</a>
-                    <a href="unlisted-shares.html?action=sell#enquire" class="btn btn-secondary btn-lg">SELL UNLISTED SHARES</a>
+                    <button type="button" class="btn btn-primary btn-lg trigger-modal" data-company="Buy Pre-IPO &amp; Unlisted Shares Desk">BUY UNLISTED SHARES</button>
+                    <button type="button" class="btn btn-secondary btn-lg trigger-modal" data-company="Sell Unlisted Shares Desk">SELL UNLISTED SHARES</button>
                 </div>
             </div>
 
@@ -183,7 +183,7 @@
                         <p class="solution-desc">
                             Access curated unlisted opportunities across technology, financial services, energy, defense, and manufacturing sectors with verified Demat credit.
                         </p>
-                        <a href="unlisted-shares.html?action=buy#enquire" class="btn btn-secondary btn-sm" style="margin-top: auto; align-self: flex-start;">Inquire Buy Desk</a>
+                        <button type="button" class="btn btn-secondary btn-sm trigger-modal" data-company="Buy Pre-IPO &amp; Unlisted Shares Desk" style="margin-top: auto; align-self: flex-start;">Inquire Buy Desk</button>
                     </div>
 
                     <!-- Info Card 2: SELL -->
@@ -193,7 +193,7 @@
                         <p class="solution-desc">
                             Liquidate existing unlisted holdings or ESOP allotments seamlessly with competitive valuation quotes and guaranteed same-day payout execution.
                         </p>
-                        <a href="unlisted-shares.html?action=sell#enquire" class="btn btn-secondary btn-sm" style="margin-top: auto; align-self: flex-start;">Inquire Sell Desk</a>
+                        <button type="button" class="btn btn-secondary btn-sm trigger-modal" data-company="Sell Unlisted Shares Desk" style="margin-top: auto; align-self: flex-start;">Inquire Sell Desk</button>
                     </div>
 
                     <!-- Info Card 3: EXECUTION -->
@@ -335,7 +335,7 @@
                             <h4>NSDL Stamp Duty Portal</h4>
                             <p>Official NSDL online portal for e-DIS authorization and off-market stamp duty payment processing.</p>
                         </div>
-                        <a href="https://www.nsdl.co.in/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="white-space: nowrap;">Visit NSDL ↗</a>
+                        <a href="https://nsdl.com/investor-services-stamp-calculator" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="white-space: nowrap;">Visit NSDL ↗</a>
                     </div>
 
                     <!-- CDSL Portal Card -->
@@ -344,7 +344,7 @@
                             <h4>CDSL Easiest Portal</h4>
                             <p>Official CDSL India web portal for electronic off-market transfer execution and stamp duty compliance.</p>
                         </div>
-                        <a href="https://www.cdslindia.com/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="white-space: nowrap;">Visit CDSL ↗</a>
+                        <a href="https://upih.cdslindia.com/sd_payment/StampdutyDetails.aspx" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="white-space: nowrap;">Visit CDSL ↗</a>
                     </div>
                 </div>
             </div>
@@ -508,8 +508,8 @@
                 </div>
 
                 <div class="hero-cta-group" style="justify-content: center; gap: 20px;">
-                    <a href="unlisted-shares.html?action=buy#enquire" class="btn btn-primary btn-lg">BUY UNLISTED SHARES</a>
-                    <a href="unlisted-shares.html?action=sell#enquire" class="btn btn-secondary btn-lg">SELL UNLISTED SHARES</a>
+                    <button type="button" class="btn btn-primary btn-lg trigger-modal" data-company="Buy Pre-IPO &amp; Unlisted Shares Desk">BUY UNLISTED SHARES</button>
+                    <button type="button" class="btn btn-secondary btn-lg trigger-modal" data-company="Sell Unlisted Shares Desk">SELL UNLISTED SHARES</button>
                 </div>
             </div>
         </section>
@@ -698,22 +698,36 @@
     <!-- Allocation / Advisory Modal Popup -->
     <div class="modal-overlay" id="allocation-modal">
         <div class="modal-box">
-            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <button class="modal-close" id="modal-close-btn" aria-label="Close dialog">&times;</button>
             <div class="modal-header">
                 <span class="badge badge-gold">Private Market Desk</span>
                 <h3 id="modal-company-title">Connect with Meera Associates</h3>
             </div>
-            <p>Our advisory team will reach out to assist you with your unlisted share & financial requirements.</p>
+            <p>Our advisory team will reach out to assist you with your unlisted share &amp; financial requirements.</p>
+
+            <div id="modal-success-alert" style="display: none; background: rgba(34, 197, 94, 0.1); border: 1px solid #22c55e; border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; color: #15803d; font-size: 0.92rem;">
+                <strong>✓ Enquiry Sent!</strong>
+                <p style="margin: 4px 0 0 0; color: #166534; font-size: 0.88rem;">Your enquiry has been received and emailed to our desk (contact.meeraassociates@gmail.com). Our team will contact you shortly.</p>
+            </div>
+
             <form id="modal-form">
                 <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" placeholder="Full Name" required>
+                    <label>Your Full Name <span style="color: #ef4444;">*</span></label>
+                    <input type="text" name="name" placeholder="e.g. Rahul Sharma" required>
                 </div>
                 <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" placeholder="+91 Mobile Number" required>
+                    <label>Mobile Number (WhatsApp) <span style="color: #ef4444;">*</span></label>
+                    <input type="tel" name="phone" placeholder="+91 98765 43210" pattern="[0-9+\s-]{10,15}" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Requirement Details / Target Company</label>
+                    <input type="text" name="requirement" placeholder="e.g. Target company, lot size, or query">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Request &rarr;</button>
             </form>
         </div>
     </div>

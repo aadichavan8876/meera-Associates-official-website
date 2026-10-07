@@ -331,6 +331,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (modalCompanyTitle) {
                 modalCompanyTitle.textContent = `Inquire Allocation: ${company}`;
             }
+            // Close any open service drawer so the enquiry modal is front-and-center
+            const openDrawer = document.getElementById('service-detail-modal');
+            if (openDrawer && openDrawer.classList.contains('active')) {
+                openDrawer.classList.remove('active');
+            }
+            const successAlert = document.getElementById('modal-success-alert');
+            if (successAlert) successAlert.style.display = 'none';
+            if (modalForm) modalForm.style.display = 'block';
+
             if (modal) modal.classList.add('active');
         });
     });
@@ -348,6 +357,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Auto-open allocation modal if query params or hash are present on services page
+    function handleServicesUrlParams() {
+        try {
+            const isServicesPage = window.location.pathname.includes('services.html');
+            if (!isServicesPage) return;
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const action = (urlParams.get('action') || '').toLowerCase();
+            const hash = (window.location.hash || '').toLowerCase();
+            if (action === 'buy' || hash === '#buy' || hash === '#inquire-buy') {
+                if (modalCompanyTitle) modalCompanyTitle.textContent = 'Inquire Allocation: Buy Pre-IPO & Unlisted Shares Desk';
+                if (modal) modal.classList.add('active');
+            } else if (action === 'sell' || hash === '#sell' || hash === '#inquire-sell') {
+                if (modalCompanyTitle) modalCompanyTitle.textContent = 'Inquire Allocation: Sell Unlisted Shares Desk';
+                if (modal) modal.classList.add('active');
+            } else if (action === 'enquire' || hash === '#enquire') {
+                if (modalCompanyTitle) modalCompanyTitle.textContent = 'Inquire Allocation: Private Market Desk';
+                if (modal) modal.classList.add('active');
+            }
+        } catch (e) {
+            console.error('Error handling services params:', e);
+        }
+    }
+    handleServicesUrlParams();
 
     /**
      * Helper to dispatch form submissions directly to contact.meeraassociates@gmail.com
@@ -402,28 +436,50 @@ document.addEventListener('DOMContentLoaded', () => {
         modalForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const submitBtn = modalForm.querySelector('button[type="submit"]');
-            const inputs = modalForm.querySelectorAll('input');
-            const name = (inputs[0]?.value || '').trim();
-            const phone = (inputs[1]?.value || '').trim();
+            
+            // Flexible input extraction
+            const nameInput = modalForm.querySelector('input[name="name"], input[placeholder*="Name"]');
+            const phoneInput = modalForm.querySelector('input[name="phone"], input[type="tel"], input[placeholder*="Mobile"], input[placeholder*="Phone"]');
+            const emailInput = modalForm.querySelector('input[name="email"], input[type="email"]');
+            const reqInput = modalForm.querySelector('input[name="requirement"], textarea[name="requirement"], textarea');
+
+            const name = (nameInput?.value || '').trim();
+            const phone = (phoneInput?.value || '').trim();
+            const email = (emailInput?.value || '').trim();
+            const requirement = (reqInput?.value || '').trim();
             const company = modalCompanyTitle ? modalCompanyTitle.textContent.replace('Inquire Allocation:', '').replace('Connect with Meera Associates', 'General Advisory').trim() : 'Unlisted Equity';
 
             const payload = {
-                _subject: `Instant Allocation Inquiry: ${company} - ${name}`,
-                "Target Requirement": company,
+                _subject: `Services Enquiry Desk: ${company} - ${name}`,
+                "Target Requirement / Desk": company,
                 "Full Name": name,
                 "Mobile Phone": phone,
-                "Source Page": window.location.pathname || "Website Modal",
+                "Source Page": window.location.pathname || "Services & Advisory Page",
                 "Submission Time": new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
             };
+            if (email) payload["Email Address"] = email;
+            if (requirement) payload["Requirement Details"] = requirement;
 
             await submitMeeraFormToEmail(
                 payload,
                 submitBtn,
                 null,
                 () => {
-                    alert(`Thank you! Your allocation inquiry for "${company}" has been sent to our advisory desk (contact.meeraassociates@gmail.com). Our team will contact you shortly.`);
-                    if (modal) modal.classList.remove('active');
-                    modalForm.reset();
+                    const successAlert = document.getElementById('modal-success-alert');
+                    if (successAlert) {
+                        successAlert.style.display = 'block';
+                        modalForm.style.display = 'none';
+                        setTimeout(() => {
+                            if (modal) modal.classList.remove('active');
+                            modalForm.reset();
+                            modalForm.style.display = 'block';
+                            successAlert.style.display = 'none';
+                        }, 4000);
+                    } else {
+                        alert(`Thank you! Your enquiry for "${company}" has been sent to our advisory desk (contact.meeraassociates@gmail.com). Our team will contact you shortly.`);
+                        if (modal) modal.classList.remove('active');
+                        modalForm.reset();
+                    }
                 }
             );
         });
@@ -692,6 +748,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 if (modalDocs) {
                     modalDocs.innerHTML = data.documents.map(doc => `<li>${doc}</li>`).join('');
+                }
+                // Set the inquiry button inside the drawer to the specific service
+                const drawerInquireBtn = serviceDetailModal?.querySelector('.trigger-modal');
+                if (drawerInquireBtn) {
+                    drawerInquireBtn.setAttribute('data-company', data.title);
                 }
                 
                 if (serviceDetailModal) serviceDetailModal.classList.add('active');

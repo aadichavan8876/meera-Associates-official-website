@@ -344,167 +344,356 @@ const resourcesData = {
     // Channel: https://youtube.com/@meeraassociates-j2z
     // --------------------------------------------------------------------------
     videos: [
+        // ----------------------------------------------------------------------
+        // SET 1: 3 Long Videos + 1 Short
+        // ----------------------------------------------------------------------
         {
             id: "bfGEgWXLpK8",
+            type: "long",
             title: "Inside JSR Dynamics: Nagpur's Defense Tech & Guided Weapons Pioneer",
             duration: "3:29",
             date: "Oct 2026",
             category: "Defense & Tech",
-            description: "Comprehensive institutional review of JSR Dynamics, an emerging defense technology company developing indigenous guided weapons, missile sub-systems, and aerospace hardware.",
+            description: "Comprehensive institutional review of JSR Dynamics, developing indigenous guided weapons, missile sub-systems, and aerospace hardware.",
             youtubeUrl: "https://www.youtube.com/watch?v=bfGEgWXLpK8"
         },
         {
             id: "AD8UBjdWxh0",
+            type: "long",
             title: "InCred Capital Unlisted Shares Review | What Does InCred Capital Do?",
             duration: "3:10",
             date: "Sep 2026",
             category: "NBFC & Financials",
-            description: "Detailed breakdown of InCred Capital's diversified financial ecosystem, merchant banking footprint, wealth management AUM, and private equity valuation trajectory.",
+            description: "Detailed breakdown of InCred Capital's financial ecosystem, merchant banking footprint, wealth management AUM, and valuation multiples.",
             youtubeUrl: "https://www.youtube.com/watch?v=AD8UBjdWxh0"
         },
         {
             id: "t36saugd_d4",
+            type: "long",
             title: "Indian Gold Metaverse Share Price | Gold-Tech Stock Analysis",
             duration: "3:26",
             date: "Sep 2026",
             category: "Technology",
-            description: "Deep dive into Indian Gold Metaverse, evaluating digital bullion registry platforms, tokenized precious metals infrastructure, and off-market investor interest.",
+            description: "Deep dive into Indian Gold Metaverse, evaluating digital bullion registry platforms, tokenized precious metals infrastructure, and demand.",
             youtubeUrl: "https://www.youtube.com/watch?v=t36saugd_d4"
         },
         {
+            id: "MF44ImcIPic",
+            type: "short",
+            title: "Do Unlisted Shares Give Dividends? Payouts & Profit Rules 💰",
+            duration: "0:45",
+            date: "Oct 2026",
+            category: "Dividends & Payouts",
+            description: "Do unlisted companies pay dividends? Learn how payouts, corporate actions, and profit distributions work for unlisted equity holders.",
+            youtubeUrl: "https://youtube.com/shorts/MF44ImcIPic?feature=share"
+        },
+
+        // ----------------------------------------------------------------------
+        // SET 2: 3 Long Videos + 1 Short
+        // ----------------------------------------------------------------------
+        {
             id: "Zk-UwLQQgaA",
+            type: "long",
             title: "Greenzo Energy Share Price | Green Hydrogen & Solar EPC",
             duration: "4:18",
             date: "Sep 2026",
             category: "Renewables & Solar",
-            description: "Exploring Greenzo Energy's indigenous hydrogen electrolyzer innovations, expanding solar EPC pipeline, corporate balance sheet metrics, and pre-IPO valuation.",
+            description: "Exploring Greenzo Energy's indigenous hydrogen electrolyzer innovations, expanding solar EPC pipeline, and pre-IPO valuation metrics.",
             youtubeUrl: "https://www.youtube.com/watch?v=Zk-UwLQQgaA"
         },
         {
             id: "LHUHCWqXshA",
+            type: "long",
             title: "World's 1st Fully Solar Airport! CIAL Business Model & Unlisted Shares",
             duration: "3:39",
             date: "Sep 2026",
             category: "Infrastructure",
-            description: "Analysis of Cochin International Airport Limited (CIAL), its historic 100% solar energy self-sufficiency, dividend track record, and strong unlisted market liquidity.",
+            description: "Analysis of Cochin International Airport Limited (CIAL), its historic 100% solar energy self-sufficiency, dividend track record, and liquidity.",
             youtubeUrl: "https://www.youtube.com/watch?v=LHUHCWqXshA"
         },
         {
             id: "Ul_j7yuh15w",
+            type: "long",
             title: "Prisma AI Share Price | Visual AI & Deep Learning Stock",
             duration: "4:14",
             date: "Aug 2026",
             category: "Defense & Tech",
-            description: "An overview of Prisma AI's patented computer vision algorithms, enterprise security analytics, behavioural surveillance deployments, and unlisted financial performance.",
+            description: "An overview of Prisma AI's computer vision algorithms, enterprise security analytics, behavioural surveillance deployments, and financials.",
             youtubeUrl: "https://www.youtube.com/watch?v=Ul_j7yuh15w"
         },
         {
+            id: "FuB7xBiXixc",
+            type: "short",
+            title: "NRI Investment in Unlisted & Pre-IPO Shares: FEMA Rules 🌐",
+            duration: "0:52",
+            date: "Oct 2026",
+            category: "NRI Advisory",
+            description: "Can NRIs invest in Indian unlisted equities? FEMA compliance, NRE/NRO Demat account regulations, and repatriation guidelines explained.",
+            youtubeUrl: "https://youtube.com/shorts/FuB7xBiXixc?feature=share"
+        },
+
+        // ----------------------------------------------------------------------
+        // SET 3: 3 Long Videos + 1 Short
+        // ----------------------------------------------------------------------
+        {
             id: "43Fei-XOr6A",
+            type: "long",
             title: "Hinduja Leyland Finance Share Price | Top Vehicle NBFC",
             duration: "4:37",
             date: "Aug 2026",
             category: "NBFC & Financials",
-            description: "Evaluating Hinduja Leyland Finance's commercial vehicle financing book, pan-India branch distribution, asset quality ratios, and preparations for public listing.",
+            description: "Evaluating Hinduja Leyland Finance's commercial vehicle financing book, branch distribution, asset quality ratios, and IPO preparations.",
             youtubeUrl: "https://www.youtube.com/watch?v=43Fei-XOr6A"
         },
         {
             id: "G5sez6qJ1kQ",
+            type: "long",
             title: "Onix Renewable Share Price Today | Pre-IPO Review",
             duration: "3:39",
             date: "Aug 2026",
             category: "Renewables & Solar",
-            description: "Detailed look at Onix Renewable's integrated wind and solar generation capacity, transmission connectivity, execution milestones, and pre-IPO trading interest.",
+            description: "Detailed look at Onix Renewable's integrated wind and solar generation capacity, transmission connectivity, and pre-IPO trading interest.",
             youtubeUrl: "https://www.youtube.com/watch?v=G5sez6qJ1kQ"
         },
         {
             id: "nb3RZxsgaQM",
+            type: "long",
             title: "Carrier Air Conditioning Share Price Today | Pre-IPO",
             duration: "4:02",
             date: "Aug 2026",
             category: "Consumer Durables",
-            description: "HVAC industry market leader Carrier Air Conditioning: balance sheet health, institutional heritage, manufacturing capabilities, and off-market trading dynamics.",
+            description: "HVAC industry market leader Carrier Air Conditioning: balance sheet health, institutional heritage, manufacturing capabilities, and trading dynamics.",
             youtubeUrl: "https://www.youtube.com/watch?v=nb3RZxsgaQM"
         },
         {
+            id: "8wTUSUvhBK8",
+            type: "short",
+            title: "Volatility in Unlisted Shares: Risk & Price Movements Explained 📉",
+            duration: "0:48",
+            date: "Sep 2026",
+            category: "Risk & Volatility",
+            description: "How volatile are unlisted shares compared to public markets? Institutional analysis of liquidity, bid-ask spreads, and price stability.",
+            youtubeUrl: "https://youtube.com/shorts/8wTUSUvhBK8?feature=share"
+        },
+
+        // ----------------------------------------------------------------------
+        // SET 4: 3 Long Videos + 1 Short
+        // ----------------------------------------------------------------------
+        {
             id: "VEBVgBZyD-Y",
+            type: "long",
             title: "Inox Clean Energy Pre-IPO Shares | How to Buy Safely",
             duration: "3:52",
             date: "Aug 2026",
             category: "Renewables & Solar",
-            description: "Step-by-step institutional guide on understanding Inox Clean Energy's power generation portfolio, tariff stability, and secure off-market DIS share transfer protocols.",
+            description: "Step-by-step institutional guide on understanding Inox Clean Energy's power generation portfolio, tariff stability, and off-market DIS transfer.",
             youtubeUrl: "https://www.youtube.com/watch?v=VEBVgBZyD-Y"
         },
         {
             id: "0zQ-m8UtV1s",
+            type: "long",
             title: "Goa Shipyard Share Price Today | Defence PSU Stock",
             duration: "4:08",
             date: "Jul 2026",
             category: "Defense & Tech",
-            description: "Defence public sector enterprise Goa Shipyard: order book execution for the Indian Navy and Coast Guard, revenue trajectory, and unlisted share value discovery.",
+            description: "Defence public sector enterprise Goa Shipyard: order book execution for the Indian Navy & Coast Guard, and unlisted share value discovery.",
             youtubeUrl: "https://www.youtube.com/watch?v=0zQ-m8UtV1s"
         },
         {
             id: "3ZXpxKfiaME",
+            type: "long",
             title: "Hero FinCorp Share Price Today | Pre-IPO Stock",
             duration: "4:10",
             date: "Jul 2026",
             category: "NBFC & Financials",
-            description: "Examining Hero FinCorp's retail lending franchise, two-wheeler financing market leadership, SME loan book, and upcoming mega initial public offering.",
+            description: "Examining Hero FinCorp's retail lending franchise, two-wheeler financing market leadership, SME loan book, and upcoming mega public issue.",
             youtubeUrl: "https://www.youtube.com/watch?v=3ZXpxKfiaME"
         },
         {
+            id: "u1XOrgdxSyA",
+            type: "short",
+            title: "What Is Price Discovery in Unlisted Shares? How Pricing Works 📈",
+            duration: "0:50",
+            date: "Sep 2026",
+            category: "Market Education",
+            description: "Without a live stock exchange ticker, how are pre-IPO share prices determined? Valuation multiples, peer comparisons, and secondary deals.",
+            youtubeUrl: "https://youtube.com/shorts/u1XOrgdxSyA?feature=share"
+        },
+
+        // ----------------------------------------------------------------------
+        // SET 5: 3 Long Videos + 1 Short
+        // ----------------------------------------------------------------------
+        {
             id: "wYAjen3so68",
+            type: "long",
             title: "Hero Motors Share Price Today | Pre-IPO Stock",
             duration: "4:48",
             date: "Jul 2026",
             category: "Auto & Engineering",
-            description: "Auto-component and e-mobility powertrain specialist Hero Motors: global OEM partnerships, export margins, patent portfolio, and listing timelines.",
+            description: "Auto-component and e-mobility powertrain specialist Hero Motors: global OEM partnerships, export margins, and listing roadmap.",
             youtubeUrl: "https://www.youtube.com/watch?v=wYAjen3so68"
         },
         {
             id: "ccBXVB-5d14",
+            type: "long",
             title: "ASK Investment Share Price Today | PMS & AIF Stock",
             duration: "4:46",
             date: "Jul 2026",
             category: "NBFC & Financials",
-            description: "Asset & wealth management powerhouse ASK Investment Managers: discretionary PMS growth, AIF deployments, fee-based revenues, and unlisted valuation multiples.",
+            description: "Asset & wealth management powerhouse ASK Investment Managers: discretionary PMS growth, AIF deployments, and unlisted valuation multiples.",
             youtubeUrl: "https://www.youtube.com/watch?v=ccBXVB-5d14"
         },
         {
             id: "uvJ211ACW-Y",
+            type: "long",
             title: "Zepto Share Price Today | Quick Commerce Pre-IPO",
             duration: "3:39",
             date: "Jun 2026",
             category: "Technology",
-            description: "Quick-commerce unicorn Zepto: dark-store micro-fulfillment economics, GMV scaling, institutional funding tranches, and road to domestic stock exchange listing.",
+            description: "Quick-commerce unicorn Zepto: dark-store micro-fulfillment economics, GMV scaling, institutional funding, and domestic IPO roadmap.",
             youtubeUrl: "https://www.youtube.com/watch?v=uvJ211ACW-Y"
         },
         {
+            id: "HqMcDMYlj9A",
+            type: "short",
+            title: "Why Do Big HNIs & Anchor Investors Choose Unlisted Shares? 💼",
+            duration: "0:55",
+            date: "Sep 2026",
+            category: "HNI & Institutional",
+            description: "Why family offices, private equity funds, and ultra-HNIs allocate heavily to late-stage pre-IPO equities before public listings.",
+            youtubeUrl: "https://youtube.com/shorts/HqMcDMYlj9A?feature=share"
+        },
+
+        // ----------------------------------------------------------------------
+        // SET 6: 3 Long Videos + 1 Short
+        // ----------------------------------------------------------------------
+        {
             id: "xYWFVTdmJlY",
+            type: "long",
             title: "Indian Gas Exchange Share Price Today | Pre-IPO Stock",
             duration: "4:26",
             date: "Jun 2026",
             category: "Infrastructure",
-            description: "India's premier automated gas delivery platform: natural gas trading volume expansions, monopoly market dynamics, and unlisted share price movements.",
+            description: "India's premier automated gas delivery platform: natural gas trading volume expansions, monopoly market dynamics, and unlisted price movements.",
             youtubeUrl: "https://www.youtube.com/watch?v=xYWFVTdmJlY"
         },
         {
             id: "3C24-s3DXWM",
+            type: "long",
             title: "Garuda Aerospace Share Price Today | Pre-IPO Drone Stock",
             duration: "3:39",
             date: "Jun 2026",
             category: "Defense & Tech",
-            description: "Agri-drone and defense UAV pioneer Garuda Aerospace: DGCA type certifications, Kisan drone subsidies, defense supply contracts, and pre-IPO valuation metrics.",
+            description: "Agri-drone and defense UAV pioneer Garuda Aerospace: DGCA type certifications, defense supply contracts, and pre-IPO valuation metrics.",
             youtubeUrl: "https://www.youtube.com/watch?v=3C24-s3DXWM"
         },
         {
             id: "pft7YBLy9ug",
+            type: "long",
             title: "HDFC Securities Share Price Today | Pre-IPO Stock",
             duration: "3:36",
             date: "May 2026",
             category: "NBFC & Financials",
-            description: "HDFC Group's equity broking and institutional wealth powerhouse: active trader base, digital investment platforms, dividend payouts, and unlisted market demand.",
+            description: "HDFC Group's equity broking powerhouse: active trader base, digital investment platforms, dividend payouts, and unlisted market demand.",
             youtubeUrl: "https://www.youtube.com/watch?v=pft7YBLy9ug"
+        },
+        {
+            id: "njOnyFt8koM",
+            type: "short",
+            title: "What Are Unlisted Shares? Pre-IPO & Private Market Basics 📚",
+            duration: "0:45",
+            date: "Aug 2026",
+            category: "Unlisted Basics",
+            description: "A clear beginner's guide to unlisted shares, private equity market fundamentals, and how retail investors can safely participate.",
+            youtubeUrl: "https://youtube.com/shorts/njOnyFt8koM?feature=share"
+        },
+
+        // ----------------------------------------------------------------------
+        // SET 7: 3 Long Videos + 1 Short
+        // ----------------------------------------------------------------------
+        {
+            id: "0zQ-m8UtV1s",
+            type: "long",
+            title: "Mohan Meakin Limited | Heritage Brewery & FMCG Analysis",
+            duration: "4:15",
+            date: "May 2026",
+            category: "Consumer Durables",
+            description: "Heritage FMCG brand Mohan Meakin (Old Monk, Golden Eagle): zero debt balance sheet, real estate assets, and steady unlisted market demand.",
+            youtubeUrl: "https://www.youtube.com/watch?v=0zQ-m8UtV1s"
+        },
+        {
+            id: "AD8UBjdWxh0",
+            type: "long",
+            title: "Manipal Housing Finance (MHFSL) Unlisted Shares Review",
+            duration: "3:50",
+            date: "May 2026",
+            category: "NBFC & Financials",
+            description: "Affordable housing finance provider backed by the Manipal Group: loan book asset quality, net interest margins, and pre-IPO share trade rates.",
+            youtubeUrl: "https://www.youtube.com/watch?v=AD8UBjdWxh0"
+        },
+        {
+            id: "bfGEgWXLpK8",
+            type: "long",
+            title: "Goodluck Defence & Aerospace Unlisted Share Valuation",
+            duration: "4:25",
+            date: "Apr 2026",
+            category: "Defense & Tech",
+            description: "High-precision forged defense components, aerospace sub-assemblies, artillery programs, and unlisted secondary market order depth.",
+            youtubeUrl: "https://www.youtube.com/watch?v=bfGEgWXLpK8"
+        },
+        {
+            id: "LJUMBeM4ekU",
+            type: "short",
+            title: "What Should You Know Before Investing in Pre-IPO Shares? ⚠️",
+            duration: "0:58",
+            date: "Aug 2026",
+            category: "Due Diligence",
+            description: "Essential checklist before buying unlisted shares: DRHP filings, lock-in periods, promoter holding, and authentic DIS Demat transfers.",
+            youtubeUrl: "https://youtube.com/shorts/LJUMBeM4ekU?feature=share"
+        },
+
+        // ----------------------------------------------------------------------
+        // SET 8: 3 Long Videos + 1 Short
+        // ----------------------------------------------------------------------
+        {
+            id: "wYAjen3so68",
+            type: "long",
+            title: "Tata Technologies Pre-IPO Journey & Lessons for Investors",
+            duration: "4:50",
+            date: "Apr 2026",
+            category: "Auto & Engineering",
+            description: "A retrospective case study on Tata Technologies: ER&D growth, anchor institutional book building, and historic listing day returns for unlisted holders.",
+            youtubeUrl: "https://www.youtube.com/watch?v=wYAjen3so68"
+        },
+        {
+            id: "ccBXVB-5d14",
+            type: "long",
+            title: "SBI Funds Management Unlisted Shares & AMC Economics",
+            duration: "3:58",
+            date: "Apr 2026",
+            category: "NBFC & Financials",
+            description: "India's largest asset management company: recurring equity SIP inflows, AUM market share, profitability margins, and upcoming mega IPO.",
+            youtubeUrl: "https://www.youtube.com/watch?v=ccBXVB-5d14"
+        },
+        {
+            id: "xYWFVTdmJlY",
+            type: "long",
+            title: "National Stock Exchange (NSE) Unlisted Shares Monopoly Analysis",
+            duration: "4:32",
+            date: "Mar 2026",
+            category: "Infrastructure",
+            description: "The world's largest derivatives exchange: high return on equity, market share dominance, clearing corporation revenues, and off-market block lots.",
+            youtubeUrl: "https://www.youtube.com/watch?v=xYWFVTdmJlY"
+        },
+        {
+            id: "HqMcDMYlj9A",
+            type: "short",
+            title: "Why Big HNIs & Anchor Investors Choose Pre-IPO Equities 🚀",
+            duration: "0:55",
+            date: "Aug 2026",
+            category: "Wealth Advisory",
+            description: "Strategic capital allocation, entry valuation discipline, and how institutional investors evaluate exit multiples before IPO day.",
+            youtubeUrl: "https://youtube.com/shorts/HqMcDMYlj9A?feature=share"
         }
     ]
 };

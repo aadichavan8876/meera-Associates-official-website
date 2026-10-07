@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #ffffff; border-radius: 12px; border: 1px solid var(--border-color);">
                         <div style="font-size: 2.5rem; margin-bottom: 12px;">🔍</div>
                         <h3 style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 8px;">No Articles Found</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">Try adjusting your search terms or selecting a different category filter.</p>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Try adjusting your search terms to find relevant articles.</p>
                     </div>
                 `;
                 return;
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #ffffff; border-radius: 12px; border: 1px solid var(--border-color);">
                         <div style="font-size: 2.5rem; margin-bottom: 12px;">📰</div>
                         <h3 style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 8px;">No News Found</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">No news matches your search or category filter. Try clearing your filters.</p>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">No news matches your search keywords. Try adjusting your query.</p>
                     </div>
                 `;
                 return;
@@ -249,30 +249,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let activeCategory = 'all';
         let searchQuery = '';
 
-        function renderVideos() {
-            const filtered = resourcesData.videos.filter(video => {
-                const matchesCat = (activeCategory === 'all') || 
-                                   (video.category.toLowerCase() === activeCategory.toLowerCase());
-                const matchesSearch = !searchQuery || 
-                                      video.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                                      (video.description && video.description.toLowerCase().includes(searchQuery.toLowerCase())) ||
-                                      video.category.toLowerCase().includes(searchQuery.toLowerCase());
-                return matchesCat && matchesSearch;
-            });
-
-            if (filtered.length === 0) {
-                videosContainer.innerHTML = `
-                    <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #ffffff; border-radius: 12px; border: 1px solid var(--border-color);">
-                        <div style="font-size: 2.5rem; margin-bottom: 12px;">🎥</div>
-                        <h3 style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 8px;">No Videos Found</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">Try selecting another category or clearing your search keywords.</p>
-                    </div>
-                `;
-                return;
-            }
-
-            videosContainer.innerHTML = filtered.map(video => `
-                <div class="video-card" data-video-id="${video.id}" data-video-title="${encodeURIComponent(video.title)}">
+        function renderLongVideoCard(video) {
+            return `
+                <div class="video-card-long" data-video-id="${video.id}" data-video-title="${encodeURIComponent(video.title)}" data-is-short="false">
                     <div class="video-thumb-container">
                         <img src="https://i.ytimg.com/vi/${video.id}/hqdefault.jpg" 
                              alt="${video.title}" 
@@ -295,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <button type="button" class="video-watch-btn">
                                 <span>Watch Video</span> ▶
                             </button>
-                            <a href="https://www.youtube.com/watch?v=${video.id}" 
+                            <a href="${video.youtubeUrl || `https://www.youtube.com/watch?v=${video.id}`}" 
                                target="_blank" 
                                rel="noopener noreferrer" 
                                style="font-size: 0.78rem; color: var(--text-subtle); text-decoration: none;"
@@ -305,14 +284,128 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                 </div>
-            `).join('');
+            `;
+        }
+
+        function renderShortVideoCard(video) {
+            return `
+                <div class="video-card-short" data-video-id="${video.id}" data-video-title="${encodeURIComponent(video.title)}" data-is-short="true">
+                    <div class="short-thumb-container">
+                        <img src="https://i.ytimg.com/vi/${video.id}/hqdefault.jpg" 
+                             alt="${video.title}" 
+                             class="short-thumb-img" 
+                             loading="lazy"
+                             onerror="this.src='assets/meera_associates_logo.png'">
+                        <span class="short-badge-pill">⚡ SHORTS</span>
+                        <div class="short-play-overlay">▶</div>
+                        <span class="short-duration-badge">${video.duration}</span>
+                    </div>
+                    <div class="short-card-body">
+                        <div>
+                            <div class="video-card-top-meta">
+                                <span class="short-tag">${video.category}</span>
+                                <span style="font-size: 0.76rem; color: var(--text-subtle); font-weight: 600;">${video.date}</span>
+                            </div>
+                            <h4 class="short-card-title">${video.title}</h4>
+                            <p class="short-card-desc">${video.description || 'Quick 60-second market insight by Meera Associates.'}</p>
+                        </div>
+                        <div class="video-card-footer">
+                            <button type="button" class="short-watch-btn">
+                                <span>⚡ Watch Short</span>
+                            </button>
+                            <a href="${video.youtubeUrl || `https://www.youtube.com/shorts/${video.id}`}" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               style="font-size: 0.78rem; color: #dc2626; text-decoration: none; font-weight: 700;"
+                               onclick="event.stopPropagation();">
+                               YouTube Shorts ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderVideos() {
+            const filtered = resourcesData.videos.filter(video => {
+                const matchesCat = (activeCategory === 'all') || 
+                                   (video.category && video.category.toLowerCase() === activeCategory.toLowerCase());
+                const matchesSearch = !searchQuery || 
+                                      video.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      (video.description && video.description.toLowerCase().includes(searchQuery.toLowerCase())) ||
+                                      (video.category && video.category.toLowerCase().includes(searchQuery.toLowerCase()));
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                videosContainer.innerHTML = `
+                    <div style="text-align: center; padding: 60px 20px; background: #ffffff; border-radius: 12px; border: 1px solid var(--border-color); width: 100%;">
+                        <div style="font-size: 2.5rem; margin-bottom: 12px;">🎥</div>
+                        <h3 style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 8px;">No Videos Found</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Try adjusting your search keywords to find relevant videos.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Separate into long and short lists to preserve the 3 Long + 1 Short structure
+            const longs = filtered.filter(v => v.type === 'long');
+            const shorts = filtered.filter(v => v.type === 'short');
+
+            let html = '';
+            let longIdx = 0;
+            let shortIdx = 0;
+
+            // Render while we have items in either list
+            while (longIdx < longs.length || shortIdx < shorts.length) {
+                const rowLongs = longs.slice(longIdx, longIdx + 3);
+                longIdx += rowLongs.length;
+
+                const rowShort = shortIdx < shorts.length ? shorts[shortIdx] : null;
+                if (rowShort) shortIdx++;
+
+                if (rowLongs.length > 0 && rowShort) {
+                    // Standard 3 Long + 1 Short Row
+                    html += `
+                        <div class="video-showcase-row">
+                            <div class="long-videos-group" style="grid-template-columns: repeat(${rowLongs.length}, minmax(0, 1fr));">
+                                ${rowLongs.map(renderLongVideoCard).join('')}
+                            </div>
+                            <div class="short-video-wrapper">
+                                ${renderShortVideoCard(rowShort)}
+                            </div>
+                        </div>
+                    `;
+                } else if (rowLongs.length > 0) {
+                    // Only Long Videos remaining
+                    html += `
+                        <div class="video-showcase-row full-width">
+                            <div class="long-videos-group" style="grid-template-columns: repeat(${rowLongs.length}, minmax(0, 1fr));">
+                                ${rowLongs.map(renderLongVideoCard).join('')}
+                            </div>
+                        </div>
+                    `;
+                } else if (rowShort) {
+                    // Only Short Video remaining
+                    html += `
+                        <div class="video-showcase-row">
+                            <div class="short-video-wrapper" style="max-width: 320px; margin: 0 auto; width: 100%;">
+                                ${renderShortVideoCard(rowShort)}
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+
+            videosContainer.innerHTML = html;
 
             // Attach click listeners to open modal
-            videosContainer.querySelectorAll('.video-card').forEach(card => {
+            videosContainer.querySelectorAll('[data-video-id]').forEach(card => {
                 card.addEventListener('click', () => {
                     const vidId = card.getAttribute('data-video-id');
                     const vidTitle = decodeURIComponent(card.getAttribute('data-video-title') || 'Video Player');
-                    openVideoModal(vidId, vidTitle);
+                    const isShort = card.getAttribute('data-is-short') === 'true';
+                    openVideoModal(vidId, vidTitle, isShort);
                 });
             });
         }
@@ -335,8 +428,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        function openVideoModal(videoId, title) {
+        function openVideoModal(videoId, title, isShort = false) {
             if (!videoModal || !videoModalIframe) return;
+            const dialog = videoModal.querySelector('.video-modal-dialog');
+            if (dialog) {
+                if (isShort) {
+                    dialog.classList.add('is-short-player');
+                } else {
+                    dialog.classList.remove('is-short-player');
+                }
+            }
             videoModalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
             if (videoModalTitle) videoModalTitle.innerText = title;
             videoModal.classList.add('active');
@@ -347,6 +448,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!videoModal || !videoModalIframe) return;
             videoModalIframe.src = '';
             videoModal.classList.remove('active');
+            const dialog = videoModal.querySelector('.video-modal-dialog');
+            if (dialog) {
+                dialog.classList.remove('is-short-player');
+            }
             document.body.style.overflow = '';
         }
 
