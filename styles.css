@@ -1807,31 +1807,44 @@ a {
 }
 
 .script-cell {
-    width: 34%;
+    min-width: 150px;
+}
+
+.milestone-table th.sr-col,
+.milestone-table td.sr-cell {
+    width: 46px;
+    text-align: center;
+    color: var(--text-muted);
+    font-weight: 800;
+    font-size: 0.78rem;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .table-logo-box {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     background: #ffffff;
-    padding: 6px 12px;
+    padding: 5px 10px;
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     border: 1px solid #cbd5e1;
+    max-width: 100%;
 }
 
 .table-logo-icon {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1;
+    flex-shrink: 0;
 }
 
 .table-logo-name {
-    font-weight: 900;
-    font-size: 0.8rem;
+    font-weight: 800;
+    font-size: 0.78rem;
     letter-spacing: -0.01em;
     color: #0f172a;
-    text-transform: uppercase;
+    line-height: 1.25;
 }
 
 .table-logo-name.rbl-logo { color: #0284c7; }
@@ -1847,7 +1860,17 @@ a {
 .table-logo-name.emblem-logo { color: #b45309; }
 .table-logo-name.syngenta-logo { color: #15803d; }
 .table-logo-name.atlas-logo { color: #0369a1; }
-.table-logo-name.bbq-logo { color: #c2410c; font-size: 0.72rem; }
+.table-logo-name.bbq-logo { color: #c2410c; font-size: 0.75rem; }
+.table-logo-name.anand-logo { color: #1e3a8a; }
+.table-logo-name.waaree-logo { color: #b45309; }
+.table-logo-name.nsdl-logo { color: #0284c7; }
+.table-logo-name.nse-logo { color: #c2410c; font-weight: 900; }
+.table-logo-name.esds-logo { color: #2563eb; }
+.table-logo-name.xtranet-logo { color: #0f766e; }
+.table-logo-name.flysbs-logo { color: #0284c7; }
+.table-logo-name.aonesteel-logo { color: #475569; }
+.table-logo-name.mohan-logo { color: #991b1b; }
+.table-logo-name.sterlite-logo { color: #b45309; }
 
 .highlight-tag {
     display: inline-block;
