@@ -161,6 +161,109 @@ body.disclaimer-open .meera-chat-window {
 }
 
 /* ==========================================
+   FLOATING WHATSAPP BUTTONS (CHAT US & JOIN US)
+   ========================================== */
+.meera-wa-floating-stack {
+    position: fixed;
+    bottom: 104px;
+    right: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 9989;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.meera-wa-floating-stack.hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(12px) scale(0.95) !important;
+}
+
+.meera-wa-fab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 9px 16px 9px 12px;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, filter 0.25s ease;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.meera-wa-fab-btn:hover {
+    transform: translateY(-2px) scale(1.04);
+    filter: brightness(1.12);
+}
+
+.meera-wa-fab-btn:active {
+    transform: scale(0.96);
+}
+
+/* Chat Us Button (Direct 1-on-1 Chat) */
+.meera-wa-chat-btn {
+    background: #25d366;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.meera-wa-chat-btn:hover {
+    box-shadow: 0 6px 22px rgba(37, 211, 102, 0.7), 0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Join Us Button (WhatsApp Community Group) */
+.meera-wa-join-btn {
+    background: linear-gradient(135deg, #128c7e 0%, #075e54 100%);
+    box-shadow: 0 4px 16px rgba(18, 140, 126, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.meera-wa-join-btn:hover {
+    box-shadow: 0 6px 22px rgba(18, 140, 126, 0.7), 0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+.meera-wa-fab-icon {
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+    display: block;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.meera-wa-fab-btn:hover .meera-wa-fab-icon {
+    transform: scale(1.1);
+}
+
+.meera-wa-fab-text {
+    line-height: 1;
+}
+
+/* Fade out when chat window is active */
+.meera-chat-window.active ~ .meera-wa-floating-stack {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(12px) scale(0.95);
+}
+
+/* Dim when disclaimer modal is open */
+body.disclaimer-open .meera-wa-floating-stack {
+    pointer-events: none;
+    opacity: 0.15;
+    filter: blur(1px);
+}
+
+/* ==========================================
    2. CHAT WINDOW CONTAINER
    ========================================== */
 .meera-chat-window {
@@ -1111,5 +1214,21 @@ body.disclaimer-open .meera-chat-window {
         height: 60px !important;
         bottom: 0 !important;
         border-radius: 16px 16px 0 0 !important;
+    }
+
+    .meera-wa-floating-stack {
+        bottom: 86px;
+        right: 20px;
+        gap: 8px;
+    }
+
+    .meera-wa-fab-btn {
+        padding: 7px 13px 7px 10px;
+        font-size: 12px;
+    }
+
+    .meera-wa-fab-icon {
+        width: 15px;
+        height: 15px;
     }
 }

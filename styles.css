@@ -388,6 +388,7 @@ a {
     align-items: center;
     gap: 6px;
     letter-spacing: -0.01em;
+    white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -533,7 +534,7 @@ a {
     gap: 10px;
     margin-left: 6px;
     padding-left: 14px;
-    border-left: 1px solid rgba(255, 255, 255, 0.16);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .nav-social-link {
@@ -543,11 +544,12 @@ a {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: #cbd5e1;
+    color: #ffffff !important;
     text-decoration: none;
+    border: none;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
 }
 
 .nav-social-svg {
@@ -558,41 +560,63 @@ a {
     transition: transform 0.2s ease;
 }
 
+/* Instagram Highlight */
+.nav-social-link.nav-social-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    box-shadow: 0 2px 10px rgba(214, 36, 159, 0.45);
+}
+
+/* YouTube Highlight */
+.nav-social-link.nav-social-youtube {
+    background: #ff0000;
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.45);
+}
+
+/* Facebook Highlight */
+.nav-social-link.nav-social-facebook {
+    background: #1877f2;
+    box-shadow: 0 2px 10px rgba(24, 119, 242, 0.45);
+}
+
+/* LinkedIn Highlight */
+.nav-social-link.nav-social-linkedin {
+    background: #0a66c2;
+    box-shadow: 0 2px 10px rgba(10, 102, 194, 0.45);
+}
+
+/* WhatsApp Highlight */
+.nav-social-link.nav-social-whatsapp {
+    background: #25d366;
+    box-shadow: 0 2px 10px rgba(37, 211, 102, 0.45);
+}
+
 .nav-social-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px) scale(1.1);
+    filter: brightness(1.12);
 }
 
 .nav-social-link:hover .nav-social-svg {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .nav-social-link.nav-social-instagram:hover {
-    color: #ffffff;
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    border-color: rgba(225, 48, 108, 0.6);
-    box-shadow: 0 4px 14px rgba(214, 36, 159, 0.5);
+    box-shadow: 0 4px 16px rgba(214, 36, 159, 0.7);
 }
 
 .nav-social-link.nav-social-youtube:hover {
-    color: #ffffff;
-    background: #ff0000;
-    border-color: #ff0000;
-    box-shadow: 0 4px 14px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 4px 16px rgba(255, 0, 0, 0.7);
 }
 
 .nav-social-link.nav-social-facebook:hover {
-    color: #ffffff;
-    background: #1877f2;
-    border-color: #1877f2;
-    box-shadow: 0 4px 14px rgba(24, 119, 242, 0.5);
+    box-shadow: 0 4px 16px rgba(24, 119, 242, 0.7);
+}
+
+.nav-social-link.nav-social-linkedin:hover {
+    box-shadow: 0 4px 16px rgba(10, 102, 194, 0.7);
 }
 
 .nav-social-link.nav-social-whatsapp:hover {
-    color: #ffffff;
-    background: #25d366;
-    border-color: #25d366;
-    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.7);
 }
 
 /* WhatsApp Icon SVG Utilities */
@@ -646,23 +670,44 @@ a {
 /* Medium Desktop Spacing Tuning */
 @media (max-width: 1280px) and (min-width: 993px) {
     .nav-menu {
-        gap: 18px;
+        gap: 14px;
     }
     .nav-link {
-        font-size: 0.93rem;
+        font-size: 0.88rem;
     }
     .nav-social-links {
-        gap: 8px;
+        gap: 7px;
         margin-left: 4px;
-        padding-left: 10px;
+        padding-left: 8px;
     }
     .nav-social-link {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
     .nav-social-svg {
-        width: 16px;
-        height: 16px;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 1100px) and (min-width: 993px) {
+    .nav-menu {
+        gap: 10px;
+    }
+    .nav-link {
+        font-size: 0.82rem;
+    }
+    .nav-social-links {
+        gap: 5px;
+        padding-left: 6px;
+    }
+    .nav-social-link {
+        width: 26px;
+        height: 26px;
+    }
+    .nav-social-svg {
+        width: 13px;
+        height: 13px;
     }
 }
 
@@ -2353,14 +2398,14 @@ a {
     width: 38px;
     height: 38px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    color: #cbd5e1;
+    color: #ffffff !important;
     text-decoration: none;
+    border: none;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     box-sizing: border-box;
     padding: 0;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .footer-social-btn svg,
@@ -2376,55 +2421,90 @@ a {
 .footer-social-btn:hover,
 .footer-social-link:hover,
 .footer-wa-btn:hover {
-    transform: translateY(-2px);
-    color: #ffffff;
+    transform: translateY(-2px) scale(1.08);
+    filter: brightness(1.12);
 }
 
 .footer-social-btn:hover svg,
 .footer-social-link:hover svg,
 .footer-wa-btn:hover svg {
-    transform: scale(1.1);
+    transform: scale(1.06);
 }
 
-/* WhatsApp Specific */
+/* WhatsApp Specific - Highlighted */
 .footer-social-btn.footer-social-wa,
 .footer-social-link.footer-social-wa,
 .footer-wa-btn {
-    background: rgba(34, 197, 94, 0.12);
-    border-color: rgba(34, 197, 94, 0.35);
-    color: #22c55e !important;
+    background: #25d366;
+    color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(37, 211, 102, 0.45);
 }
 
 .footer-social-btn.footer-social-wa:hover,
 .footer-social-link.footer-social-wa:hover,
 .footer-wa-btn:hover {
-    background: rgba(34, 197, 94, 0.24);
-    border-color: #22c55e;
-    box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
+    background: #22c55e;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.7);
 }
 
-/* Instagram Specific */
+/* Instagram Specific - Highlighted */
+.footer-social-btn.footer-social-instagram,
+.footer-social-link.footer-social-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(214, 36, 159, 0.45);
+}
+
 .footer-social-btn.footer-social-instagram:hover,
 .footer-social-link.footer-social-instagram:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    border-color: rgba(225, 48, 108, 0.6);
-    box-shadow: 0 4px 14px rgba(214, 36, 159, 0.45);
+    box-shadow: 0 4px 16px rgba(214, 36, 159, 0.7);
 }
 
-/* YouTube Specific */
+/* YouTube Specific - Highlighted */
+.footer-social-btn.footer-social-youtube,
+.footer-social-link.footer-social-youtube {
+    background: #ff0000;
+    color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.45);
+}
+
 .footer-social-btn.footer-social-youtube:hover,
 .footer-social-link.footer-social-youtube:hover {
-    background: #ff0000;
-    border-color: #ff0000;
-    box-shadow: 0 4px 14px rgba(255, 0, 0, 0.45);
+    box-shadow: 0 4px 16px rgba(255, 0, 0, 0.7);
 }
 
-/* Facebook Specific */
-.footer-social-btn.footer-social-facebook:hover,
-.footer-social-link.footer-social-facebook:hover {
+/* Facebook Specific - Highlighted */
+.footer-social-btn.footer-social-facebook,
+.footer-social-link.footer-social-facebook,
+.footer-social-btn.footer-social-fb,
+.footer-social-link.footer-social-fb {
     background: #1877f2;
-    border-color: #1877f2;
-    box-shadow: 0 4px 14px rgba(24, 119, 242, 0.45);
+    color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(24, 119, 242, 0.45);
+}
+
+.footer-social-btn.footer-social-facebook:hover,
+.footer-social-link.footer-social-facebook:hover,
+.footer-social-btn.footer-social-fb:hover,
+.footer-social-link.footer-social-fb:hover {
+    box-shadow: 0 4px 16px rgba(24, 119, 242, 0.7);
+}
+
+/* LinkedIn Specific - Highlighted */
+.footer-social-btn.footer-social-linkedin,
+.footer-social-link.footer-social-linkedin,
+.footer-social-btn.footer-social-li,
+.footer-social-link.footer-social-li {
+    background: #0a66c2;
+    color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(10, 102, 194, 0.45);
+}
+
+.footer-social-btn.footer-social-linkedin:hover,
+.footer-social-link.footer-social-linkedin:hover,
+.footer-social-btn.footer-social-li:hover,
+.footer-social-link.footer-social-li:hover {
+    box-shadow: 0 4px 16px rgba(10, 102, 194, 0.7);
 }
 
 .footer-social-icons {
