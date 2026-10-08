@@ -28,18 +28,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         document.body.classList.remove('disclaimer-open');
     } else if (disclaimerModal) {
-        const DISCLAIMER_STORAGE_KEY = 'meera_disclaimer_accepted';
+        // Clear legacy permanent localStorage flag so it doesn't block visits
+        try {
+            localStorage.removeItem('meera_disclaimer_accepted');
+        } catch (e) {}
+
+        const DISCLAIMER_SESSION_KEY = 'meera_disclaimer_session_accepted';
 
         function checkDisclaimerStatus() {
-            // Check if visitor has already accepted the disclaimer previously
-            const hasAccepted = localStorage.getItem(DISCLAIMER_STORAGE_KEY) === 'true';
+            // Check if visitor has already accepted the disclaimer in the current session
+            let hasAccepted = false;
+            try {
+                hasAccepted = sessionStorage.getItem(DISCLAIMER_SESSION_KEY) === 'true';
+            } catch (e) {
+                hasAccepted = false;
+            }
 
             if (!hasAccepted) {
                 // First-time visit: show disclaimer popup
                 disclaimerModal.classList.add('active');
                 document.body.classList.add('disclaimer-open');
             } else {
-                // Already accepted: never show again on page reloads or returns
+                // Already accepted in this session: do not show on page reloads or return visits
                 disclaimerModal.classList.remove('active');
                 document.body.classList.remove('disclaimer-open');
             }
@@ -50,17 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
             disclaimerSubmitBtn.disabled = true;
 
             disclaimerCheckbox.addEventListener('change', () => {
-                if (disclaimerCheckbox.checked) {
-                    disclaimerSubmitBtn.disabled = false;
-                } else {
-                    disclaimerSubmitBtn.disabled = true;
-                }
+                disclaimerSubmitBtn.disabled = !disclaimerCheckbox.checked;
             });
 
             disclaimerSubmitBtn.addEventListener('click', () => {
                 if (disclaimerCheckbox.checked) {
-                    // Permanently record acceptance so it does NOT appear again on reload
-                    localStorage.setItem(DISCLAIMER_STORAGE_KEY, 'true');
+                    // Record in sessionStorage so it does NOT appear again on page reloads
+                    try {
+                        sessionStorage.setItem(DISCLAIMER_SESSION_KEY, 'true');
+                    } catch (e) {}
 
                     disclaimerModal.classList.remove('active');
                     document.body.classList.remove('disclaimer-open');
