@@ -1,0 +1,1003 @@
+/* ==========================================================================
+   RITE WATER SOLUTIONS (INDIA) LIMITED - DEDICATED STYLESHEET
+   100% Structural & Design Parity with NCDEX
+   
+   Palette: Deep Oceanic Navy (#071827, #0b253c), CleanTech Emerald/Cyan (#0284c7, #059669, #10b981),
+   Crisp White, Neutral Slates & Amber Accents
+   ========================================================================== */
+
+/* Base page wrapper with clean background */
+.ritewater-page-wrap {
+    padding-bottom: 70px;
+}
+
+/* High-Impact Hero Command Bar (Exact Same Parity as NCDEX) */
+.ritewater-hero {
+    background: linear-gradient(135deg, #061624 0%, #08283e 50%, #06394f 100%);
+    color: #ffffff;
+    padding: 60px 0 45px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.25);
+}
+
+.ritewater-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 18% 28%, rgba(2, 132, 199, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 82% 72%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.ritewater-hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.ritewater-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    color: #94a3b8;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.ritewater-breadcrumbs a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.ritewater-breadcrumbs a:hover {
+    color: #38bdf8;
+}
+
+.ritewater-breadcrumbs .crumb-sep {
+    color: #64748b;
+}
+
+.ritewater-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(2, 132, 199, 0.22);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #7dd3fc;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.ritewater-hero-badge .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981;
+    animation: pulseRitewater 2s infinite;
+}
+
+@keyframes pulseRitewater {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.25); }
+}
+
+.ritewater-hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+}
+
+.ritewater-hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    max-width: 860px;
+    margin-bottom: 32px;
+}
+
+/* 4-KPI Metric Strip in Hero */
+.ritewater-metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.ritewater-metric-card {
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.ritewater-metric-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.ritewater-metric-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+}
+
+.ritewater-metric-value {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.ritewater-metric-sub {
+    font-size: 0.78rem;
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   ASYMMETRIC SPLIT-GRID LAYOUT (MAIN 68% + SIDEBAR 32%)
+   ========================================================================== */
+.ritewater-main-grid {
+    max-width: 1240px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 68% calc(32% - 32px);
+    gap: 32px;
+    align-items: start;
+}
+
+.ritewater-content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Generic Section Card */
+.ritewater-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.ritewater-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    border-color: #cbd5e1;
+}
+
+.ritewater-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ritewater-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.ritewater-card-title-icon {
+    font-size: 1.25rem;
+}
+
+.ritewater-card-tag {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #0284c7;
+    background: #f0f9ff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #bae6fd;
+}
+
+/* Corporate Master Specifications Table */
+.ritewater-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.ritewater-table tr {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.ritewater-table tr:last-child {
+    border-bottom: none;
+}
+
+.ritewater-table td {
+    padding: 12px 16px;
+    font-size: 0.92rem;
+    vertical-align: middle;
+}
+
+.ritewater-table .td-label {
+    width: 32%;
+    color: #64748b;
+    font-weight: 600;
+    background: #f8fafc;
+    border-right: 1px solid #f1f5f9;
+}
+
+.ritewater-table .td-val {
+    width: 68%;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* Interactive ISIN Copy Badge */
+.isin-copy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0f172a;
+    color: #38bdf8;
+    font-family: monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.isin-copy-badge:hover {
+    background: #1e293b;
+    border-color: #38bdf8;
+    transform: scale(1.02);
+}
+
+.isin-copy-badge .copy-hint {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Directors Grid */
+.directors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.director-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.director-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+    background: #f1f5f9;
+}
+
+.director-check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.director-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.director-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.director-role {
+    font-size: 0.78rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Prose Overview & Infrastructure Box */
+.ritewater-prose {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #334155;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ritewater-prose p {
+    margin: 0;
+}
+
+.infrastructure-feature-box {
+    background: #f8fafc;
+    border-left: 4px solid #0284c7;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.infra-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.infra-bullet {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0284c7;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.infra-text strong {
+    color: #0f172a;
+}
+
+/* Financial Performance & Trajectory Card */
+.fin-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.fin-card-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fin-card-subtitle {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.fin-card-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.fin-tag-badge {
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.badge-primary {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.badge-emerald {
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+/* 4 High-Impact KPI Highlight Cards */
+.fin-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.fin-kpi-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.fin-kpi-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+}
+
+.fin-kpi-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fin-kpi-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #64748b;
+}
+
+.fin-kpi-icon {
+    font-size: 1rem;
+}
+
+.fin-kpi-val {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.fin-kpi-sub {
+    font-size: 0.76rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #64748b;
+    flex-wrap: wrap;
+}
+
+.fin-pill-growth {
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 0.72rem;
+}
+
+.fin-pill-growth.positive {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.fin-pill-growth.neutral {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+/* Chart Controls Bar */
+.fin-controls-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.fin-metric-tabs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.fin-metric-tab {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fin-metric-tab:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.fin-metric-tab.active {
+    background: #0284c7;
+    border-color: #0284c7;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(2, 132, 199, 0.2);
+}
+
+.fin-type-toggles {
+    display: flex;
+    gap: 6px;
+}
+
+.fin-type-btn {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fin-type-btn.active {
+    background: #0f172a;
+    border-color: #0f172a;
+    color: #ffffff;
+}
+
+.fin-chart-canvas-wrapper {
+    position: relative;
+    width: 100%;
+    height: 340px;
+}
+
+/* Strategic Ecosystem Tri-Grid */
+.subsections-tri-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.sub-feature-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.sub-feature-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+}
+
+.sub-feature-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-feature-icon {
+    font-size: 1.25rem;
+}
+
+.sub-feature-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.sub-feature-desc {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.sub-feature-list {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.85rem;
+    color: #334155;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Filing & Statutory Badge Card */
+.filing-badge-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 18px 22px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.filing-badge-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.filing-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.ritewater-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #0284c7;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ritewater-link-btn:hover {
+    background: #0369a1;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: STICKY EXECUTIVE SIDEBAR & TRADING DESK (32%)
+   ========================================================================== */
+.ritewater-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 96px;
+}
+
+/* 1. Brand Identity & Logo Card */
+.sidebar-brand-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-logo-box {
+    width: 140px;
+    height: 70px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.sidebar-brand-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.sidebar-brand-sub {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+.sidebar-btn-web {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 9px 16px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-web:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0f172a;
+}
+
+/* 2. Direct Investor Execution Desk */
+.sidebar-trade-card {
+    background: linear-gradient(135deg, #061624 0%, #08283e 100%);
+    border: 1px solid rgba(2, 132, 199, 0.35);
+    border-radius: 16px;
+    padding: 24px;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(6, 22, 36, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sidebar-trade-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #38bdf8;
+}
+
+.sidebar-trade-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.sidebar-trade-desc {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+.sidebar-btn-wa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 18px;
+    background: #25d366;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.sidebar-btn-wa:hover {
+    background: #20ba59;
+    transform: translateY(-2px);
+}
+
+.sidebar-btn-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 11px 18px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.sidebar-btn-call:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+
+.sidebar-trade-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.76rem;
+    color: #94a3b8;
+    text-align: center;
+    padding-top: 4px;
+}
+
+/* 3. Credentials & Governance Card */
+.sidebar-credentials-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-cred-title {
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 14px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebar-cred-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-cred-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.4;
+}
+
+.sidebar-cred-bullet {
+    color: #10b981;
+    font-weight: 800;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .ritewater-main-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .ritewater-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .sidebar-brand-card {
+        grid-column: span 2;
+    }
+
+    .subsections-tri-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .ritewater-hero {
+        padding: 40px 0 35px;
+    }
+
+    .ritewater-hero-title {
+        font-size: 1.85rem;
+    }
+
+    .ritewater-hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .ritewater-metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .directors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fin-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-brand-card {
+        grid-column: span 1;
+    }
+
+    .ritewater-table td {
+        padding: 10px 12px;
+        font-size: 0.88rem;
+    }
+
+    .ritewater-table .td-label {
+        width: 40%;
+    }
+
+    .ritewater-table .td-val {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .ritewater-hero-title {
+        font-size: 1.55rem;
+    }
+
+    .ritewater-metrics-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .fin-kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fin-controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fin-metric-tabs {
+        justify-content: center;
+    }
+
+    .fin-type-toggles {
+        justify-content: center;
+    }
+}
