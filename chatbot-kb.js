@@ -380,6 +380,18 @@ window.MEERA_KB = {
             a: "No. Equity investments in unlisted shares carry market risk and do NOT offer guaranteed returns. Values fluctuate based on business performance, broader market conditions, liquidity, and eventual listing valuation. Meera Associates does not offer guaranteed returns or speculative predictions. Investors should invest based on their risk appetite and research."
         },
         {
+            id: "nsdl-ideas-guide",
+            q: "How do I register for NSDL IDEAS and add a beneficiary?",
+            keywords: ["nsdl", "ideas", "speed-e", "nsdl registration", "nsdl beneficiary", "nsdl transfer", "nsdl guide"],
+            a: "To register for NSDL IDEAS & SPEED-e and add Meera Associates as an approved beneficiary for off-market unlisted share transfers, visit our detailed step-by-step guide: <a href='nsdl-ideas-guide.html' style='color:#0284c7; font-weight:700;'>NSDL IDEAS & SPEED-e Process Guide ↗</a>. It covers online registration, OTP verification, adding NSDL/CDSL target accounts, and executing e-DIS delivery without paperwork."
+        },
+        {
+            id: "cdsl-easiest-guide",
+            q: "How do I register for CDSL Easiest and add a trusted account?",
+            keywords: ["cdsl", "easiest", "cdsl easiest", "trusted account", "cdsl registration", "cdsl beneficiary", "cdsl transfer", "cdsl guide"],
+            a: "To register for CDSL Easiest under the Trusted Account (PIN) option and map Meera Associates clearing Demat account, visit our comprehensive walkthrough: <a href='cdsl-easiest-guide.html' style='color:#059669; font-weight:700;'>CDSL Easiest Process Guide ↗</a>. It provides click-by-click instructions for 16-digit BO ID registration, DP approval, adding trusted accounts, and executing bulk off-market transfers."
+        },
+        {
             id: "how-to-contact",
             q: "How can I contact Meera Associates?",
             keywords: ["contact meera", "phone number", "office address", "call us", "contact details", "helpline"],

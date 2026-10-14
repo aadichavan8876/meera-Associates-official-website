@@ -968,6 +968,66 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    initScreenBullIntro();
+    // Global FAQ Accordion, Category Filtering & Live Search
+    function initGlobalFaq() {
+        const faqSections = document.querySelectorAll('.faq-section');
+        if (!faqSections.length) return;
+
+        faqSections.forEach(section => {
+            const faqCards = section.querySelectorAll('.faq-card');
+            const filterTabs = section.querySelectorAll('.faq-tab-btn');
+            const searchInput = section.querySelector('.faq-search-input');
+
+            // Toggle Accordion Card
+            faqCards.forEach(card => {
+                const btn = card.querySelector('.faq-card-question');
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        const isActive = card.classList.contains('active');
+                        card.classList.toggle('active', !isActive);
+                    });
+                }
+            });
+
+            // Category Filter Tabs
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    applySectionFilters();
+                });
+            });
+
+            // Live Search Input
+            if (searchInput) {
+                searchInput.addEventListener('input', () => {
+                    applySectionFilters();
+                });
+            }
+
+            function applySectionFilters() {
+                const activeTab = section.querySelector('.faq-tab-btn.active');
+                const selectedCat = activeTab ? activeTab.getAttribute('data-category') : 'all';
+                const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+                faqCards.forEach(card => {
+                    const cardCat = card.getAttribute('data-category') || '';
+                    const qText = card.querySelector('.faq-q-text') ? card.querySelector('.faq-q-text').textContent.toLowerCase() : '';
+                    const aText = card.querySelector('.faq-card-answer') ? card.querySelector('.faq-card-answer').textContent.toLowerCase() : '';
+
+                    const matchesCat = (selectedCat === 'all' || cardCat.includes(selectedCat));
+                    const matchesQuery = (!query || qText.includes(query) || aText.includes(query));
+
+                    if (matchesCat && matchesQuery) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        });
+    }
+
+    initGlobalFaq();
 
 });
