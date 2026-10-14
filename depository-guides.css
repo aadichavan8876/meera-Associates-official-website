@@ -416,10 +416,20 @@
 
 .copyable-url {
     color: #38bdf8;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: rgba(56, 189, 248, 0.45);
+    text-underline-offset: 3px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+a.copyable-url:hover {
+    color: #ffffff;
+    text-decoration-color: #38bdf8;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
 }
 
 .btn-copy-code {
