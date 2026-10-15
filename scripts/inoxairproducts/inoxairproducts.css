@@ -1,0 +1,803 @@
+/* ==========================================================================
+   INOX AIR PRODUCTS LIMITED - DEDICATED STYLESHEET
+   100% Structural & Design Parity with Anugraha / NCDEX Architecture
+   
+   Theme: Industrial & Medical Gas Manufacturing, Cryogenic Emerald & Air Tech Blue
+   ========================================================================== */
+
+/* Base page wrapper */
+.inoxap-page-wrap {
+    padding-bottom: 70px;
+}
+
+/* High-Impact Hero Command Bar */
+.inoxap-hero {
+    background: linear-gradient(135deg, #06241b 0%, #064e3b 50%, #0f172a 100%);
+    color: #ffffff;
+    padding: 60px 0 45px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.inoxap-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 18% 28%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 82% 72%, rgba(2, 132, 199, 0.18) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.inoxap-hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.inoxap-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    color: #94a3b8;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.inoxap-breadcrumbs a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.inoxap-breadcrumbs a:hover {
+    color: #6ee7b7;
+}
+
+.inoxap-breadcrumbs .crumb-sep {
+    color: #64748b;
+}
+
+.inoxap-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.18);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #a7f3d0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.inoxap-hero-badge .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981;
+    animation: pulseInoxap 2s infinite;
+}
+
+@keyframes pulseInoxap {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.25); }
+}
+
+.inoxap-hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.inoxap-hero-subtitle {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 920px;
+    margin-bottom: 28px;
+}
+
+/* 4-KPI Metric Strip in Hero */
+.inoxap-metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.inoxap-metric-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.inoxap-metric-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(16, 185, 129, 0.5);
+}
+
+.inoxap-metric-label {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.inoxap-metric-value {
+    display: block;
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.inoxap-metric-sub {
+    display: block;
+    font-size: 0.76rem;
+    color: #6ee7b7;
+    font-weight: 500;
+}
+
+/* 3. Asymmetric Split-Grid Layout */
+.inoxap-main-grid {
+    max-width: 1240px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 68% 32%;
+    gap: 32px;
+    align-items: start;
+}
+
+.inoxap-content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Reusable Institutional Card Architecture */
+.inoxap-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    padding: 28px;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.inoxap-card:hover {
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
+    border-color: #cbd5e1;
+}
+
+.inoxap-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.inoxap-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.inoxap-card-title-icon {
+    font-size: 1.25rem;
+}
+
+.inoxap-card-tag {
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+/* Corporate Master Specifications Table */
+.inoxap-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.inoxap-table tr {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.inoxap-table tr:last-child {
+    border-bottom: none;
+}
+
+.inoxap-table td {
+    padding: 13px 8px;
+    font-size: 0.92rem;
+    vertical-align: middle;
+}
+
+.inoxap-table .td-label {
+    width: 32%;
+    font-weight: 600;
+    color: #475569;
+}
+
+.inoxap-table .td-val {
+    width: 68%;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Interactive ISIN Badge with Copy */
+.isin-copy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.isin-copy-badge:hover {
+    background: #ecfdf5;
+    border-color: #10b981;
+    color: #047857;
+}
+
+.isin-copy-badge .copy-hint {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.72rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* Link Button in Table */
+.inoxap-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #047857;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.inoxap-link-btn:hover {
+    color: #065f46;
+    text-decoration: underline;
+}
+
+/* Board of Directors Grid (2-Column) */
+.directors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.director-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.director-card:hover {
+    border-color: #a7f3d0;
+    background: #f0fdf4;
+    transform: translateY(-2px);
+}
+
+.director-check {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #10b981;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.director-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.director-name {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.director-role {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #047857;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+/* Prose Styling */
+.inoxap-prose p {
+    font-size: 0.94rem;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 16px;
+}
+
+.inoxap-prose p:last-child {
+    margin-bottom: 0;
+}
+
+/* Feature Callout Box in Company Profile */
+.infrastructure-feature-box {
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-radius: 10px;
+    background: #ecfdf5;
+    border-left: 4px solid #10b981;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.infra-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.infra-bullet {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #047857;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.infra-text {
+    font-size: 0.9rem;
+    color: #064e3b;
+    line-height: 1.55;
+}
+
+/* Products Cards Grid */
+.products-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.product-feature-card {
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.product-feature-card:hover {
+    border-color: #a7f3d0;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);
+}
+
+.product-feature-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.product-feature-icon {
+    font-size: 1.25rem;
+}
+
+.product-feature-title {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.product-feature-desc {
+    font-size: 0.86rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Projects Cards Grid */
+.projects-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.project-card {
+    padding: 16px 18px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #10b981;
+    transition: all 0.2s ease;
+}
+
+.project-card:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-card-title {
+    font-size: 0.96rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-card-desc {
+    font-size: 0.86rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Awards List */
+.awards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.award-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.award-medal {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.award-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.award-title {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.award-desc {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.45;
+}
+
+/* Filings Banner Card */
+.filing-badge-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.filing-badge-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.filing-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+/* RIGHT SIDEBAR (32%) */
+.inoxap-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 90px;
+}
+
+.sidebar-brand-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.sidebar-logo-box {
+    width: 100%;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+
+.sidebar-logo-img {
+    max-height: 58px;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+.sidebar-brand-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+}
+
+.sidebar-brand-sub {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #047857;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.sidebar-summary-list {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.sidebar-summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.86rem;
+}
+
+.sidebar-summary-item .label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.sidebar-summary-item .value {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+/* Trading Desk Execution Card */
+.sidebar-cta-card {
+    background: linear-gradient(135deg, #064e3b 0%, #06241b 100%);
+    border-radius: 14px;
+    padding: 24px;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(6, 78, 59, 0.25);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.sidebar-cta-badge {
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #a7f3d0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.sidebar-cta-title {
+    font-size: 1.12rem;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    line-height: 1.35;
+    color: #ffffff;
+}
+
+.sidebar-cta-desc {
+    font-size: 0.84rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.sidebar-cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.sidebar-btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.sidebar-btn-whatsapp:hover {
+    background: #20bd5a;
+    transform: translateY(-1px);
+}
+
+.sidebar-btn-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 11px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-call:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.sidebar-helpline-note {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    text-align: center;
+    line-height: 1.45;
+}
+
+/* Disclaimer Card */
+.sidebar-disclaimer-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.sidebar-disclaimer-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sidebar-disclaimer-text {
+    font-size: 0.74rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .inoxap-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inoxap-sidebar {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .inoxap-metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .inoxap-hero-title {
+        font-size: 1.85rem;
+    }
+
+    .inoxap-metrics-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .directors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inoxap-table .td-label,
+    .inoxap-table .td-val {
+        width: 100%;
+        display: block;
+    }
+
+    .inoxap-table tr {
+        display: block;
+        padding: 8px 0;
+    }
+
+    .filing-badge-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

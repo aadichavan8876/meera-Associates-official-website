@@ -1,4 +1,4 @@
-﻿/**
+/**
  * MEERA ASSOCIATES - UNLISTED SHARES DIRECTORY
  * Official Directory Sequence (#1 to #99)
  * Source: Official Meera Associates Directory
@@ -414,15 +414,15 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'insolare',
             seqNo: 32,
-            name: 'Insolar Energy Ltd',
+            name: 'InSolare Energy Limited',
             shortName: 'InSolare',
             isin: 'INE0TSJ01021',
             category: 'Energy',
             industry: 'Utility Solar Plants & Renewable EPC',
-            logo: 'assets/logos/insolare.svg',
-            about: 'Meera Associates is a trusted broker and dealer of Insolar Energy Ltd Unlisted Shares. Official Scrip #32 in the Official Directory with ISIN INE0TSJ01021. Trades facilitated via compliant off-market depository transfer.',
+            logo: 'assets/logos/insolare.png',
+            about: 'Meera Associates is a trusted broker and dealer of InSolare Energy Limited Unlisted Shares. Official Scrip #32 in the Official Directory with ISIN INE0TSJ01021. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE0TSJ01021', 'Official Scrip: #32', 'Sector: Energy'],
-            overview: 'Institutional allocation and private equity facilitation for Insolar Energy Ltd, operating in the Utility Solar Plants & Renewable EPC sector. All trades subject to confirmation.'
+            overview: 'Institutional allocation and private equity facilitation for InSolare Energy Limited, operating in the Utility Solar Plants & Renewable EPC sector. All trades subject to confirmation.'
         },
         {
             id: 'jai-mata',
@@ -458,7 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE0REL01021',
             category: 'Technology',
             industry: 'Agricultural Drones & Defense UAVs',
-            logo: 'assets/logos/garuda-aerospace.svg',
+            logo: 'assets/logos/garuda-aerospace.png',
             about: 'Meera Associates is a trusted broker and dealer of Garuda Aerospace Limited Unlisted Shares. Official Scrip #35 in the Official Directory with ISIN INE0REL01021. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE0REL01021', 'Official Scrip: #35', 'Sector: Technology'],
             overview: 'Institutional allocation and private equity facilitation for Garuda Aerospace Limited, operating in the Agricultural Drones & Defense UAVs sector. All trades subject to confirmation.'
@@ -601,7 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE0JFD01014',
             category: 'Manufacturing',
             industry: 'Indigenous Guided Missiles & Defense Systems',
-            logo: 'assets/logos/jsr-dynamics.svg',
+            logo: 'assets/logos/jsr-dynamics.png',
             about: 'Meera Associates is a trusted broker and dealer of JSR Dynamics Limited Unlisted Shares. Official Scrip #46 in the Official Directory with ISIN INE0JFD01014. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE0JFD01014', 'Official Scrip: #46', 'Sector: Manufacturing'],
             overview: 'Institutional allocation and private equity facilitation for JSR Dynamics Limited, operating in the Indigenous Guided Missiles & Defense Systems sector. All trades subject to confirmation.'
@@ -691,23 +691,23 @@ document.addEventListener('DOMContentLoaded', () => {
             shortName: 'Sun Drops',
             isin: 'INE0H1U01025',
             category: 'Energy',
-            industry: 'Solar Power Production & Open Access',
-            logo: 'assets/logos/sundrops.svg',
+            industry: 'Renewable Energy Solutions & Solar IPP',
+            logo: 'assets/logos/sundrops-energia.png',
             about: 'Meera Associates is a trusted broker and dealer of Sun Drops Energia Limited Unlisted Shares. Official Scrip #53 in the Official Directory with ISIN INE0H1U01025. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE0H1U01025', 'Official Scrip: #53', 'Sector: Energy'],
-            overview: 'Institutional allocation and private equity facilitation for Sun Drops Energia Limited, operating in the Solar Power Production & Open Access sector. All trades subject to confirmation.'
+            overview: 'Institutional allocation and private equity facilitation for Sun Drops Energia Limited, operating in the Renewable Energy Solutions & Solar IPP sector. All trades subject to confirmation.'
         },
         {
             id: 'vivriti-next',
             seqNo: 54,
             name: 'Vivriti Next Limited',
             shortName: 'Vivriti Next',
-            isin: 'IN90OUB01015',
+            isin: 'INE0OUB01017',
             category: 'Financial Services',
             industry: 'Fintech Structured Debt & Mid-Market Loans',
-            logo: 'assets/logos/vivriti-next.svg',
-            about: 'Meera Associates is a trusted broker and dealer of Vivriti Next Limited Unlisted Shares. Official Scrip #54 in the Official Directory with ISIN IN90OUB01015. Trades facilitated via compliant off-market depository transfer.',
-            highlights: ['ISIN: IN90OUB01015', 'Official Scrip: #54', 'Sector: Financial Services'],
+            logo: 'assets/logos/vivriti-next.png',
+            about: 'Meera Associates is a trusted broker and dealer of Vivriti Next Limited Unlisted Shares. Official Scrip #54 in the Official Directory with ISIN INE0OUB01017. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE0OUB01017', 'Official Scrip: #54', 'Sector: Financial Services'],
             overview: 'Institutional allocation and private equity facilitation for Vivriti Next Limited, operating in the Fintech Structured Debt & Mid-Market Loans sector. All trades subject to confirmation.'
         },
         {
@@ -757,7 +757,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE0HAD01019',
             category: 'Manufacturing',
             industry: 'Lithium Battery Recycling & Precious Metals',
-            logo: 'assets/logos/recyclekaro.svg',
+            logo: 'assets/logos/recyclekaro.png',
             about: 'Meera Associates is a trusted broker and dealer of Evergreen Recyclekaro (India) Limited Unlisted Shares. Official Scrip #58 in the Official Directory with ISIN INE0HAD01019. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE0HAD01019', 'Official Scrip: #58', 'Sector: Manufacturing'],
             overview: 'Institutional allocation and private equity facilitation for Evergreen Recyclekaro (India) Limited, operating in the Lithium Battery Recycling & Precious Metals sector. All trades subject to confirmation.'
@@ -848,7 +848,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE13V701016',
             category: 'Energy',
             industry: 'High-Efficiency Solar Modules & Cells',
-            logo: 'assets/logos/cosmic-pv.svg',
+            logo: 'assets/logos/cosmic-pv.png',
             about: 'Meera Associates is a trusted broker and dealer of Cosmic PV Power Limited Unlisted Shares. Official Scrip #65 in the Official Directory with ISIN INE13V701016. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE13V701016', 'Official Scrip: #65', 'Sector: Energy'],
             overview: 'Institutional allocation and private equity facilitation for Cosmic PV Power Limited, operating in the High-Efficiency Solar Modules & Cells sector. All trades subject to confirmation.'
@@ -860,11 +860,11 @@ document.addEventListener('DOMContentLoaded', () => {
             shortName: 'Maverick',
             isin: 'INE1BEQ01014',
             category: 'Technology',
-            industry: 'Military Simulators & Flight Trainers',
-            logo: 'assets/logos/maverick.svg',
+            industry: 'Medical Simulation & MedTech Training Systems',
+            logo: 'assets/logos/maverick-simulation.png',
             about: 'Meera Associates is a trusted broker and dealer of Maverick Simulation Solutions Limited Unlisted Shares. Official Scrip #66 in the Official Directory with ISIN INE1BEQ01014. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE1BEQ01014', 'Official Scrip: #66', 'Sector: Technology'],
-            overview: 'Institutional allocation and private equity facilitation for Maverick Simulation Solutions Limited, operating in the Military Simulators & Flight Trainers sector. All trades subject to confirmation.'
+            overview: 'Institutional allocation and private equity facilitation for Maverick Simulation Solutions Limited, operating in the Medical Simulation & MedTech Training Systems sector. All trades subject to confirmation.'
         },
         {
             id: 'capgemini',
@@ -900,7 +900,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE08GI01012',
             category: 'Financial Services',
             industry: 'Commercial Loans & Structured Credit',
-            logo: 'assets/logos/hindon-mercantile.svg',
+            logo: 'assets/logos/hindon-mercantile.png',
             about: 'Meera Associates is a trusted broker and dealer of Hindon Mercantile Limited Unlisted Shares. Official Scrip #69 in the Official Directory with ISIN INE08GI01012. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE08GI01012', 'Official Scrip: #69', 'Sector: Financial Services'],
             overview: 'Institutional allocation and private equity facilitation for Hindon Mercantile Limited, operating in the Commercial Loans & Structured Credit sector. All trades subject to confirmation.'
@@ -926,7 +926,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE1GFM01019',
             category: 'Infrastructure',
             industry: 'Urban Water Infrastructure & Sewage Treatment',
-            logo: 'assets/logos/eiffil-water.svg',
+            logo: 'assets/logos/eiffil-water.png',
             about: 'Meera Associates is a trusted broker and dealer of Eiffil Water Infra Limited Unlisted Shares. Official Scrip #71 in the Official Directory with ISIN INE1GFM01019. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE1GFM01019', 'Official Scrip: #71', 'Sector: Infrastructure'],
             overview: 'Institutional allocation and private equity facilitation for Eiffil Water Infra Limited, operating in the Urban Water Infrastructure & Sewage Treatment sector. All trades subject to confirmation.'
@@ -965,7 +965,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE495Y01014',
             category: 'Technology',
             industry: 'Interactive VR Platforms & Sports Tech',
-            logo: 'assets/logos/proyuga.svg',
+            logo: 'assets/logos/proyuga.png',
             about: 'Meera Associates is a trusted broker and dealer of Proyuga Advanced Technologies Limited Unlisted Shares. Official Scrip #74 in the Official Directory with ISIN INE495Y01014. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE495Y01014', 'Official Scrip: #74', 'Sector: Technology'],
             overview: 'Institutional allocation and private equity facilitation for Proyuga Advanced Technologies Limited, operating in the Interactive VR Platforms & Sports Tech sector. All trades subject to confirmation.'
@@ -986,15 +986,15 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'soleos-energy',
             seqNo: 76,
-            name: 'Soleos Energy Private Limited',
+            name: 'Soleos Energy Limited',
             shortName: 'Soleos Energy',
             isin: 'INE0VL901028',
             category: 'Energy',
-            industry: 'Rooftop Solar & Utility Power Projects',
-            logo: 'assets/logos/soleos-energy.svg',
-            about: 'Meera Associates is a trusted broker and dealer of Soleos Energy Private Limited Unlisted Shares. Official Scrip #76 in the Official Directory with ISIN INE0VL901028. Trades facilitated via compliant off-market depository transfer.',
+            industry: 'Solar EPC & Renewable Energy Services',
+            logo: 'assets/logos/soleos.png',
+            about: 'Meera Associates is a trusted broker and dealer of Soleos Energy Limited Unlisted Shares. Official Scrip #76 in the Official Directory with ISIN INE0VL901028. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE0VL901028', 'Official Scrip: #76', 'Sector: Energy'],
-            overview: 'Institutional allocation and private equity facilitation for Soleos Energy Private Limited, operating in the Rooftop Solar & Utility Power Projects sector. All trades subject to confirmation.'
+            overview: 'Institutional allocation and private equity facilitation for Soleos Energy Limited, operating in the Solar EPC & Renewable Energy Services sector. All trades subject to confirmation.'
         },
         {
             id: 'signify',
@@ -1295,7 +1295,110 @@ document.addEventListener('DOMContentLoaded', () => {
             highlights: ['ISIN: INE629Z01015', 'Official Scrip: #99', 'Sector: Manufacturing'],
             overview: 'Institutional allocation and private equity facilitation for Anugraha Valve Casting Ltd, operating in the Industrial Valve Castings & Steel Foundries sector. All trades subject to confirmation.'
         },
-
+        {
+            id: 'ofbusiness',
+            seqNo: 100,
+            name: 'OFB Tech Limited (OfBusiness)',
+            shortName: 'OfBusiness',
+            isin: 'INE06DH01023',
+            category: 'Financial Services',
+            industry: 'B2B Raw Material Commerce & SME Fintech',
+            logo: 'assets/logos/ofbusiness.png',
+            about: 'Meera Associates is a trusted broker and dealer of OFB Tech Limited (OfBusiness) Unlisted Shares. Official Scrip #100 in the Official Directory with ISIN INE06DH01023. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE06DH01023', 'Official Scrip: #100', 'Sector: Financial Services'],
+            overview: 'Institutional allocation and private equity facilitation for OFB Tech Limited (OfBusiness), operating in the B2B Raw Material Commerce & SME Fintech sector. All trades subject to confirmation.'
+        },
+        {
+            id: 'infobay-ai',
+            seqNo: 101,
+            name: 'InfoBay AI Limited',
+            shortName: 'InfoBay AI',
+            isin: 'INE0SE901014',
+            category: 'Technology',
+            industry: 'Artificial Intelligence Infrastructure & Synthetic Data',
+            logo: 'assets/logos/infobay-ai.png',
+            about: 'Meera Associates is a trusted broker and dealer of InfoBay AI Limited Unlisted Shares. Official Scrip #101 in the Official Directory with ISIN INE0SE901014. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE0SE901014', 'Official Scrip: #101', 'Sector: Technology'],
+            overview: 'Institutional allocation and private equity facilitation for InfoBay AI Limited, operating in the Artificial Intelligence Infrastructure & Synthetic Data sector. All trades subject to confirmation.'
+        },
+        {
+            id: 'sk-finance',
+            seqNo: 102,
+            name: 'SK Finance Limited',
+            shortName: 'SK Finance',
+            isin: 'INE124N01039',
+            category: 'Financial Services',
+            industry: 'Vehicle Financing & Secured MSME Lending',
+            logo: 'assets/logos/sk-finance.png',
+            about: 'Meera Associates is a trusted broker and dealer of SK Finance Limited Unlisted Shares. Official Scrip #102 in the Official Directory with ISIN INE124N01039. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE124N01039', 'Official Scrip: #102', 'Sector: Financial Services'],
+            overview: 'Institutional allocation and private equity facilitation for SK Finance Limited, operating in the Vehicle Financing & Secured MSME Lending sector. All trades subject to confirmation.'
+        },
+        {
+            id: 'inox-air-products',
+            seqNo: 103,
+            name: 'Inox Air Products Limited',
+            shortName: 'Inox Air Products',
+            isin: 'INE321A01020',
+            category: 'Manufacturing',
+            industry: 'Industrial & Medical Gas Manufacturing',
+            logo: 'assets/logos/inox-air-products.png',
+            about: 'Meera Associates is a trusted broker and dealer of Inox Air Products Limited Unlisted Shares. Official Scrip #103 in the Official Directory with ISIN INE321A01020. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE321A01020', 'Official Scrip: #103', 'Sector: Manufacturing'],
+            overview: 'Institutional allocation and private equity facilitation for Inox Air Products Limited, operating in the Industrial & Medical Gas Manufacturing sector. All trades subject to confirmation.'
+        },
+        {
+            id: 'goldi-solar',
+            seqNo: 104,
+            name: 'Goldi Solar Limited',
+            shortName: 'Goldi Solar',
+            isin: 'INE19IG01019',
+            category: 'Energy',
+            industry: 'Solar PV Module Manufacturing & Renewable EPC',
+            logo: 'assets/logos/goldi-solar.png',
+            about: 'Meera Associates is a trusted broker and dealer of Goldi Solar Limited Unlisted Shares. Official Scrip #104 in the Official Directory with ISIN INE19IG01019. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE19IG01019', 'Official Scrip: #104', 'Sector: Energy'],
+            overview: 'Institutional allocation and private equity facilitation for Goldi Solar Limited, operating in the Solar PV Module Manufacturing & Renewable EPC sector. All trades subject to confirmation.'
+        },
+        {
+            id: 'rkb-global',
+            seqNo: 105,
+            name: 'RKB Global Limited',
+            shortName: 'RKB Global',
+            isin: 'INE028W01017',
+            category: 'Manufacturing',
+            industry: 'Steel Trading, PEB Fabrication & Industrial Metals',
+            logo: 'assets/logos/rkb-global.png',
+            about: 'Meera Associates is a trusted broker and dealer of RKB Global Limited Unlisted Shares. Official Scrip #105 in the Official Directory with ISIN INE028W01017. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE028W01017', 'Official Scrip: #105', 'Sector: Manufacturing'],
+            overview: 'Institutional allocation and private equity facilitation for RKB Global Limited, operating in the Steel Trading, PEB Fabrication & Industrial Metals sector. All trades subject to confirmation.'
+        },
+        {
+            id: 'prabhudas-lilladher',
+            seqNo: 106,
+            name: 'Prabhudas Lilladher Advisory Services Ltd (PL Capital)',
+            shortName: 'PL Capital',
+            isin: 'INE894K01025',
+            category: 'Financial Services',
+            industry: 'Institutional Equities, Wealth Management & PMS/AIF',
+            logo: 'assets/logos/pl-capital.png',
+            about: 'Meera Associates is a trusted broker and dealer of Prabhudas Lilladher Advisory Services Ltd Unlisted Shares. Official Scrip #106 in the Official Directory with ISIN INE894K01025. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE894K01025', 'Official Scrip: #106', 'Sector: Financial Services'],
+            overview: 'Institutional allocation and private equity facilitation for Prabhudas Lilladher Advisory Services Ltd (PL Capital), operating in the Institutional Equities, Wealth Management & PMS/AIF sector. All trades subject to confirmation.'
+        },
+        {
+            id: 'inox-neo',
+            seqNo: 107,
+            name: 'Inox Neo Energies Limited',
+            shortName: 'Inox Neo Energies',
+            isin: 'INE1G8T01014',
+            category: 'Energy',
+            industry: 'Renewable Energy IPP, Wind & Solar Hybrid',
+            logo: 'assets/logos/inox-neo.png',
+            about: 'Meera Associates is a trusted broker and dealer of Inox Neo Energies Limited Unlisted Shares. Official Scrip #107 in the Official Directory with ISIN INE1G8T01014. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE1G8T01014', 'Official Scrip: #107', 'Sector: Energy'],
+            overview: 'Institutional allocation and private equity facilitation for Inox Neo Energies Limited, operating in the Renewable Energy IPP, Wind & Solar Hybrid sector. All trades subject to confirmation.'
+        }
     ];
 
     // DOM Elements
@@ -1408,7 +1511,48 @@ document.addEventListener('DOMContentLoaded', () => {
         'pharmed': 'scripts/pharmed/pharmed.html',
         'goa-shipyard': 'scripts/goashipyard/goashipyard.html',
         'rite-water': 'scripts/ritewater/ritewater.html',
-        'anugraha': 'scripts/anugrahavalve/anugrahavalve.html'
+        'anugraha': 'scripts/anugrahavalve/anugrahavalve.html',
+        'soleos': 'scripts/soleos/soleos.html',
+        'soleos-energy': 'scripts/soleos/soleos.html',
+        'proyuga': 'scripts/proyuga/proyuga.html',
+        'eiffil-water': 'scripts/eiffilwater/eiffilwater.html',
+        'eiffilwater': 'scripts/eiffilwater/eiffilwater.html',
+        'insolare': 'scripts/insolare/insolare.html',
+        'garuda-aerospace': 'scripts/garudaaerospace/garudaaerospace.html',
+        'garuda': 'scripts/garudaaerospace/garudaaerospace.html',
+        'hindon-mercantile': 'scripts/hindonmercantile/hindonmercantile.html',
+        'hindon': 'scripts/hindonmercantile/hindonmercantile.html',
+        'vivriti-next': 'scripts/vivritinext/vivritinext.html',
+        'vivriti': 'scripts/vivritinext/vivritinext.html',
+        'maverick': 'scripts/mavericksimulation/mavericksimulation.html',
+        'maverick-simulation': 'scripts/mavericksimulation/mavericksimulation.html',
+        'recyclekaro': 'scripts/recyclekaro/recyclekaro.html',
+        'evergreen-recyclekaro': 'scripts/recyclekaro/recyclekaro.html',
+        'cosmic-pv': 'scripts/cosmicpv/cosmicpv.html',
+        'cosmicpv': 'scripts/cosmicpv/cosmicpv.html',
+        'sundrops': 'scripts/sundropsenergia/sundropsenergia.html',
+        'sundrops-energia': 'scripts/sundropsenergia/sundropsenergia.html',
+        'ofbusiness': 'scripts/ofbusiness/ofbusiness.html',
+        'ofb': 'scripts/ofbusiness/ofbusiness.html',
+        'ofb-tech': 'scripts/ofbusiness/ofbusiness.html',
+        'infobay': 'scripts/infobayai/infobayai.html',
+        'infobay-ai': 'scripts/infobayai/infobayai.html',
+        'sk-finance': 'scripts/skfinance/skfinance.html',
+        'skfinance': 'scripts/skfinance/skfinance.html',
+        'jsr-dynamics': 'scripts/jsrdynamics/jsrdynamics.html',
+        'jsrdynamics': 'scripts/jsrdynamics/jsrdynamics.html',
+        'inox-air-products': 'scripts/inoxairproducts/inoxairproducts.html',
+        'inoxairproducts': 'scripts/inoxairproducts/inoxairproducts.html',
+        'goldi-solar': 'scripts/goldisolar/goldisolar.html',
+        'goldisolar': 'scripts/goldisolar/goldisolar.html',
+        'rkb-global': 'scripts/rkbglobal/rkbglobal.html',
+        'rkbglobal': 'scripts/rkbglobal/rkbglobal.html',
+        'prabhudas-lilladher': 'scripts/plindia/plindia.html',
+        'pl-capital': 'scripts/plindia/plindia.html',
+        'plindia': 'scripts/plindia/plindia.html',
+        'inox-neo': 'scripts/inoxneo/inoxneo.html',
+        'inox-neo-energies': 'scripts/inoxneo/inoxneo.html',
+        'inoxneo': 'scripts/inoxneo/inoxneo.html'
     };
 
     // Attach Click Handlers to Cards and Buttons
@@ -1471,6 +1615,60 @@ document.addEventListener('DOMContentLoaded', () => {
         if (highlightsList && comp.highlights) {
             const cleanHighlights = comp.highlights.filter(h => !h.toLowerCase().includes('price') && !h.includes('₹'));
             highlightsList.innerHTML = cleanHighlights.map(h => `<li><span class="highlight-bullet">✓</span> ${h}</li>`).join('');
+        }
+
+        // Populate Company-Specific FAQs in Modal
+        const faqsListEl = document.getElementById('modal-detail-faqs-list');
+        if (faqsListEl) {
+            const companyFaqs = [
+                {
+                    q: `How do I buy unlisted shares of ${comp.shortName}?`,
+                    a: `Contact Meera Associates at <a href="tel:+918983388881" style="color: #0284c7; font-weight: 700;">+91 89833 88881</a>. We confirm current lot sizing and pricing, verify your KYC and Demat Client Master List (CML), and transfer the shares directly into your Demat account under ISIN <strong>${comp.isin}</strong> within 24 business hours.`
+                },
+                {
+                    q: `Can I sell my existing ${comp.shortName} shares to Meera Associates?`,
+                    a: `<strong>Yes, guaranteed same-day payout.</strong> Meera Associates buys existing ${comp.shortName} shares. Transfer the shares to our designated clearing Demat account via CDSL Easiest or NSDL, and funds are credited directly to your bank account via RTGS/NEFT on the exact same business day.`
+                },
+                {
+                    q: `What is the official ISIN and Depository status of ${comp.shortName}?`,
+                    a: `The official ISIN for ${comp.name} is <strong>${comp.isin}</strong>. The equity shares are fully dematerialized and eligible for custody across both NSDL and CDSL depositories.`
+                },
+                {
+                    q: `Where will ${comp.shortName} shares reflect after purchase?`,
+                    a: `After depository transfer, the shares appear under ISIN <strong>${comp.isin}</strong> in your existing broker Demat portfolio (Zerodha, Groww, Angel One, Upstox, HDFC, ICICI, etc.) and in your monthly NSDL/CDSL Consolidated Account Statement (CAS).`
+                },
+                {
+                    q: `What happens if ${comp.shortName} executes an IPO?`,
+                    a: `When the company files its DRHP and lists on the NSE or BSE, your pre-IPO Demat shares automatically transition into publicly traded listed shares under the designated listed ISIN, subject to SEBI's 6-month pre-IPO lock-in from commercial listing.`
+                }
+            ];
+
+            faqsListEl.innerHTML = companyFaqs.map((faq, idx) => `
+                <div class="modal-company-faq-item ${idx === 0 ? 'active' : ''}">
+                    <button type="button" class="modal-company-faq-q" aria-expanded="${idx === 0}">
+                        <span>${faq.q}</span>
+                        <span class="modal-faq-arrow">▼</span>
+                    </button>
+                    <div class="modal-company-faq-a" style="${idx === 0 ? 'display: block;' : ''}">
+                        <p style="margin: 0;">${faq.a}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            // Attach accordion toggle to modal FAQ questions
+            faqsListEl.querySelectorAll('.modal-company-faq-q').forEach(qBtn => {
+                qBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const item = qBtn.closest('.modal-company-faq-item');
+                    const ans = item.querySelector('.modal-company-faq-a');
+                    const isActive = item.classList.contains('active');
+                    
+                    item.classList.toggle('active', !isActive);
+                    if (ans) {
+                        ans.style.display = isActive ? 'none' : 'block';
+                    }
+                });
+            });
         }
 
         const modalEnquireBtn = document.getElementById('modal-detail-enquire-btn');

@@ -8672,4 +8672,75 @@ body.disclaimer-open {
     }
 }
 
+/* Modal Company-Specific FAQs */
+.modal-company-faqs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.modal-company-faq-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.modal-company-faq-item:hover {
+    border-color: #cbd5e1;
+}
+
+.modal-company-faq-item.active {
+    border-color: #38bdf8;
+    background: #ffffff;
+}
+
+.modal-company-faq-q {
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.modal-company-faq-q:hover {
+    color: #0284c7;
+}
+
+.modal-company-faq-q .modal-faq-arrow {
+    font-size: 0.75rem;
+    color: #64748b;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.modal-company-faq-item.active .modal-company-faq-q .modal-faq-arrow {
+    transform: rotate(180deg);
+    color: #0284c7;
+}
+
+.modal-company-faq-a {
+    padding: 0 14px 12px 14px;
+    font-size: 0.84rem;
+    color: #475569;
+    line-height: 1.5;
+    display: none;
+}
+
+.modal-company-faq-item.active .modal-company-faq-a {
+    display: block;
+}
+
+
 

@@ -1,0 +1,746 @@
+/* ==========================================================================
+   VIVRITI NEXT LIMITED - DEDICATED STYLESHEET
+   100% Structural & Design Parity with Anugraha / NCDEX Architecture
+   
+   Theme: Fintech Mid-Market Debt, Electric Cyan & Vibrant Coral / Indigo Palette
+   ========================================================================== */
+
+/* Base page wrapper */
+.vivriti-page-wrap {
+    padding-bottom: 70px;
+}
+
+/* High-Impact Hero Command Bar */
+.vivriti-hero {
+    background: linear-gradient(135deg, #051426 0%, #0a2544 50%, #0e3b68 100%);
+    color: #ffffff;
+    padding: 60px 0 45px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(14, 165, 233, 0.25);
+}
+
+.vivriti-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 18% 28%, rgba(14, 165, 233, 0.22) 0%, transparent 50%),
+        radial-gradient(circle at 82% 72%, rgba(249, 115, 22, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.vivriti-hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.vivriti-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    color: #94a3b8;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.vivriti-breadcrumbs a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.vivriti-breadcrumbs a:hover {
+    color: #38bdf8;
+}
+
+.vivriti-breadcrumbs .crumb-sep {
+    color: #64748b;
+}
+
+.vivriti-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(14, 165, 233, 0.2);
+    border: 1px solid rgba(14, 165, 233, 0.4);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.vivriti-hero-badge .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0ea5e9;
+    box-shadow: 0 0 10px #0ea5e9;
+    animation: pulseVivriti 2s infinite;
+}
+
+@keyframes pulseVivriti {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.25); }
+}
+
+.vivriti-hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.vivriti-hero-subtitle {
+    font-size: 1.08rem;
+    color: #cbd5e1;
+    max-width: 880px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+
+/* 4-KPI Metric Strip in Hero */
+.vivriti-metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.vivriti-metric-card {
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.vivriti-metric-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(14, 165, 233, 0.4);
+}
+
+.vivriti-metric-label {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.vivriti-metric-value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.vivriti-metric-sub {
+    font-size: 0.8rem;
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+/* Asymmetric Main Grid (68% / 32%) */
+.vivriti-main-grid {
+    max-width: 1240px;
+    margin: 36px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 68%) minmax(0, 32%);
+    gap: 32px;
+    align-items: start;
+}
+
+/* Left Content Column */
+.vivriti-content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Base Profile Card */
+.vivriti-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 28px 32px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.vivriti-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.vivriti-card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vivriti-card-title-icon {
+    font-size: 1.25rem;
+}
+
+.vivriti-card-tag {
+    font-size: 0.8rem;
+    color: #0369a1;
+    background: #e0f2fe;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Corporate Master Table */
+.vivriti-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vivriti-table tr {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.vivriti-table tr:last-child {
+    border-bottom: none;
+}
+
+.vivriti-table td {
+    padding: 13px 12px;
+    font-size: 0.94rem;
+    vertical-align: middle;
+}
+
+.vivriti-table .td-label {
+    width: 32%;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.vivriti-table .td-val {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+/* Click-to-Copy ISIN Badge */
+.isin-copy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0f172a;
+    color: #38bdf8;
+    font-family: monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.isin-copy-badge:hover {
+    background: #1e293b;
+    border-color: #0ea5e9;
+    color: #7dd3fc;
+}
+
+.isin-copy-badge .copy-hint {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    text-transform: none;
+}
+
+.vivriti-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #0284c7;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.vivriti-link-btn:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+/* Board of Directors Grid */
+.directors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.director-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.director-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+}
+
+.director-check {
+    background: #e0f2fe;
+    color: #0284c7;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.director-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.director-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.director-role {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Prose Paragraphs */
+.vivriti-prose p {
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 16px;
+}
+
+.vivriti-prose p:last-child {
+    margin-bottom: 0;
+}
+
+/* Feature Callout Box */
+.infrastructure-feature-box {
+    background: #f0f9ff;
+    border-left: 4px solid #0284c7;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.infra-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.infra-bullet {
+    width: 8px;
+    height: 8px;
+    background: #0284c7;
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+}
+
+.infra-text {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #0c4a6e;
+}
+
+/* Products Cards Grid */
+.products-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.product-feature-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.product-feature-card:hover {
+    border-color: #0ea5e9;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.08);
+}
+
+.product-feature-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-feature-icon {
+    font-size: 1.4rem;
+}
+
+.product-feature-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.product-feature-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Upcoming Projects Grid */
+.projects-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.project-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-card:hover {
+    border-color: #0284c7;
+}
+
+.project-card-title {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-card-desc {
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Annual Report Filing Card */
+.filing-badge-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    gap: 16px;
+}
+
+.filing-badge-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.filing-icon {
+    font-size: 1.8rem;
+}
+
+/* Right Column Sidebar */
+.vivriti-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 90px;
+}
+
+/* Sidebar Brand Card */
+.sidebar-brand-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-logo-box {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+.sidebar-logo-img {
+    max-height: 80px;
+    max-width: 190px;
+    object-fit: contain;
+}
+
+.sidebar-brand-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.sidebar-brand-sub {
+    font-size: 0.86rem;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+.sidebar-btn-web {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: #0f172a;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-web:hover {
+    background: #e2e8f0;
+    color: #0284c7;
+}
+
+/* Sidebar Trade Execution Card */
+.sidebar-trade-card {
+    background: linear-gradient(135deg, #051426 0%, #0d2a4c 100%);
+    border-radius: 16px;
+    padding: 26px 24px;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(5, 20, 38, 0.25);
+    border: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.sidebar-trade-tag {
+    display: inline-block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #4ade80;
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.sidebar-trade-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.sidebar-trade-desc {
+    font-size: 0.86rem;
+    color: #cbd5e1;
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+.sidebar-btn-wa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 18px;
+    background: #25d366;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-wa:hover {
+    background: #20ba5a;
+    transform: translateY(-1px);
+}
+
+.sidebar-btn-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 11px 18px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-call:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-trade-footer {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.78rem;
+    color: #94a3b8;
+    text-align: center;
+}
+
+/* Sidebar Credentials Card */
+.sidebar-credentials-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-cred-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.sidebar-cred-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-cred-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.45;
+}
+
+.sidebar-cred-bullet {
+    color: #0284c7;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+/* Responsive Rules */
+@media (max-width: 1024px) {
+    .vivriti-main-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vivriti-sidebar {
+        position: static;
+        margin-top: 20px;
+    }
+    
+    .vivriti-metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .vivriti-hero-title {
+        font-size: 1.9rem;
+    }
+    
+    .vivriti-metrics-strip {
+        grid-template-columns: 1fr;
+    }
+    
+    .directors-grid,
+    .products-cards-grid,
+    .projects-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vivriti-card {
+        padding: 20px 18px;
+    }
+    
+    .vivriti-table .td-label {
+        width: 40%;
+    }
+    
+    .filing-badge-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
