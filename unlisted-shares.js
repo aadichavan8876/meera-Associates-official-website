@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE071I01016',
             category: 'Manufacturing',
             industry: 'Agrochemicals & Crop Protection',
-            logo: 'assets/logos/indofil.svg',
+            logo: 'assets/logos/indofil.png',
             about: 'Meera Associates is a trusted broker and dealer of Indofil Industries Ltd Unlisted Shares. Official Scrip #6 in the Official Directory with ISIN INE071I01016. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE071I01016', 'Official Scrip: #6', 'Sector: Manufacturing'],
             overview: 'Institutional allocation and private equity facilitation for Indofil Industries Ltd, operating in the Agrochemicals & Crop Protection sector. All trades subject to confirmation.'
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE155K01013',
             category: 'Financial Services',
             industry: 'Custody & Clearing Services',
-            logo: 'assets/logos/orbis.png',
+            logo: 'assets/logos/orbis-financial.png',
             about: 'Meera Associates is a trusted broker and dealer of Orbis Financial Ltd Unlisted Shares. Official Scrip #9 in the Official Directory with ISIN INE155K01013. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE155K01013', 'Official Scrip: #9', 'Sector: Financial Services'],
             overview: 'Institutional allocation and private equity facilitation for Orbis Financial Ltd, operating in the Custody & Clearing Services sector. All trades subject to confirmation.'
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE011A01019',
             category: 'Energy',
             industry: 'Oil Refining & Fuel Retail',
-            logo: 'assets/logos/nayara-energy.svg',
+            logo: 'assets/logos/nayara-energy.png',
             about: 'Meera Associates is a trusted broker and dealer of Nayara Energy Ltd Unlisted Shares. Official Scrip #10 in the Official Directory with ISIN INE011A01019. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE011A01019', 'Official Scrip: #10', 'Sector: Energy'],
             overview: 'Institutional allocation and private equity facilitation for Nayara Energy Ltd, operating in the Oil Refining & Fuel Retail sector. All trades subject to confirmation.'
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE561T01021',
             category: 'Consumer',
             industry: 'Hospitality & Travel Tech Platform',
-            logo: 'assets/logos/oyo.svg',
+            logo: 'assets/logos/oyo.png',
             about: 'Meera Associates is a trusted broker and dealer of OYO Rooms (Oravel Stays Ltd) Unlisted Shares. Official Scrip #11 in the Official Directory with ISIN INE561T01021. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE561T01021', 'Official Scrip: #11', 'Sector: Consumer'],
             overview: 'Institutional allocation and private equity facilitation for OYO Rooms (Oravel Stays Ltd), operating in the Hospitality & Travel Tech Platform sector. All trades subject to confirmation.'
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE499C01012',
             category: 'Manufacturing',
             industry: 'Industrial Refrigeration Equipment',
-            logo: 'assets/logos/frick-india.svg',
+            logo: 'assets/logos/frick-india.png',
             about: 'Meera Associates is a trusted broker and dealer of Frick India Ltd Unlisted Shares. Official Scrip #15 in the Official Directory with ISIN INE499C01012. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE499C01012', 'Official Scrip: #15', 'Sector: Manufacturing'],
             overview: 'Institutional allocation and private equity facilitation for Frick India Ltd, operating in the Industrial Refrigeration Equipment sector. All trades subject to confirmation.'
@@ -221,12 +221,12 @@ document.addEventListener('DOMContentLoaded', () => {
             seqNo: 17,
             name: 'Sunday Proptech Limited',
             shortName: 'Sunday Proptech',
-            isin: 'INE1DBV01016',
+            isin: 'INE1DBV01024',
             category: 'Technology',
             industry: 'Digital Real Estate Tech Platforms',
             logo: 'assets/logos/sunday-proptech.svg',
-            about: 'Meera Associates is a trusted broker and dealer of Sunday Proptech Limited Unlisted Shares. Official Scrip #17 in the Official Directory with ISIN INE1DBV01016. Trades facilitated via compliant off-market depository transfer.',
-            highlights: ['ISIN: INE1DBV01016', 'Official Scrip: #17', 'Sector: Technology'],
+            about: 'Meera Associates is a trusted broker and dealer of Sunday Proptech Limited Unlisted Shares. Official Scrip #17 in the Official Directory with ISIN INE1DBV01024. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE1DBV01024', 'Official Scrip: #17', 'Sector: Technology'],
             overview: 'Institutional allocation and private equity facilitation for Sunday Proptech Limited, operating in the Digital Real Estate Tech Platforms sector. All trades subject to confirmation.'
         },
         {
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE040I01011',
             category: 'Consumer',
             industry: 'HVAC, Air Conditioning & Cold Chain',
-            logo: 'assets/logos/carrier.svg',
+            logo: 'assets/logos/carrier.png',
             about: 'Meera Associates is a trusted broker and dealer of Carrier Aircon & Refrigeration Ltd Unlisted Shares. Official Scrip #18 in the Official Directory with ISIN INE040I01011. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE040I01011', 'Official Scrip: #18', 'Sector: Consumer'],
             overview: 'Institutional allocation and private equity facilitation for Carrier Aircon & Refrigeration Ltd, operating in the HVAC, Air Conditioning & Cold Chain sector. All trades subject to confirmation.'
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE02KH01019',
             category: 'Infrastructure',
             industry: 'Airport Operations & 100% Solar Power',
-            logo: 'assets/logos/cial.svg',
+            logo: 'assets/logos/cial.png',
             about: 'Meera Associates is a trusted broker and dealer of Cochin International Airport Ltd (CIAL) Unlisted Shares. Official Scrip #19 in the Official Directory with ISIN INE02KH01019. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE02KH01019', 'Official Scrip: #19', 'Sector: Infrastructure'],
             overview: 'Institutional allocation and private equity facilitation for Cochin International Airport Ltd (CIAL), operating in the Airport Operations & 100% Solar Power sector. All trades subject to confirmation.'
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE957N01016',
             category: 'Financial Services',
             industry: 'Retail Lending, MSME Loans & NBFC',
-            logo: 'assets/logos/hero-fincorp.svg',
+            logo: 'assets/logos/hero-fincorp.png',
             about: 'Meera Associates is a trusted broker and dealer of Hero FinCorp Ltd Unlisted Shares. Official Scrip #20 in the Official Directory with ISIN INE957N01016. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE957N01016', 'Official Scrip: #20', 'Sector: Financial Services'],
             overview: 'Institutional allocation and private equity facilitation for Hero FinCorp Ltd, operating in the Retail Lending, MSME Loans & NBFC sector. All trades subject to confirmation.'
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE852S01026',
             category: 'Consumer',
             industry: 'Sports Entertainment & IPL Franchise',
-            logo: 'assets/logos/csk.svg',
+            logo: 'assets/logos/csk.png',
             about: 'Meera Associates is a trusted broker and dealer of Chennai Super Kings Cricket Ltd (CSK) Unlisted Shares. Official Scrip #21 in the Official Directory with ISIN INE852S01026. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE852S01026', 'Official Scrip: #21', 'Sector: Consumer'],
             overview: 'Institutional allocation and private equity facilitation for Chennai Super Kings Cricket Ltd (CSK), operating in the Sports Entertainment & IPL Franchise sector. All trades subject to confirmation.'
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE0S7401019',
             category: 'Manufacturing',
             industry: 'Defense Forgings & Missile Components',
-            logo: 'assets/logos/goodluck.png',
+            logo: 'assets/logos/goodluck-defence.png',
             about: 'Meera Associates is a trusted broker and dealer of Good Luck Defence & Aerospace Ltd Unlisted Shares. Official Scrip #22 in the Official Directory with ISIN INE0S7401019. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE0S7401019', 'Official Scrip: #22', 'Sector: Manufacturing'],
             overview: 'Institutional allocation and private equity facilitation for Good Luck Defence & Aerospace Ltd, operating in the Defense Forgings & Missile Components sector. All trades subject to confirmation.'
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isin: 'INE139Y01018',
             category: 'Manufacturing',
             industry: 'Advanced Composites, Rail & Aerospace',
-            logo: 'assets/logos/kineco.svg',
+            logo: 'assets/logos/kineco.png',
             about: 'Meera Associates is a trusted broker and dealer of Kineco Ltd Unlisted Shares. Official Scrip #23 in the Official Directory with ISIN INE139Y01018. Trades facilitated via compliant off-market depository transfer.',
             highlights: ['ISIN: INE139Y01018', 'Official Scrip: #23', 'Sector: Manufacturing'],
             overview: 'Institutional allocation and private equity facilitation for Kineco Ltd, operating in the Advanced Composites, Rail & Aerospace sector. All trades subject to confirmation.'
@@ -312,13 +312,13 @@ document.addEventListener('DOMContentLoaded', () => {
             seqNo: 24,
             name: 'GFCL EV Products Limited',
             shortName: 'GFCL EV',
-            isin: 'INEOKA501014',
+            isin: 'INE0KA501014',
             category: 'Energy',
             industry: 'EV Battery Materials & Fluoropolymers',
-            logo: 'assets/logos/gfcl-ev.svg',
-            about: 'Meera Associates is a trusted broker and dealer of GFCL EV Products Limited Unlisted Shares. Official Scrip #24 in the Official Directory with ISIN INEOKA501014. Trades facilitated via compliant off-market depository transfer.',
-            highlights: ['ISIN: INEOKA501014', 'Official Scrip: #24', 'Sector: Energy'],
-            overview: 'Institutional allocation and private equity facilitation for GFCL EV Products Limited, operating in the EV Battery Materials & Fluoropolymers sector. All trades subject to confirmation.'
+            logo: 'assets/logos/gfcl-ev.webp',
+            about: 'Meera Associates is a trusted broker and dealer of GFCL EV Products Limited Unlisted Shares. Official Scrip #24 in the Official Directory with ISIN INE0KA501014. Trades facilitated via compliant off-market depository transfer.',
+            highlights: ['ISIN: INE0KA501014', 'Official Scrip: #24', 'Sector: EV Battery Materials', 'US$50M IFC Investment', 'INOXGFL Group Subsidiary'],
+            overview: 'Leading Indian manufacturer of battery chemicals and advanced fluoropolymer materials for Lithium-ion batteries. Wholly owned subsidiary of Gujarat Fluorochemicals Limited (GFL) backed by a US$50 Million strategic investment from the International Finance Corporation (IFC).'
         },
         {
             id: 'inox-leasing',
@@ -1512,9 +1512,14 @@ document.addEventListener('DOMContentLoaded', () => {
         'goa-shipyard': 'scripts/goashipyard/goashipyard.html',
         'rite-water': 'scripts/ritewater/ritewater.html',
         'anugraha': 'scripts/anugrahavalve/anugrahavalve.html',
+        'gfcl-ev': 'scripts/gfclev/gfclev.html',
+        'gfclev': 'scripts/gfclev/gfclev.html',
+        'gfcl': 'scripts/gfclev/gfclev.html',
         'soleos': 'scripts/soleos/soleos.html',
         'soleos-energy': 'scripts/soleos/soleos.html',
         'proyuga': 'scripts/proyuga/proyuga.html',
+        'proyug': 'scripts/proyuga/proyuga.html',
+        'proyuga-advanced-tech': 'scripts/proyuga/proyuga.html',
         'eiffil-water': 'scripts/eiffilwater/eiffilwater.html',
         'eiffilwater': 'scripts/eiffilwater/eiffilwater.html',
         'insolare': 'scripts/insolare/insolare.html',
@@ -1552,7 +1557,58 @@ document.addEventListener('DOMContentLoaded', () => {
         'plindia': 'scripts/plindia/plindia.html',
         'inox-neo': 'scripts/inoxneo/inoxneo.html',
         'inox-neo-energies': 'scripts/inoxneo/inoxneo.html',
-        'inoxneo': 'scripts/inoxneo/inoxneo.html'
+        'inoxneo': 'scripts/inoxneo/inoxneo.html',
+        'hpx': 'scripts/hpx/hpx.html',
+        'care-health': 'scripts/carehealth/carehealth.html',
+        'carehealth': 'scripts/carehealth/carehealth.html',
+        'msei': 'scripts/msei/msei.html',
+        'mse': 'scripts/msei/msei.html',
+        'indofil': 'scripts/indofil/indofil.html',
+        'sterlite-grid-5': 'scripts/sterlitegrid5/sterlitegrid5.html',
+        'sterlitegrid5': 'scripts/sterlitegrid5/sterlitegrid5.html',
+        'nerl': 'scripts/nerl/nerl.html',
+        'national-e-repository': 'scripts/nerl/nerl.html',
+        'nayara-energy': 'scripts/nayaraenergy/nayaraenergy.html',
+        'nayara': 'scripts/nayaraenergy/nayaraenergy.html',
+        'nayaraenergy': 'scripts/nayaraenergy/nayaraenergy.html',
+        'oyo': 'scripts/oyo/oyo.html',
+        'oravel-stays': 'scripts/oyo/oyo.html',
+        'oravel': 'scripts/oyo/oyo.html',
+        'hdfc-securities': 'scripts/hdfcsecurities/hdfcsecurities.html',
+        'hdfcsecurities': 'scripts/hdfcsecurities/hdfcsecurities.html',
+        'hdfcsec': 'scripts/hdfcsecurities/hdfcsecurities.html',
+        'motilal-oswal-hf': 'scripts/motilaloswalhf/motilaloswalhf.html',
+        'motilal-oswal-home-finance': 'scripts/motilaloswalhf/motilaloswalhf.html',
+        'motilaloswalhf': 'scripts/motilaloswalhf/motilaloswalhf.html',
+        'mohf': 'scripts/motilaloswalhf/motilaloswalhf.html',
+        'ppfas': 'scripts/ppfas/ppfas.html',
+        'parag-parikh': 'scripts/ppfas/ppfas.html',
+        'frick-india': 'scripts/frickindia/frickindia.html',
+        'frick': 'scripts/frickindia/frickindia.html',
+        'frickindia': 'scripts/frickindia/frickindia.html',
+        'sunday-proptech': 'scripts/sundayproptech/sundayproptech.html',
+        'sunday': 'scripts/sundayproptech/sundayproptech.html',
+        'sundayproptech': 'scripts/sundayproptech/sundayproptech.html',
+        'carrier-aircon': 'scripts/carrier/carrier.html',
+        'carrier': 'scripts/carrier/carrier.html',
+        'carrier-airconditioning': 'scripts/carrier/carrier.html',
+        'cial': 'scripts/cial/cial.html',
+        'cochin': 'scripts/cial/cial.html',
+        'cochin-airport': 'scripts/cial/cial.html',
+        'orbis': 'scripts/orbisfinancial/orbisfinancial.html',
+        'orbis-financial': 'scripts/orbisfinancial/orbisfinancial.html',
+        'orbisfinancial': 'scripts/orbisfinancial/orbisfinancial.html',
+        'hero-fincorp': 'scripts/herofincorp/herofincorp.html',
+        'herofincorp': 'scripts/herofincorp/herofincorp.html',
+        'hero-fin-corp': 'scripts/herofincorp/herofincorp.html',
+        'csk': 'scripts/csk/csk.html',
+        'chennai-super-kings': 'scripts/csk/csk.html',
+        'goodluck-defence': 'scripts/goodluckdefence/goodluckdefence.html',
+        'goodluck': 'scripts/goodluckdefence/goodluckdefence.html',
+        'goodluckdefence': 'scripts/goodluckdefence/goodluckdefence.html',
+        'kineco': 'scripts/kineco/kineco.html',
+        'kineco-limited': 'scripts/kineco/kineco.html',
+        'kinecolimited': 'scripts/kineco/kineco.html'
     };
 
     // Attach Click Handlers to Cards and Buttons
@@ -1780,7 +1836,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
             if (submitBtn) {
                 submitBtn.disabled = true;
-                submitBtn.innerHTML = '<span>â³ Sending Enquiry...</span>';
+                submitBtn.innerHTML = '<span>⏳ Sending Enquiry...</span>';
             }
 
             const company = (document.getElementById('enquiry-company-name')?.value || '').trim();

@@ -1,0 +1,876 @@
+/* ==========================================================================
+   INDOFIL INDUSTRIES LIMITED - DEDICATED STYLESHEET
+   100% Structural, Layout & Design Parity with NCDEX / Anugraha Architecture
+   ========================================================================== */
+
+/* Base page wrapper with clean background */
+.indofil-page-wrap {
+    padding-bottom: 70px;
+}
+
+/* High-Impact Hero Command Bar */
+.indofil-hero {
+    background: linear-gradient(135deg, #071320 0%, #0c2033 50%, #082d49 100%);
+    color: #ffffff;
+    padding: 60px 0 45px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.25);
+}
+
+.indofil-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 18% 28%, rgba(2, 132, 199, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 82% 72%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.indofil-hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.indofil-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    color: #94a3b8;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.indofil-breadcrumbs a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.indofil-breadcrumbs a:hover {
+    color: #38bdf8;
+}
+
+.indofil-breadcrumbs .crumb-sep {
+    color: #64748b;
+}
+
+.indofil-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(2, 132, 199, 0.22);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.indofil-hero-badge .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 10px #38bdf8;
+    animation: pulseIndofil 2s infinite;
+}
+
+@keyframes pulseIndofil {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.25); }
+}
+
+.indofil-hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.indofil-hero-subtitle {
+    font-size: 1.08rem;
+    color: #cbd5e1;
+    max-width: 880px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+
+/* 4-KPI Metric Strip in Hero */
+.indofil-metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.indofil-metric-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.indofil-metric-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.indofil-metric-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.indofil-metric-value {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+}
+
+.indofil-metric-sub {
+    font-size: 0.78rem;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+/* Main Asymmetric Grid Layout (68% Main / 32% Sidebar) */
+.indofil-main-grid {
+    max-width: 1240px;
+    margin: 36px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Common Card Architecture */
+.indofil-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.indofil-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 25px -4px rgba(15, 23, 42, 0.08);
+}
+
+.indofil-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.indofil-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.indofil-card-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #e0f2fe;
+    color: #0284c7;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.indofil-card-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0284c7;
+    background: #f0f9ff;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid #bae6fd;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+/* Master Specification Table */
+.indofil-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.indofil-table tr {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.indofil-table tr:last-child {
+    border-bottom: none;
+}
+
+.indofil-table .td-label {
+    width: 35%;
+    padding: 13px 16px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #475569;
+    background: #f8fafc;
+    border-right: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.indofil-table .td-val {
+    padding: 13px 18px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #0f172a;
+    vertical-align: middle;
+}
+
+/* ISIN Copy Badge */
+.isin-copy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0f172a;
+    color: #38bdf8;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 1px solid #334155;
+    transition: all 0.2s ease;
+}
+
+.isin-copy-badge:hover {
+    background: #1e293b;
+    color: #7dd3fc;
+    border-color: #0284c7;
+}
+
+.isin-copy-badge:active {
+    transform: scale(0.97);
+}
+
+.isin-copy-badge .copy-hint {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+/* Link Button in Table */
+.indofil-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.indofil-link-btn:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+/* Directors Grid */
+.directors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.director-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.director-card:hover {
+    border-color: #cbd5e1;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.director-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    color: #0284c7;
+    font-size: 0.9rem;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.director-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.director-name {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.director-role {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #0284c7;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-top: 2px;
+}
+
+/* Prose Styling */
+.indofil-prose p {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.indofil-prose p:last-child {
+    margin-bottom: 0;
+}
+
+/* Highlight / Callout Feature Box */
+.feature-callout-box {
+    margin-top: 22px;
+    padding: 18px 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #0284c7;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.callout-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.callout-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #0284c7;
+    margin-top: 7px;
+    flex-shrink: 0;
+}
+
+.callout-text {
+    font-size: 0.88rem;
+    color: #334155;
+    line-height: 1.55;
+}
+
+.callout-text strong {
+    color: #0f172a;
+}
+
+/* Products & Offerings Grid */
+.products-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.product-feature-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+    transition: all 0.2s ease;
+}
+
+.product-feature-card:hover {
+    border-color: #bae6fd;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.08);
+    transform: translateY(-2px);
+}
+
+.product-feature-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.product-feature-icon {
+    font-size: 1.3rem;
+}
+
+.product-feature-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.product-feature-desc {
+    font-size: 0.86rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Awards Grid */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.award-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: all 0.2s ease;
+}
+
+.award-card:hover {
+    border-color: #bae6fd;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.08);
+    transform: translateY(-2px);
+}
+
+.award-trophy {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.award-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.award-name {
+    font-size: 0.94rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.4;
+}
+
+.award-body {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.45;
+}
+
+.award-year {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #0284c7;
+    background: #e0f2fe;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+/* Filing Badge Card */
+.filing-badge-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    gap: 20px;
+}
+
+.filing-badge-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.filing-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+/* Frequently Asked Questions */
+.faq-accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.faq-card:hover {
+    border-color: #cbd5e1;
+}
+
+.faq-card-question {
+    width: 100%;
+    padding: 16px 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 14px;
+}
+
+.faq-question-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.faq-cat-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #0284c7;
+    letter-spacing: 0.5px;
+}
+
+.faq-q-text {
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.faq-chevron-icon {
+    font-size: 0.75rem;
+    color: #64748b;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.faq-card.active .faq-chevron-icon {
+    transform: rotate(180deg);
+}
+
+.faq-card-answer {
+    display: none;
+    padding: 0 20px 18px;
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.65;
+}
+
+.faq-card.active .faq-card-answer {
+    display: block;
+}
+
+/* RIGHT COLUMN: Executive Sticky Sidebar (32%) */
+.indofil-sidebar {
+    position: sticky;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* 1. Sidebar Brand Card */
+.sidebar-brand-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+}
+
+.sidebar-logo-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.02);
+    min-height: 90px;
+}
+
+.sidebar-logo-img {
+    max-width: 100%;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+.sidebar-brand-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.sidebar-brand-sub { font-size: 0.82rem; font-weight: 700; color: #0284c7; text-transform: uppercase; letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.sidebar-btn-web {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-web:hover {
+    background: #0284c7;
+    border-color: #0284c7;
+    color: #ffffff;
+}
+
+/* 2. Direct Investor Execution Desk */
+.sidebar-trade-card {
+    background: linear-gradient(145deg, #071320 0%, #0c2033 100%);
+    border: 1px solid rgba(2, 132, 199, 0.3);
+    border-radius: 16px;
+    padding: 24px;
+    color: #ffffff;
+    box-shadow: 0 8px 30px -4px rgba(6, 32, 19, 0.3);
+}
+
+.sidebar-trade-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.sidebar-trade-title {
+    font-size: 1.18rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.35;
+}
+
+.sidebar-trade-desc {
+    font-size: 0.84rem;
+    color: #cbd5e1;
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+.sidebar-btn-wa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 18px;
+    background: #25d366;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+
+.sidebar-btn-wa:hover {
+    background: #22c55e;
+    transform: translateY(-1px);
+}
+
+.sidebar-btn-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 18px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-bottom: 14px;
+}
+
+.sidebar-btn-call:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.sidebar-trade-footer {
+    text-align: center;
+    font-size: 0.76rem;
+    color: #94a3b8;
+}
+
+/* 3. Standards Card */
+.sidebar-credentials-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px;
+}
+
+.sidebar-cred-title {
+    font-size: 0.96rem;
+    font-weight: 800;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.sidebar-cred-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-cred-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.sidebar-cred-bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 0.72rem;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .indofil-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .indofil-sidebar {
+        position: static;
+    }
+
+    .indofil-metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .indofil-hero-title {
+        font-size: 2rem;
+    }
+
+    .directors-grid,
+    .products-cards-grid,
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .indofil-metrics-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .filing-badge-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .indofil-table .td-label {
+        width: 40%;
+    }
+}

@@ -1,0 +1,1661 @@
+/* ==========================================================================
+   NATIONAL COMMODITY & DERIVATIVES EXCHANGE LIMITED (nayara) - DEDICATED STYLESHEET
+   100% Structural & Design Parity with Anugraha Valve Castings Limited
+   
+   Palette: Deep Navy (#071320, #0c2033), Commodity Cyan/Teal (#0284c7, #0ea5e9),
+   Crisp White, Neutral Slates & Gold/Amber Accents
+   ========================================================================== */
+
+/* Base page wrapper with clean background */
+.nayara-page-wrap {
+    padding-bottom: 70px;
+}
+
+/* High-Impact Hero Command Bar (Exact Same Parity as Anugraha) */
+.nayara-hero {
+    background: linear-gradient(135deg, #071320 0%, #0c2033 50%, #082d49 100%);
+    color: #ffffff;
+    padding: 60px 0 45px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.25);
+}
+
+.nayara-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 18% 28%, rgba(2, 132, 199, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 82% 72%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.nayara-hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.nayara-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    color: #94a3b8;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.nayara-breadcrumbs a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nayara-breadcrumbs a:hover {
+    color: #38bdf8;
+}
+
+.nayara-breadcrumbs .crumb-sep {
+    color: #64748b;
+}
+
+.nayara-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(2, 132, 199, 0.22);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #7dd3fc;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.nayara-hero-badge .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 10px #38bdf8;
+    animation: pulsenayara 2s infinite;
+}
+
+@keyframes pulsenayara {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.25); }
+}
+
+.nayara-hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.nayara-hero-subtitle {
+    font-size: 1.08rem;
+    color: #cbd5e1;
+    max-width: 880px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+
+/* 4-KPI Metric Strip in Hero */
+.nayara-metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.nayara-metric-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.nayara-metric-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.nayara-metric-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nayara-metric-value {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+}
+
+.nayara-metric-sub {
+    font-size: 0.78rem;
+    color: #7dd3fc;
+    font-weight: 600;
+}
+
+/* Main Asymmetric Grid Layout (68% Main / 32% Sidebar) */
+.nayara-main-grid {
+    max-width: 1240px;
+    margin: 36px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Common Card Architecture */
+.nayara-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.nayara-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 25px -4px rgba(15, 23, 42, 0.08);
+}
+
+.nayara-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nayara-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nayara-card-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #e0f2fe;
+    color: #0284c7;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.nayara-card-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0284c7;
+    background: #f0f9ff;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid #bae6fd;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+/* Master Data Table */
+.nayara-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nayara-table tr {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.nayara-table tr:last-child {
+    border-bottom: none;
+}
+
+.nayara-table .td-label {
+    width: 35%;
+    padding: 13px 16px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #475569;
+    background: #f8fafc;
+    border-right: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.nayara-table .td-val {
+    padding: 13px 18px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #0f172a;
+    vertical-align: middle;
+}
+
+.nayara-link-btn {
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+}
+
+.nayara-link-btn:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+/* ISIN Interactive Copy Badge */
+.isin-copy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0f172a;
+    color: #38bdf8;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 1px solid #334155;
+    transition: all 0.2s ease;
+}
+
+.isin-copy-badge:hover {
+    background: #1e293b;
+    color: #7dd3fc;
+    border-color: #0284c7;
+}
+
+.isin-copy-badge:active {
+    transform: scale(0.97);
+}
+
+.copy-hint {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.nayara-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.nayara-link-btn:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+/* Board of Directors: Executive Grid */
+.directors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.director-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.director-card:hover {
+    transform: translateY(-2px);
+    border-color: #0284c7;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+}
+
+.director-check {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.director-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.director-name {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+.director-role {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0284c7;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Strategic Profile Prose & Highlights */
+.nayara-prose {
+    color: #334155;
+    font-size: 0.97rem;
+    line-height: 1.75;
+}
+
+.nayara-prose p {
+    margin-bottom: 16px;
+}
+
+.nayara-prose p:last-child {
+    margin-bottom: 0;
+}
+
+/* Market Infrastructure Feature Box */
+.infrastructure-feature-box {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 4px solid #0284c7;
+    border-radius: 0 12px 12px 0;
+    padding: 20px 22px;
+    margin: 22px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.infra-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.infra-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #0284c7;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.infra-text {
+    font-size: 0.93rem;
+    color: #0c4a6e;
+    line-height: 1.6;
+}
+
+.infra-text strong {
+    color: #0369a1;
+}
+
+/* Subsections Tri-Grid (Products, Commodities, Strategic Points) */
+.subsections-tri-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.sub-feature-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sub-feature-card:hover {
+    background: #ffffff;
+    border-color: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.08);
+}
+
+.sub-feature-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sub-feature-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.sub-feature-title {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.sub-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sub-feature-list li {
+    font-size: 0.88rem;
+    color: #334155;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.45;
+}
+
+.sub-feature-list li::before {
+    content: '\2713';
+    color: #0284c7;
+    font-weight: 800;
+    font-size: 0.82rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.sub-feature-desc {
+    font-size: 0.86rem;
+    color: #475569;
+    line-height: 1.55;
+    margin-bottom: 4px;
+}
+
+/* Annual Report Box */
+.filing-badge-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.filing-badge-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filing-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #dbeafe;
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+/* Sticky Sidebar Components */
+.nayara-sidebar {
+    position: sticky;
+    top: 104px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-brand-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+    text-align: center;
+}
+
+.sidebar-logo-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.02);
+    min-height: 90px;
+}
+
+.sidebar-logo-img {
+    max-width: 100%;
+    max-height: 70px;
+    object-fit: contain;
+}
+
+.sidebar-brand-title {
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.sidebar-brand-sub {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+.sidebar-btn-web {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-web:hover {
+    background: #0284c7;
+    border-color: #0284c7;
+    color: #ffffff;
+}
+
+/* Direct Investor Execution Desk (Sidebar) */
+.sidebar-trade-card {
+    background: linear-gradient(135deg, #071320 0%, #0c2033 100%);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.25);
+    border: 1px solid rgba(2, 132, 199, 0.35);
+}
+
+.sidebar-trade-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.sidebar-trade-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.sidebar-trade-desc {
+    font-size: 0.84rem;
+    color: #cbd5e1;
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+.sidebar-btn-wa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: #25d366;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    margin-bottom: 10px;
+}
+
+.sidebar-btn-wa:hover {
+    background: #22c55e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+.sidebar-btn-call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 11px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn-call:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.sidebar-trade-footer {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.75rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Sidebar Credentials Card */
+.sidebar-credentials-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px;
+}
+
+.sidebar-cred-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-cred-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: #334155;
+}
+
+.sidebar-cred-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-cred-bullet {
+    color: #0284c7;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+/* Financial Performance Graph - nayara Styling */
+.nayara-card .fin-card-title {
+    color: #0f2942;
+}
+
+.nayara-card .fin-kpi-card {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+}
+
+.nayara-card .fin-kpi-card:hover {
+    border-color: #0284c7;
+    background: #ffffff;
+}
+
+.nayara-card .fin-metric-tab.active {
+    background: #0f2942;
+    border-color: #0f2942;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 41, 66, 0.25);
+}
+
+.nayara-card .fin-type-btn.active {
+    background: #0284c7;
+    color: #ffffff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+    .nayara-metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    .nayara-main-grid {
+        grid-template-columns: 1fr;
+    }
+    .nayara-sidebar {
+        position: static;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .subsections-tri-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nayara-hero {
+        padding: 45px 0 30px;
+    }
+    .nayara-hero-container {
+        padding: 0 16px;
+    }
+    .nayara-hero-title {
+        font-size: clamp(1.45rem, 5.5vw, 2.1rem);
+        line-height: 1.25;
+    }
+    .nayara-hero-subtitle {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+    .nayara-page-wrap {
+        padding-bottom: 50px;
+    }
+    .nayara-card {
+        padding: 22px 18px;
+        border-radius: 14px;
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nayara-card {
+        padding: 18px 14px;
+        border-radius: 12px;
+        margin-bottom: 18px;
+    }
+    .nayara-card-header {
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+    }
+    .nayara-card-title {
+        font-size: 1.15rem;
+        gap: 8px;
+    }
+    .nayara-card-title-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+    .nayara-metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .directors-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .director-card {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    /* Transform table into mobile cards */
+    .nayara-table,
+    .nayara-table tbody {
+        display: block;
+        width: 100%;
+    }
+    .nayara-table tr {
+        display: block;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+    }
+    .nayara-table td {
+        display: block;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .nayara-table .td-label {
+        min-width: 0 !important;
+        width: 100% !important;
+        white-space: normal !important;
+        font-size: 0.74rem;
+        text-transform: uppercase;
+        color: #64748b;
+        font-weight: 700;
+        margin-bottom: 4px;
+        letter-spacing: 0.04em;
+    }
+    .nayara-table .td-val {
+        width: 100% !important;
+        font-size: 0.92rem;
+        color: #0f172a;
+        font-weight: 700;
+        word-break: break-word;
+    }
+    .isin-copy-badge {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        box-sizing: border-box;
+    }
+
+    /* Sidebar Cards */
+    .sidebar-brand-card,
+    .sidebar-trade-card {
+        padding: 18px 14px;
+        border-radius: 12px;
+    }
+    .sidebar-trade-title {
+        font-size: 1.05rem;
+    }
+    .sidebar-btn-wa {
+        padding: 12px 14px;
+        font-size: 0.92rem;
+    }
+    .sidebar-btn-call {
+        padding: 11px 14px;
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .nayara-metrics-strip {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================================================
+   COMPLETE ASYMMETRIC GRID & TWO-COLUMN VIEWPORT LAYOUT
+   ========================================================================== */
+.nayara-main-grid {
+    max-width: 1240px;
+    margin: 36px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+    align-items: start;
+}
+
+.nayara-content-col,
+.nayara-main-col {
+    min-width: 0;
+    width: 100%;
+}
+
+.nayara-sidebar,
+.nayara-sidebar-col {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+    width: 100%;
+}
+
+/* ==========================================================================
+   STRATEGIC MOATS & COMPETITIVE ADVANTAGES GRID (2-COLUMN)
+   ========================================================================== */
+.moats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.moat-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.moat-card:hover {
+    background: #ffffff;
+    border-color: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.08);
+}
+
+.moat-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.moat-title {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.moat-desc {
+    font-size: 0.86rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* ==========================================================================
+   SIDEBAR COMPLIANCE & SECTOR PEERS CARDS
+   ========================================================================== */
+.sidebar-compliance-card,
+.sidebar-peers-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
+}
+
+.compliance-head,
+.peers-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.compliance-icon,
+.peers-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.compliance-title,
+.peers-title {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.compliance-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.compliance-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.84rem;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #f1f5f9;
+}
+
+.compliance-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.comp-label {
+    color: #64748b;
+    font-weight: 600;
+}
+
+.comp-val {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.peers-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.peer-link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.peer-link-item:hover {
+    background: #f0f9ff;
+    border-color: #bae6fd;
+    transform: translateX(3px);
+}
+
+.peer-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.peer-arrow {
+    color: #0284c7;
+    font-weight: 700;
+}
+
+/* Responsive Grid Breakpoints */
+@media (max-width: 1024px) {
+    .nayara-main-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 24px;
+    }
+    .nayara-sidebar,
+    .nayara-sidebar-col {
+        position: static;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .moats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   HERO METRIC CARDS ENHANCEMENT
+   ========================================================================== */
+.nayara-metric-card,
+.metric-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 104px;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.nayara-metric-card:hover,
+.metric-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nayara-metric-label,
+.metric-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.nayara-metric-value,
+.nayara-metric-val,
+.metric-val {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.metric-val.highlight {
+    color: #38bdf8;
+}
+
+.metric-val.status-active {
+    color: #4ade80;
+}
+
+.nayara-metric-sub,
+.metric-sub {
+    font-size: 0.78rem;
+    color: #7dd3fc;
+    font-weight: 600;
+    display: block;
+}
+
+/* ==========================================================================
+   COMPANY DETAILS MASTER SPECIFICATION TABLE
+   ========================================================================== */
+.nayara-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nayara-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nayara-table tr {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.nayara-table tr:last-child {
+    border-bottom: none;
+}
+
+.nayara-table .td-label,
+.nayara-table .spec-label {
+    width: 35%;
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #475569;
+    background: #f8fafc;
+    border-right: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.nayara-table .td-val,
+.nayara-table .spec-value {
+    padding: 14px 18px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #0f172a;
+    vertical-align: middle;
+}
+
+.depository-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0284c7;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 6px;
+    margin-right: 6px;
+}
+
+.depository-sub {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin-left: 4px;
+}
+
+/* ==========================================================================
+   FINANCIAL PERFORMANCE KPIS & CHART CONTROLS
+   ========================================================================== */
+.fin-kpi-grid,
+.fin-kpi-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.fin-kpi-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fin-kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #0284c7;
+}
+
+.fin-kpi-card.kpi-revenue::before { background: #0284c7; }
+.fin-kpi-card.kpi-ebitda::before  { background: #0d9488; }
+.fin-kpi-card.kpi-pat::before     { background: #d97706; }
+.fin-kpi-card.kpi-eps::before     { background: #7c3aed; }
+
+.fin-kpi-card:hover {
+    transform: translateY(-2px);
+    border-color: #38bdf8;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.fin-kpi-header,
+.fin-kpi-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fin-kpi-title,
+.fin-kpi-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.fin-kpi-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #0284c7;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+.fin-kpi-val {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.fin-kpi-sub {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.fin-pill-growth {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.fin-pill-growth.positive {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.fin-controls-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.fin-metric-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.fin-metric-tab {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.fin-metric-tab:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #94a3b8;
+}
+
+.fin-metric-tab.active {
+    background: #0284c7;
+    color: #ffffff;
+    border-color: #0284c7;
+}
+
+.fin-type-toggle {
+    display: flex;
+    gap: 4px;
+}
+
+.fin-type-btn {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fin-type-btn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.fin-type-btn.active {
+    background: #0f172a;
+    color: #ffffff;
+    border-color: #0f172a;
+}
+
+.fin-chart-canvas-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+}
+
+/* ==========================================================================
+   INTERACTIVE FAQS SECTION
+   ========================================================================== */
+.faq-accordion-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.faq-card:hover {
+    border-color: #bae6fd;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.06);
+}
+
+.faq-card.active {
+    border-color: #38bdf8;
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.1);
+}
+
+.faq-card-question {
+    width: 100%;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: 16px;
+}
+
+.faq-question-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.faq-cat-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: #f0f9ff;
+    color: #0284c7;
+    border: 1px solid #bae6fd;
+    padding: 3px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.faq-q-text {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.45;
+}
+
+.faq-chevron-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+    flex-shrink: 0;
+}
+
+.faq-card.active .faq-chevron-icon {
+    background: #0284c7;
+    color: #ffffff;
+    transform: rotate(180deg);
+}
+
+.faq-card-answer {
+    display: none;
+    padding: 0 20px 20px 20px;
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.65;
+    border-top: 1px solid #f1f5f9;
+    margin-top: 2px;
+    padding-top: 14px;
+}
+
+.faq-card.active .faq-card-answer {
+    display: block;
+}
+
+.faq-card-answer p {
+    margin: 0;
+}
+
+/* Fallback for legacy .faq-accordion markup */
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.faq-item:hover {
+    border-color: #bae6fd;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.06);
+}
+
+.faq-item.active {
+    border-color: #38bdf8;
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.1);
+}
+
+.faq-question {
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #0f172a;
+    gap: 16px;
+}
+
+.faq-arrow {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-arrow {
+    background: #0284c7;
+    color: #ffffff;
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 20px 18px 20px;
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.65;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 14px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Responsive Rules for KPIs & Strip */
+@media (max-width: 992px) {
+    .nayara-metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .fin-kpi-grid,
+    .fin-kpi-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .nayara-metrics-strip {
+        grid-template-columns: 1fr;
+    }
+    .fin-kpi-grid,
+    .fin-kpi-summary-grid {
+        grid-template-columns: 1fr;
+    }
+    .nayara-table .td-label,
+    .nayara-table .spec-label {
+        width: 40%;
+        font-size: 0.82rem;
+        padding: 10px 12px;
+    }
+    .nayara-table .td-val,
+    .nayara-table .spec-value {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+    .faq-card-question {
+        padding: 14px 16px;
+    }
+    .faq-q-text {
+        font-size: 0.92rem;
+    }
+}

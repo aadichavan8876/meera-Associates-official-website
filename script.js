@@ -974,12 +974,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!faqSections.length) return;
 
         faqSections.forEach(section => {
-            const faqCards = section.querySelectorAll('.faq-card');
+            const faqCards = section.querySelectorAll('.faq-card, .faq-item');
             const filterTabs = section.querySelectorAll('.faq-tab-btn');
             const searchInput = section.querySelector('.faq-search-input');
 
-            // Toggle Accordion Card
-            faqCards.forEach(card => {
+            // Toggle Accordion Card (legacy .faq-card support)
+            section.querySelectorAll('.faq-card').forEach(card => {
                 const btn = card.querySelector('.faq-card-question');
                 if (btn) {
                     btn.addEventListener('click', () => {
@@ -1012,14 +1012,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 faqCards.forEach(card => {
                     const cardCat = card.getAttribute('data-category') || '';
-                    const qText = card.querySelector('.faq-q-text') ? card.querySelector('.faq-q-text').textContent.toLowerCase() : '';
-                    const aText = card.querySelector('.faq-card-answer') ? card.querySelector('.faq-card-answer').textContent.toLowerCase() : '';
+                    const qElem = card.querySelector('.faq-q-text') || card.querySelector('.faq-question span') || card.querySelector('.faq-question');
+                    const qText = qElem ? qElem.textContent.toLowerCase() : '';
+                    const aElem = card.querySelector('.faq-card-answer') || card.querySelector('.faq-answer');
+                    const aText = aElem ? aElem.textContent.toLowerCase() : '';
 
                     const matchesCat = (selectedCat === 'all' || cardCat.includes(selectedCat));
                     const matchesQuery = (!query || qText.includes(query) || aText.includes(query));
 
                     if (matchesCat && matchesQuery) {
-                        card.style.display = 'block';
+                        card.style.display = '';
                     } else {
                         card.style.display = 'none';
                     }
@@ -1028,6 +1030,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Global Accordion for Standard Scrip FAQs (.faq-accordion / .faq-item)
+    function initStandardFaqAccordion() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const toggleBtn = item.querySelector('.faq-question');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const isActive = item.classList.contains('active');
+                    const parent = item.parentElement;
+                    if (parent) {
+                        const siblings = parent.querySelectorAll('.faq-item');
+                        siblings.forEach(s => { if (s !== item) s.classList.remove('active'); });
+                    }
+                    item.classList.toggle('active', !isActive);
+                });
+            }
+        });
+    }
+
     initGlobalFaq();
+    initStandardFaqAccordion();
 
 });
