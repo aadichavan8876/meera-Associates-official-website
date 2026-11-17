@@ -1050,6 +1050,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    initScreenBullIntro();
     initGlobalFaq();
     initStandardFaqAccordion();
 

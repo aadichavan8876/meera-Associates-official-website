@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Depository Guides Interactive Handler (NSDL & CDSL)
  * Meera Associates Official Portal
  */
@@ -76,7 +76,7 @@ function fallbackCopy(text, btn) {
 
 function showCopiedFeedback(btn) {
     const origText = btn.innerHTML;
-    btn.innerHTML = '✓ Copied!';
+    btn.innerHTML = '\u2713 Copied!';
     btn.style.background = '#10b981';
     btn.style.borderColor = '#059669';
 
